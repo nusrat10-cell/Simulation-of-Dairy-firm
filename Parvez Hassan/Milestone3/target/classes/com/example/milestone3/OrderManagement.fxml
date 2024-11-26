@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="782.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.milestone3.OrderManagementController">
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back_button" text="Back" />
+      <Button layoutX="22.0" layoutY="84.0" mnemonicParsing="false" onAction="#orderOverview_button" prefHeight="25.0" prefWidth="141.0" text="Order Overview" />
+      <Button layoutX="22.0" layoutY="120.0" mnemonicParsing="false" onAction="#addOrder_button" prefHeight="25.0" prefWidth="141.0" text="Add Oder" />
+      <Button layoutX="22.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="Order Processing" />
+      <Button layoutX="22.0" layoutY="200.0" mnemonicParsing="false" text="Shipping Managerment" />
+      <Button layoutX="22.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="customer Notifications" />
+      <Button layoutX="22.0" layoutY="274.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="Issue Resolution" />
+      <Button layoutX="22.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="Completed order" />
+      <Button layoutX="22.0" layoutY="343.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="Report And Analytics" />
+      <Line endX="-100.0" endY="277.0" layoutX="286.0" layoutY="84.0" startX="-100.0" />
+      <StackPane layoutX="191.0" layoutY="84.0" prefHeight="698.0" prefWidth="708.0">
+         <children>
+            <AnchorPane fx:id="addOrder_Pane" prefHeight="698.0" prefWidth="649.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="16.0" text="Date:" />
+                  <DatePicker fx:id="order_Date_DP" layoutX="62.0" layoutY="12.0" />
+                  <Label layoutX="256.0" layoutY="16.0" text="Order ID:" />
+                  <TextField fx:id="order_ID_TF" layoutX="322.0" layoutY="12.0" />
+                  <Label layoutX="19.0" layoutY="47.0" text="Item Name:" />
+                  <Label layoutX="262.0" layoutY="47.0" text="Quantity" />
+                  <Label layoutX="18.0" layoutY="83.0" text="Status:" />
+                  <Label layoutX="273.0" layoutY="83.0" text="Payment Method: " />
+                  <Label layoutX="19.0" layoutY="126.0" text="Customer Details:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="200.0" text="Name: " />
+                  <Label layoutX="228.0" layoutY="200.0" text="Customer:ID" />
+                  <Label layoutX="228.0" layoutY="231.0" text="Address:" />
+                  <Label layoutX="15.0" layoutY="231.0" text="Contact:" />
+                  <ComboBox fx:id="order_Name_CB" layoutX="86.0" layoutY="44.0" prefWidth="150.0" />
+                  <TextField fx:id="order_Quantity_TF" layoutX="322.0" layoutY="43.0" />
+                  <ComboBox fx:id="pay_Status_CB" layoutX="112.0" layoutY="79.0" prefWidth="150.0" />
+                  <ComboBox fx:id="pay_Method_CB" layoutX="371.0" layoutY="79.0" prefWidth="150.0" />
+                  <Line endX="430.0" layoutX="103.0" layoutY="117.0" startX="-100.0" />
+                  <Button layoutX="24.0" layoutY="262.0" mnemonicParsing="false" onAction="#show_tab_Button" text="Show" />
+                  <TableView fx:id="newOrder_TV" layoutX="19.0" layoutY="314.0" prefHeight="290.0" prefWidth="630.0">
+                    <columns>
+                      <TableColumn fx:id="date_Col" prefWidth="57.0" text="Date" />
+                      <TableColumn fx:id="orderID_Col" prefWidth="69.0" text="Order ID" />
+                        <TableColumn fx:id="item_Col" prefWidth="50.0" text="Item" />
+                        <TableColumn fx:id="quantity_Col" prefWidth="70.0" text="Quantity" />
+                        <TableColumn fx:id="payMryhod_Col" prefWidth="93.0" text="Method" />
+                        <TableColumn fx:id="status_Col" prefWidth="105.0" text="Status" />
+                        <TableColumn fx:id="customerID_Col" prefWidth="75.0" text="Cust ID" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="22.0" layoutY="161.0" text="Customer ID: " />
+                  <TextField fx:id="customerID_TF" layoutX="119.0" layoutY="157.0" />
+                  <Label fx:id="customerName_label" layoutX="67.0" layoutY="200.0" prefHeight="17.0" prefWidth="150.0" />
+                  <Label fx:id="sustomerType_label" layoutX="306.0" layoutY="200.0" prefHeight="17.0" prefWidth="97.0" />
+                  <Label fx:id="customerNumber_label" layoutX="67.0" layoutY="231.0" prefHeight="17.0" prefWidth="149.0" text="Label" />
+                  <Label fx:id="customerAdress_label" layoutX="277.0" layoutY="231.0" prefHeight="17.0" prefWidth="259.0" text="Label" />
+                  <Button layoutX="291.0" layoutY="157.0" mnemonicParsing="false" onAction="#fetch_Customer_button" prefHeight="25.0" prefWidth="174.0" text="Get Customer Details" />
+                  <ButtonBar layoutX="407.0" layoutY="593.0" prefHeight="40.0" prefWidth="200.0" />
+                <Button layoutX="527.0" layoutY="630.0" mnemonicParsing="false" onAction="#saveOrder_button" text="save Order" />
+                  <Button layoutX="455.0" layoutY="630.0" mnemonicParsing="false" onAction="#clear_button" text="Clear" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="orderView_Pane" prefHeight="312.0" prefWidth="486.0">
+               <children>
+                  <ComboBox fx:id="orderType_CB" layoutX="131.0" layoutY="26.0" prefWidth="150.0" />
+                  <Button layoutX="429.0" layoutY="26.0" mnemonicParsing="false" onAction="#show_Button" text="Go" />
+                  <TableView fx:id="allOrder_TV" layoutX="15.0" layoutY="64.0" prefHeight="200.0" prefWidth="456.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="34.0" layoutY="30.0" text="Select Order Type:" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
