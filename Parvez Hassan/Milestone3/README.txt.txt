@@ -8,4 +8,5 @@ For Supply Chain And Logistics
       -Inventory Management
       -Order management  
 For Financial Manager:
-      -
+      - Budget
+      - Expenses
