@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.RouteOptimization">
+   <children>
+      <Button layoutX="24.0" layoutY="24.0" mnemonicParsing="false" text="Back" />
+      <TextField layoutX="24.0" layoutY="69.0" text="Sample ID" />
+      <TextField layoutX="24.0" layoutY="105.0" text="Farmer Name" />
+      <ComboBox layoutX="34.0" layoutY="158.0" prefWidth="150.0" promptText="Milk quantity " />
+      <Button layoutX="268.0" layoutY="345.0" mnemonicParsing="false" text="confirm milk collect" />
+      <TableView layoutX="258.0" layoutY="41.0" prefHeight="260.0" prefWidth="334.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="id" />
+          <TableColumn prefWidth="75.0" text="name" />
+            <TableColumn prefWidth="75.0" text="quality" />
+            <TableColumn prefWidth="75.0" text="Total" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
