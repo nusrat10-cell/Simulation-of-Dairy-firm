@@ -24,7 +24,7 @@ public class LogInController {
 
     @javafx.fxml.FXML
     public void initialize() {
-        designation_ComboBox.getItems().addAll("Milk Collector", "Milk Processor", "Inventory Manager", "Customer Service Representative", "Supply Chain & Logistics", "Financial Manager", "Sales & Marketing Manager", "Waste Management Employee");
+        designation_ComboBox.getItems().addAll("Milk Collector", "Milk Processor", "Inventory Manager", "Customer Service Representative", "Supply Chain & Logistics", "Financial Manager", "Sales & Marketing Manager", "Customer");
     }
     public void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
