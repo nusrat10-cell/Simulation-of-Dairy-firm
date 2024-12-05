@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="472.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.User3.ManageDispatchRequest">
+   <children>
+      <TableView layoutX="51.0" layoutY="36.0" prefHeight="200.0" prefWidth="290.0">
+        <columns>
+          <TableColumn prefWidth="72.79995346069336" text="Request ID" />
+          <TableColumn prefWidth="84.0" text="product name" />
+            <TableColumn prefWidth="56.00001525878906" text="Quantity" />
+            <TableColumn prefWidth="88.79998779296875" text="Destination" />
+        </columns>
+      </TableView>
+      <ComboBox layoutX="51.0" layoutY="262.0" prefWidth="150.0" promptText="Select Product" />
+      <Button layoutX="202.0" layoutY="305.0" mnemonicParsing="false" text="Process" />
+      <Line endX="-100.0" endY="424.0" layoutX="503.0" layoutY="48.0" startX="-100.0" startY="-48.0" />
+      <Label layoutX="419.0" layoutY="36.0" prefHeight="18.0" prefWidth="150.0" text="Fill-up the form">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="419.0" layoutY="85.0" prefWidth="150.0" promptText="Select Logistic Provider" />
+      <DatePicker layoutX="419.0" layoutY="136.0" promptText="Dispatch date" />
+      <Button layoutX="482.0" layoutY="199.0" mnemonicParsing="false" text="Dispatch" />
+      <Line endX="100.0" startX="-100.0" />
+      <Line endX="155.00006103515625" layoutX="507.0" layoutY="56.0" startX="-104.5" />
+      <Line endX="157.300048828125" layoutX="506.0" layoutY="36.0" startX="-103.5" />
+   </children>
+</AnchorPane>
