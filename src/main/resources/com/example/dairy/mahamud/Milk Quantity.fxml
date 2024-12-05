@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.MilkQuantity">
+   <children>
+      <TextField layoutX="64.0" layoutY="39.0" />
+      <TextField layoutX="65.0" layoutY="93.0" />
+      <Text layoutX="14.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id" />
+      <Text layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="13.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="quantity" />
+      <TextField layoutX="80.0" layoutY="150.0" />
+      <TableView layoutX="283.0" layoutY="39.0" prefHeight="200.0" prefWidth="244.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="name" />
+          <TableColumn prefWidth="75.0" text="id" />
+            <TableColumn prefWidth="75.0" text="quantity" />
+        </columns>
+      </TableView>
+      <Button layoutX="353.0" layoutY="328.0" mnemonicParsing="false" text="confirm quantity" />
+      <Button layoutX="139.0" layoutY="200.0" mnemonicParsing="false" text="add" />
+      <Button layoutX="9.0" layoutY="2.0" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>
