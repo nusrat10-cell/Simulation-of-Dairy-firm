@@ -1,26 +1,26 @@
-public class ExpiryDates
+public class ProperStorage
 {
     @javafx.fxml.FXML
-    private TableColumn productNameTC;
+    private TableColumn temperatureTC;
     @javafx.fxml.FXML
     private ComboBox selectProductCB;
     @javafx.fxml.FXML
-    private TableView expiryDateTV;
+    private ComboBox takeActionCB;
     @javafx.fxml.FXML
-    private TableColumn currentStockTC;
+    private TableView properStorageTV;
     @javafx.fxml.FXML
-    private TableColumn expiryDateTC;
+    private TableColumn statusTC;
     @javafx.fxml.FXML
     private Label label;
     @javafx.fxml.FXML
-    private ComboBox chooseActionCB;
+    private TableColumn humidityTC;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void confirmActionButton(ActionEvent actionEvent) {
+    public void logActionButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

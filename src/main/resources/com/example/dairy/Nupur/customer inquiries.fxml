@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="513.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.CustomerInquiries">
    <children>
       <Text layoutX="314.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Inquiries">
@@ -19,16 +18,16 @@
       </Text>
       <Line endX="100.0" startX="-100.0" />
       <Line endX="100.0" layoutX="387.0" layoutY="42.0" startX="-100.0" />
-      <TableView layoutX="27.0" layoutY="66.0" prefHeight="200.0" prefWidth="464.0">
+      <TableView fx:id="inquiriesTV" layoutX="27.0" layoutY="66.0" prefHeight="200.0" prefWidth="464.0">
         <columns>
-          <TableColumn prefWidth="90.4000244140625" text="Inquiry ID" />
-          <TableColumn prefWidth="110.39996337890625" text="customer name" />
-            <TableColumn prefWidth="136.0" text="Inquiry Type" />
-            <TableColumn prefWidth="126.39996337890625" text="status" />
+          <TableColumn fx:id="inquiryidTC" prefWidth="90.4000244140625" text="Inquiry ID" />
+          <TableColumn fx:id="customerNameTC" prefWidth="110.39996337890625" text="customer name" />
+            <TableColumn fx:id="inquiryTypeTC" prefWidth="136.0" text="Inquiry Type" />
+            <TableColumn fx:id="statusTC" prefWidth="126.39996337890625" text="status" />
         </columns>
       </TableView>
-      <TextArea layoutX="27.0" layoutY="282.0" prefHeight="81.0" prefWidth="408.0" promptText="type renponses" />
-      <Button layoutX="192.0" layoutY="382.0" mnemonicParsing="false" text="send response" />
-      <Button layoutX="620.0" layoutY="461.0" mnemonicParsing="false" text="Back" />
+      <TextArea fx:id="responseTA" layoutX="27.0" layoutY="282.0" prefHeight="81.0" prefWidth="408.0" promptText="type renponses" />
+      <Button layoutX="192.0" layoutY="382.0" mnemonicParsing="false" onAction="#sendResponseButton" text="send response" />
+      <Button layoutX="620.0" layoutY="461.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>
