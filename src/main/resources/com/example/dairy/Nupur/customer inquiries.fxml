@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="513.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user4.CustomerInquiries">
+<AnchorPane prefHeight="513.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.CustomerInquiries">
    <children>
       <Text layoutX="314.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Inquiries">
          <font>
