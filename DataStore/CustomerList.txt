@@ -1,0 +1,4 @@
+Customers{customerID=1234, customerName='Rahim', customerNumber=1928682961, paymentDetails= Cash, customerAddress='IUB'}
+Customers{customerID=1235, customerName='Karim', customerNumber=1928682962, paymentDetails= Card, customerAddress='IUB'}
+Customers{customerID=1236, customerName='Salim', customerNumber=1928682963, paymentDetails= Card, customerAddress='IUB'}
+Customers{customerID=1237, customerName='Naim', customerNumber=1928682964, paymentDetails= Card, customerAddress='IUB'}
