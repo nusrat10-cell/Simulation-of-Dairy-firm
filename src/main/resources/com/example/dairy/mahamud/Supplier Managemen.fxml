@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.SupplierManagemen">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.mahamud.SupplierManagemen">
    <children>
       <TextField fx:id="smnametextfieldfx" layoutX="70.0" layoutY="47.0" />
       <TextField fx:id="smidtextfieldfx" layoutX="71.0" layoutY="118.0" />

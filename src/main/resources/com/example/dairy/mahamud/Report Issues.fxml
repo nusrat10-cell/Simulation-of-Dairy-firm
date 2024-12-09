@@ -5,7 +5,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.ReportIssues">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.mahamud.ReportIssues">
    <children>
       <RadioButton fx:id="rimilkqualityradiobuttonfx" layoutX="82.0" layoutY="59.0" mnemonicParsing="false" text="Milk Quality" />
       <RadioButton fx:id="riTransportationradbuttonfx" layoutX="82.0" layoutY="93.0" mnemonicParsing="false" text="Transportation" />
