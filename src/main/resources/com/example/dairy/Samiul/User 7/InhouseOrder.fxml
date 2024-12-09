@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.InhouseOrder">
+   <children>
+      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
+      <Text layoutX="256.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inhouse Order" underline="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <ComboBox layoutX="69.0" layoutY="126.0" prefWidth="150.0" promptText="Select product" />
+      <Text layoutX="293.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:" />
+      <TextField layoutX="379.0" layoutY="119.0" />
+      <Text layoutX="293.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery date:" />
+      <DatePicker layoutX="379.0" layoutY="158.0" />
+      <Button layoutX="239.0" layoutY="222.0" mnemonicParsing="false" text="Place Order" />
+      <TableView layoutX="105.0" layoutY="293.0" prefHeight="200.0" prefWidth="472.0">
+        <columns>
+          <TableColumn prefWidth="96.66661834716797" text="Name" />
+          <TableColumn prefWidth="69.33331298828125" text="ID" />
+            <TableColumn prefWidth="73.33332824707031" text="Quantity" />
+            <TableColumn prefWidth="128.0" text="Delivery Date" />
+            <TableColumn prefWidth="103.33334350585938" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

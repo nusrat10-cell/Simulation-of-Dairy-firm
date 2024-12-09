@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.IncomeManagement">
+   <children>
+      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
+      <Text layoutX="217.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income Management" underline="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="82.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total lifetime sales:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="81.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total campaign cost:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="80.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total lifetime profit:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label layoutX="236.0" layoutY="179.0" text="Label" />
+      <Label layoutX="245.0" layoutY="230.0" text="Label" />
+      <Label layoutX="231.0" layoutY="277.0" text="Label" />
+   </children>
+</AnchorPane>
