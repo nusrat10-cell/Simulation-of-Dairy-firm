@@ -5,14 +5,13 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.ReportIssues">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.mahamud.ReportIssues">
    <children>
-      <RadioButton layoutX="82.0" layoutY="59.0" mnemonicParsing="false" text="Milk Quality" />
-      <RadioButton layoutX="82.0" layoutY="93.0" mnemonicParsing="false" text="Transportation" />
-      <RadioButton layoutX="82.0" layoutY="138.0" mnemonicParsing="false" text="Supplier Problem" />
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="back" />
-      <Button layoutX="99.0" layoutY="200.0" mnemonicParsing="false" text="submit" />
-      <Label layoutX="229.0" layoutY="204.0" text="Successfully submitted" />
+      <RadioButton fx:id="rimilkqualityradiobuttonfx" layoutX="82.0" layoutY="59.0" mnemonicParsing="false" text="Milk Quality" />
+      <RadioButton fx:id="riTransportationradbuttonfx" layoutX="82.0" layoutY="93.0" mnemonicParsing="false" text="Transportation" />
+      <RadioButton fx:id="riSupplierProblemradbuttonfx" layoutX="82.0" layoutY="138.0" mnemonicParsing="false" text="Supplier Problem" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ribackbuttonfx" text="back" />
+      <Button layoutX="99.0" layoutY="200.0" mnemonicParsing="false" onAction="#risubmitbuttonfx" text="submit" />
+      <Label fx:id="rilabelmassagefx" layoutX="229.0" layoutY="204.0" text="Successfully submitted" />
    </children>
 </AnchorPane>

@@ -18,7 +18,7 @@
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back_button" text="Back" />
       <Button layoutX="22.0" layoutY="84.0" mnemonicParsing="false" onAction="#orderOverview_button" prefHeight="25.0" prefWidth="141.0" text="Order Overview" />
       <Button layoutX="22.0" layoutY="120.0" mnemonicParsing="false" onAction="#addOrder_button" prefHeight="25.0" prefWidth="141.0" text="Add Oder" />
-      <Button layoutX="22.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="Order Processing" />
+      <Button layoutX="22.0" layoutY="159.0" mnemonicParsing="false" onAction="#orderProcessingButton" prefHeight="25.0" prefWidth="141.0" text="Order Processing" />
       <Button layoutX="22.0" layoutY="200.0" mnemonicParsing="false" text="Shipping Managerment" />
       <Button layoutX="22.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="customer Notifications" />
       <Button layoutX="22.0" layoutY="274.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="Issue Resolution" />
@@ -27,6 +27,18 @@
       <Line endX="-100.0" endY="277.0" layoutX="286.0" layoutY="84.0" startX="-100.0" />
       <StackPane layoutX="191.0" layoutY="84.0" prefHeight="698.0" prefWidth="708.0">
          <children>
+            <AnchorPane fx:id="orderProcessingPane" prefHeight="698.0" prefWidth="708.0">
+               <children>
+                  <TableView fx:id="pendingOrderTableView" layoutX="53.0" layoutY="89.0" prefHeight="342.0" prefWidth="502.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="310.0" layoutY="473.0" mnemonicParsing="false" onAction="#markAsFulfilledButton" text="MarkFullfilled" />
+                  <Button layoutX="181.0" layoutY="473.0" mnemonicParsing="false" onAction="#saveAndSendToWarehouseButton" text="Save" />
+               </children>
+            </AnchorPane>
             <AnchorPane fx:id="addOrder_Pane" prefHeight="698.0" prefWidth="649.0">
                <children>
                   <Label layoutX="22.0" layoutY="16.0" text="Date:" />

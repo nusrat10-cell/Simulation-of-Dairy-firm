@@ -7,21 +7,20 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.ProductionRecords">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.mahamud.ProductionRecords">
    <children>
-      <TextField layoutX="31.0" layoutY="49.0" text="quantity" />
-      <ComboBox layoutX="31.0" layoutY="95.0" prefWidth="150.0" promptText="type of quantitys" />
-      <ComboBox layoutX="37.0" layoutY="137.0" prefWidth="150.0" promptText="wastage" />
-      <TableView layoutX="327.0" layoutY="50.0" prefHeight="200.0" prefWidth="234.0">
+      <TextField fx:id="prquantitytextfieldfx" layoutX="31.0" layoutY="49.0" text="quantity" />
+      <ComboBox fx:id="prtypeofquantityscomboxfx" layoutX="31.0" layoutY="95.0" prefWidth="150.0" promptText="type of quantitys" />
+      <ComboBox fx:id="prwastagecomboxfx" layoutX="37.0" layoutY="137.0" prefWidth="150.0" promptText="wastage" />
+      <TableView fx:id="prtablefx" layoutX="327.0" layoutY="50.0" prefHeight="200.0" prefWidth="234.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="quantity" />
-          <TableColumn prefWidth="75.0" text="type quantity" />
-            <TableColumn prefWidth="75.0" text="wastage" />
+          <TableColumn fx:id="prquantitytablecollumfx" prefWidth="75.0" text="quantity" />
+          <TableColumn fx:id="prtypeqquantitytablecollumfx" prefWidth="75.0" text="type quantity" />
+            <TableColumn fx:id="prwastagetablecollumfx" prefWidth="75.0" text="wastage" />
         </columns>
       </TableView>
-      <Button layoutX="37.0" layoutY="14.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="327.0" layoutY="285.0" mnemonicParsing="false" text="Save Record " />
-      <Button layoutX="80.0" layoutY="187.0" mnemonicParsing="false" text="Add in table" />
+      <Button layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#prbackbuttonfx" text="Back" />
+      <Button layoutX="327.0" layoutY="285.0" mnemonicParsing="false" onAction="#prsaverecordbuttonfx" text="Save Record " />
+      <Button layoutX="80.0" layoutY="187.0" mnemonicParsing="false" onAction="#praddbuttonfx" text="Add in table" />
    </children>
 </AnchorPane>

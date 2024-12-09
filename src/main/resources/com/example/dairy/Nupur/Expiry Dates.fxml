@@ -10,8 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="428.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nushrat.dairyfirmm3.ExpiryDates">
+<AnchorPane prefHeight="428.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.ExpiryDates">
    <children>
       <Text layoutX="257.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expiry Date">
          <font>
@@ -19,18 +18,18 @@
          </font>
       </Text>
       <Line endX="62.79998779296875" endY="1.1444091796875E-5" layoutX="306.0" layoutY="51.0" startX="-57.99998474121094" startY="1.1444091796875E-5" />
-      <TableView layoutX="36.0" layoutY="77.0" prefHeight="200.0" prefWidth="260.0">
+      <TableView fx:id="expiryDateTV" layoutX="36.0" layoutY="77.0" prefHeight="200.0" prefWidth="260.0">
         <columns>
-          <TableColumn prefWidth="92.00000381469727" text="Product Name" />
-          <TableColumn prefWidth="92.79998779296875" text="Current Stock" />
-            <TableColumn prefWidth="75.19993591308594" text="Expiry date" />
+          <TableColumn fx:id="productNameTC" prefWidth="92.00000381469727" text="Product Name" />
+          <TableColumn fx:id="currentStockTC" prefWidth="92.79998779296875" text="Current Stock" />
+            <TableColumn fx:id="expiryDateTC" prefWidth="75.19993591308594" text="Expiry date" />
         </columns>
       </TableView>
-      <ComboBox layoutX="36.0" layoutY="290.0" prefWidth="150.0" promptText="Select Product" />
-      <ComboBox layoutX="367.0" layoutY="289.0" prefHeight="26.0" prefWidth="194.0" promptText="Choose Action" />
-      <Label layoutX="38.0" layoutY="331.0" prefHeight="18.0" prefWidth="254.0" text="Label" />
-      <Button layoutX="369.0" layoutY="340.0" mnemonicParsing="false" text="Confirm Action" />
-      <Button layoutX="568.0" layoutY="388.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" text="Back" />
+      <ComboBox fx:id="selectProductCB" layoutX="36.0" layoutY="290.0" prefWidth="150.0" promptText="Select Product" />
+      <ComboBox fx:id="chooseActionCB" layoutX="367.0" layoutY="289.0" prefHeight="26.0" prefWidth="194.0" promptText="Choose Action" />
+      <Label fx:id="label" layoutX="38.0" layoutY="331.0" prefHeight="18.0" prefWidth="254.0" text="Label" />
+      <Button layoutX="369.0" layoutY="340.0" mnemonicParsing="false" onAction="#confirmActionButton" text="Confirm Action" />
+      <Button layoutX="568.0" layoutY="388.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="52.0" text="Back" />
       <Line endX="1.5999908447265625" endY="71.39996337890625" layoutX="271.0" layoutY="334.0" startX="1.5999908447265625" startY="-35.0" />
    </children>
 </AnchorPane>

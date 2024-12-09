@@ -1,0 +1,6 @@
+Inventory{name='Milk', priceperUnit=44, stockLevel=100, type='Raw Material'}
+Inventory{name='Cheese', priceperUnit=44, stockLevel=100, type='Finished Goods'}
+Inventory{name='Butter', priceperUnit=44, stockLevel=100, type='Raw Material'}
+Inventory{name='Paneer', priceperUnit=44, stockLevel=30, type='Packaging Material'}
+Inventory{name='Condensed Milk', priceperUnit=44, stockLevel=60, type='Storage Supplies'}
+Inventory{name='Whey', priceperUnit=44, stockLevel=44, type='Equipments'}

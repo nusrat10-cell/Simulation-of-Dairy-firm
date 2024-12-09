@@ -6,8 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="515.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InventoryManagerDashboard">
+<AnchorPane prefHeight="515.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.InventoryManagerDashboard">
    <children>
       <Text layoutX="235.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Manager Dashboard">
          <font>
@@ -15,14 +14,14 @@
          </font>
       </Text>
       <Line endX="163.14453125" layoutX="395.0" layoutY="70.0" startX="-159.99996948242188" />
-      <Button layoutY="255.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="204.0" text="Process Product Return" />
-      <Button layoutX="1.0" layoutY="114.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="204.0" text="View Inventory" />
-      <Button layoutY="290.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="204.0" text="Dispatch Shows" />
-      <Button layoutY="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="204.0" text="Monitor Storage Conditions" />
-      <Button layoutY="186.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="204.0" text="Manage Expiry Dates" />
-      <Button layoutY="222.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="204.0" text="Track Packeging Usage" />
-      <Button layoutY="325.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="204.0" text="Inventory Management Tools " />
-      <Button layoutY="360.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="204.0" text="Update Stock" />
+      <Button layoutY="255.0" mnemonicParsing="false" onAction="#ProcessProductReturnButton" prefHeight="35.0" prefWidth="204.0" text="Process Product Return" />
+      <Button layoutX="1.0" layoutY="114.0" mnemonicParsing="false" onAction="#viewInventoryButton" prefHeight="35.0" prefWidth="204.0" text="View Inventory" />
+      <Button layoutY="290.0" mnemonicParsing="false" onAction="#DispatchShowsButton" prefHeight="35.0" prefWidth="204.0" text="Dispatch Shows" />
+      <Button layoutY="150.0" mnemonicParsing="false" onAction="#monitorStorageConditionButton" prefHeight="35.0" prefWidth="204.0" text="Monitor Storage Conditions" />
+      <Button layoutY="186.0" mnemonicParsing="false" onAction="#manageExpiryDatesButton" prefHeight="35.0" prefWidth="204.0" text="Manage Expiry Dates" />
+      <Button layoutY="222.0" mnemonicParsing="false" onAction="#TrackPackegingUsageButton" prefHeight="35.0" prefWidth="204.0" text="Track Packeging Usage" />
+      <Button layoutY="325.0" mnemonicParsing="false" onAction="#InventoryManagementToolsButton" prefHeight="35.0" prefWidth="204.0" text="Inventory Management Tools " />
+      <Button layoutY="360.0" mnemonicParsing="false" onAction="#UpdateStockButton" prefHeight="35.0" prefWidth="204.0" text="Update Stock" />
       <Line endX="85.60002136230469" endY="4.8000030517578125" layoutX="119.0" layoutY="78.0" startX="85.60002136230469" startY="404.0" />
    </children>
 </AnchorPane>
