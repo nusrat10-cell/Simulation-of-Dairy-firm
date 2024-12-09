@@ -1,0 +1,5 @@
+recipientName='rahman', trans_ID=1998, trans_type='credit', trans_method='bkash', amount=1990, trans_date=2023-11-23}
+recipientName='rahman', trans_ID=1999, trans_type='credit', trans_method='bkash', amount=1990, trans_date=2023-11-23}
+recipientName='rahman', trans_ID=2000, trans_type='credit', trans_method='bkash', amount=1990, trans_date=2023-11-23}
+recipientName='rahman', trans_ID=2001, trans_type='credit', trans_method='bkash', amount=1990, trans_date=2023-11-23}
+recipientName='rahman', trans_ID=2002, trans_type='credit', trans_method='bkash', amount=1990, trans_date=2023-11-23}

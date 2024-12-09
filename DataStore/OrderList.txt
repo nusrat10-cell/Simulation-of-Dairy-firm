@@ -1,0 +1,12 @@
+Orders{orderDate=2024-12-01, orderName='Milk', OrderID=112, orderQuantity=12, orderType=Pending, orderCustomerName=Rahim}
+Orders{orderDate=2024-12-02, orderName='Cheese', OrderID=113, orderQuantity=12, orderType=Fulfilled, orderCustomerName=Karim}
+Orders{orderDate=2024-12-03, orderName='Butter', OrderID=114, orderQuantity=12, orderType=Fulfilled, orderCustomerName=Salim}
+Orders{orderDate=2024-12-04, orderName='Paneer', OrderID=115, orderQuantity=12, orderType=Pending, orderCustomerName=Naim}
+Orders{orderDate=2024-12-05, orderName='Condensed Milk', OrderID=116, orderQuantity=12, orderType=Fulfilled, orderCustomerName=Naim}
+Orders{orderDate=2024-12-01, orderName='Milk', OrderID=112, orderQuantity=12, orderType=Pending, orderCustomerName=Rahim}
+Orders{orderDate=2024-12-02, orderName='Cheese', OrderID=113, orderQuantity=12, orderType=Fulfilled, orderCustomerName=Karim}
+Orders{orderDate=2024-12-03, orderName='Butter', OrderID=114, orderQuantity=12, orderType=Fulfilled, orderCustomerName=Salim}
+Orders{orderDate=2024-12-04, orderName='Paneer', OrderID=115, orderQuantity=12, orderType=Pending, orderCustomerName=Naim}
+Orders{orderDate=2024-12-05, orderName='Condensed Milk', OrderID=116, orderQuantity=12, orderType=Fulfilled, orderCustomerName=Naim}
+Orders{orderDate=2024-12-06, orderName='Paneer', OrderID=77, orderQuantity=1, orderType=Pending, orderCustomerName=Rahim}
+Orders{orderDate=2024-12-01, orderName='Cheese', OrderID=24, orderQuantity=1, orderType=Pending, orderCustomerName=Rahim}

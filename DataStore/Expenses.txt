@@ -1,0 +1,14 @@
+Year: 2024, Month: January, Amount: 350000.0
+Year: 2024, Month: February, Amount: 350000.0
+Year: 2024, Month: March, Amount: 350000.0
+Year: 2024, Month: April, Amount: 350000.0
+Year: 2024, Month: May, Amount: 350000.0
+Year: 2024, Month: June, Amount: 350000.0
+Year: 2024, Month: July, Amount: 350000.0
+Year: 2024, Month: August, Amount: 350000.0
+Year: 2024, Month: September, Amount: 350000.0
+Year: 2024, Month: October, Amount: 350000.0
+Year: 2024, Month: November, Amount: 350000.0
+Year: 2024, Month: December, Amount: 350000.0
+
+

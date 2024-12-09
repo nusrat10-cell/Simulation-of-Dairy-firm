@@ -1,0 +1,6 @@
+CustomerID=1234, CustomerName='Rahim', CustomerAddress='IUB', CustomerNumber=1928682961, ItemName='Milk', OrderQuantity=12, TotalPrice=528
+CustomerID=1237, CustomerName='Naim', CustomerAddress='IUB', CustomerNumber=1928682964, ItemName='Paneer', OrderQuantity=12, TotalPrice=528
+CustomerID=1234, CustomerName='Rahim', CustomerAddress='IUB', CustomerNumber=1928682961, ItemName='Milk', OrderQuantity=12, TotalPrice=528
+CustomerID=1237, CustomerName='Naim', CustomerAddress='IUB', CustomerNumber=1928682964, ItemName='Paneer', OrderQuantity=12, TotalPrice=528
+CustomerID=1234, CustomerName='Rahim', CustomerAddress='IUB', CustomerNumber=1928682961, ItemName='Milk', OrderQuantity=12, TotalPrice=528
+CustomerID=1237, CustomerName='Naim', CustomerAddress='IUB', CustomerNumber=1928682964, ItemName='Paneer', OrderQuantity=12, TotalPrice=528

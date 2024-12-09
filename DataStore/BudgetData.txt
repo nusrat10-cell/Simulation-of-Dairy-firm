@@ -1,0 +1,7 @@
+name: Marketing, Allocation%: 10.0, Amount: 50000.0
+name: Operations, Allocation%: 10.0, Amount: 50000.0
+name: Transportation, Allocation%: 10.0, Amount: 50000.0
+name: Development, Allocation%: 10.0, Amount: 50000.0
+name: Processing, Allocation%: 10.0, Amount: 50000.0
+name: Labor, Allocation%: 25.0, Amount: 125000.0
+name: Utilities, Allocation%: 25.0, Amount: 125000.0
