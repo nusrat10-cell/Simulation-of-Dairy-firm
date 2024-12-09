@@ -22,8 +22,7 @@
         <columns>
           <TableColumn fx:id="productNameTC" prefWidth="84.79998779296875" text="product name" />
           <TableColumn fx:id="productIdTC" prefWidth="81.60003662109375" text="product id" />
-            <TableColumn fx:id="customerNameTC" prefWidth="95.199951171875" text="customer name" />
-            <TableColumn fx:id="returnReasonTC" prefWidth="121.5999755859375" text="reason for return" />
+            <TableColumn fx:id="returnReasonTC" prefWidth="214.39999999999998" text="reason for return" />
         </columns>
       </TableView>
       <ComboBox fx:id="selectProductCB" layoutX="23.0" layoutY="277.0" prefWidth="150.0" promptText="select product" />

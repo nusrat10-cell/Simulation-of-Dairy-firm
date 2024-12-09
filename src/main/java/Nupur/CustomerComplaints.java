@@ -1,14 +1,20 @@
+package Nupur;
+
+import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class CustomerComplaints
 {
 
     @javafx.fxml.FXML
-    private TableColumn productTC;
+    private TableColumn<complaintsClass,String> productTC;
     @javafx.fxml.FXML
     private TableView complaintsTV;
     @javafx.fxml.FXML
-    private TableColumn customernameTC;
+    private TableColumn<complaintsClass,String> customernameTC;
     @javafx.fxml.FXML
-    private TableColumn complaintsTC;
+    private TableColumn<complaintsClass,String> complaintsTC;
 
     @javafx.fxml.FXML
     public void initialize() {

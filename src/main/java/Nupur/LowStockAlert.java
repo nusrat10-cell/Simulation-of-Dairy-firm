@@ -1,17 +1,25 @@
+package Nupur;
+
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class LowStockAlert
 {
     @javafx.fxml.FXML
     private TableView lowStockAlertTV;
     @javafx.fxml.FXML
-    private TableColumn productNameTC;
+    private TableColumn<expiryDateModelClass,String> productNameTC;
     @javafx.fxml.FXML
-    private ComboBox selectProductCB;
+    private ComboBox<String> selectProductCB;
     @javafx.fxml.FXML
-    private ComboBox chooseOptionCB;
+    private ComboBox<String> chooseOptionCB;
     @javafx.fxml.FXML
-    private TableColumn currentStockTC;
+    private TableColumn<expiryDateModelClass,Integer> currentStockTC;
     @javafx.fxml.FXML
-    private TableColumn minimumStockTC;
+    private TableColumn<expiryDateModelClass,Integer> minimumStockTC;
     @javafx.fxml.FXML
     private Label label;
 

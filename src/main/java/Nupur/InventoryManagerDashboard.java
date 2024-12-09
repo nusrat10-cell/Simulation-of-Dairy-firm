@@ -1,3 +1,7 @@
+package Nupur;
+
+import javafx.event.ActionEvent;
+
 public class InventoryManagerDashboard
 {
     @javafx.fxml.FXML

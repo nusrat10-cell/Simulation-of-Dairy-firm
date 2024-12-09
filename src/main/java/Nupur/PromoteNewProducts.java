@@ -1,3 +1,5 @@
+import javafx.event.ActionEvent;
+
 public class PromoteNewProducts
 {
     @javafx.fxml.FXML

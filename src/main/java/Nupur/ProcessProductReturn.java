@@ -1,15 +1,22 @@
+package Nupur;
+
+import javafx.event.ActionEvent;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class ProcessProductReturn
 {
     @javafx.fxml.FXML
     private TableView productReturnTV;
     @javafx.fxml.FXML
-    private TableColumn productNameTC;
+    private TableColumn<productReturnModelClass,String> productNameTC;
     @javafx.fxml.FXML
     private RadioButton rejectRB;
     @javafx.fxml.FXML
-    private TableColumn returnidTC;
+    private TableColumn<productReturnModelClass,Integer> returnidTC;
     @javafx.fxml.FXML
-    private TableColumn returnReasonTC;
+    private TableColumn<productReturnModelClass,String> returnReasonTC;
     @javafx.fxml.FXML
     private RadioButton approveRB;
 

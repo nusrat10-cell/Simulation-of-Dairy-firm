@@ -36,6 +36,6 @@
             <TableColumn fx:id="purchaseQuantityTC" prefWidth="126.39990234375" text="purchase quantity" />
         </columns>
       </TableView>
-      <Button fx:id="backButton" layoutX="661.0" layoutY="434.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="661.0" layoutY="434.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>
