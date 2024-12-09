@@ -10,8 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user4.ManageProductReturns">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.ManageProductReturns">
    <children>
       <Text layoutX="251.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Returns">
          <font>
@@ -19,18 +18,18 @@
          </font>
       </Text>
       <Line endX="100.0" layoutX="315.0" layoutY="45.0" startX="-100.0" />
-      <TableView layoutX="23.0" layoutY="65.0" prefHeight="200.0" prefWidth="382.0">
+      <TableView fx:id="productReturnTV" layoutX="23.0" layoutY="65.0" prefHeight="200.0" prefWidth="382.0">
         <columns>
-          <TableColumn prefWidth="84.79998779296875" text="product name" />
-          <TableColumn prefWidth="81.60003662109375" text="product id" />
-            <TableColumn prefWidth="95.199951171875" text="customer name" />
-            <TableColumn prefWidth="121.5999755859375" text="reason for return" />
+          <TableColumn fx:id="productNameTC" prefWidth="84.79998779296875" text="product name" />
+          <TableColumn fx:id="productIdTC" prefWidth="81.60003662109375" text="product id" />
+            <TableColumn fx:id="customerNameTC" prefWidth="95.199951171875" text="customer name" />
+            <TableColumn fx:id="returnReasonTC" prefWidth="121.5999755859375" text="reason for return" />
         </columns>
       </TableView>
-      <ComboBox layoutX="23.0" layoutY="277.0" prefWidth="150.0" promptText="select product" />
-      <Label layoutX="23.0" layoutY="312.0" prefHeight="18.0" prefWidth="184.0" text="Label" />
-      <Button layoutX="286.0" layoutY="330.0" mnemonicParsing="false" text="confirm action" />
-      <ComboBox layoutX="251.0" layoutY="277.0" prefHeight="26.0" prefWidth="240.0" promptText="choose action" />
-      <Button layoutX="512.0" layoutY="356.0" mnemonicParsing="false" text="Back" />
+      <ComboBox fx:id="selectProductCB" layoutX="23.0" layoutY="277.0" prefWidth="150.0" promptText="select product" />
+      <Label fx:id="label" layoutX="23.0" layoutY="312.0" prefHeight="18.0" prefWidth="184.0" text="Label" />
+      <Button layoutX="286.0" layoutY="330.0" mnemonicParsing="false" onAction="#confirmActionButton" text="confirm action" />
+      <ComboBox fx:id="chooseActionTC" layoutX="251.0" layoutY="277.0" prefHeight="26.0" prefWidth="240.0" promptText="choose action" />
+      <Button layoutX="512.0" layoutY="356.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>
