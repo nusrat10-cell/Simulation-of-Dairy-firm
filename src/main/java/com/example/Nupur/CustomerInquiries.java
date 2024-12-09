@@ -1,6 +1,5 @@
-package Nupur;
+package com.example.Nupur;
 
-import Nupur.inquiryClass;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;

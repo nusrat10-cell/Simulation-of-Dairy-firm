@@ -1,4 +1,4 @@
-package Nupur;
+package com.example.Nupur;
 
 import java.time.LocalDate;
 
@@ -6,14 +6,11 @@ public class expiryDateModelClass {
     public String productName;
     public Integer currentStock;
     public LocalDate expiryDate;
-    public Integer minimumStock;
 
-    public Integer getMinimumStock() {
-        return minimumStock;
-    }
-
-    public void setMinimumStock(Integer minimumStock) {
-        this.minimumStock = minimumStock;
+    public expiryDateModelClass(String productName, Integer currentStock, LocalDate expiryDate) {
+        this.productName = productName;
+        this.currentStock = currentStock;
+        this.expiryDate = expiryDate;
     }
 
     public String getProductName() {
@@ -24,18 +21,6 @@ public class expiryDateModelClass {
         this.productName = productName;
     }
 
-    public LocalDate getExpiryDate() {
-        return expiryDate;
-    }
-
-    public expiryDateModelClass(Integer minimumStock) {
-        this.minimumStock = minimumStock;
-    }
-
-    public void setExpiryDate(LocalDate expiryDate) {
-        this.expiryDate = expiryDate;
-    }
-
     public Integer getCurrentStock() {
         return currentStock;
     }
@@ -44,10 +29,12 @@ public class expiryDateModelClass {
         this.currentStock = currentStock;
     }
 
-    public expiryDateModelClass(String productName, LocalDate expiryDate, Integer currentStock) {
-        this.productName = productName;
+    public LocalDate getExpiryDate() {
+        return expiryDate;
+    }
+
+    public void setExpiryDate(LocalDate expiryDate) {
         this.expiryDate = expiryDate;
-        this.currentStock = currentStock;
     }
 
     @Override
@@ -56,7 +43,6 @@ public class expiryDateModelClass {
                 "productName='" + productName + '\'' +
                 ", currentStock=" + currentStock +
                 ", expiryDate=" + expiryDate +
-                ", minimumStock=" + minimumStock +
                 '}';
     }
 }

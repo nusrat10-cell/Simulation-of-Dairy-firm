@@ -1,4 +1,4 @@
-package Nupur;
+package com.example.Nupur;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
@@ -6,31 +6,29 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-import java.time.LocalDate;
-
-public class ManageInventoryLevel
+public class ProperStorage
 {
     @javafx.fxml.FXML
-    private TableView inventoryTV;
-    @javafx.fxml.FXML
-    private TableColumn<inventoryModelClass,Integer> stockLevelTC;
-    @javafx.fxml.FXML
-    private TableColumn<inventoryModelClass,String> productNameTC;
+    private TableColumn<storageconditionClass, Double> temperatureTC;
     @javafx.fxml.FXML
     private ComboBox<String> selectProductCB;
     @javafx.fxml.FXML
-    private TableColumn<inventoryModelClass,Integer> minimumStockTC;
+    private ComboBox<String> takeActionCB;
     @javafx.fxml.FXML
-    private TableColumn<inventoryModelClass, LocalDate> expiryDateTC;
+    private TableView properStorageTV;
+    @javafx.fxml.FXML
+    private TableColumn<storageconditionClass,String> statusTC;
     @javafx.fxml.FXML
     private Label label;
+    @javafx.fxml.FXML
+    private TableColumn<storageconditionClass,Double> humidityTC;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void restockButton(ActionEvent actionEvent) {
+    public void logActionButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
