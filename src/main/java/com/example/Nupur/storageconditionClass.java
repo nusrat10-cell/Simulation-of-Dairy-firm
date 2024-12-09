@@ -1,4 +1,4 @@
-package Nupur;
+package com.example.Nupur;
 
 public class storageconditionClass {
     public double temperature;

@@ -1,4 +1,4 @@
-package Nupur;
+package com.example.Nupur;
 
 public class feedbackModelClass {
     public String customerName;

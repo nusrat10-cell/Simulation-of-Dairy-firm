@@ -1,3 +1,5 @@
+package com.example.Nupur;
+
 import javafx.event.ActionEvent;
 
 public class PromoteNewProducts
