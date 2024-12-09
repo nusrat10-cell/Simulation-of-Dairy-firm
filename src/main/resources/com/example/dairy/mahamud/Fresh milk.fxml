@@ -4,19 +4,21 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.FreshMilk">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.FreshMilk">
    <children>
-      <Button layoutX="7.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
-      <ComboBox layoutX="14.0" layoutY="58.0" prefWidth="150.0" promptText="Refrigeration Stutus " />
-      <TableView layoutX="27.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+      <Button layoutX="7.0" layoutY="14.0" mnemonicParsing="false" onAction="#fmbackbuttonfx" text="Back" />
+      <ComboBox fx:id="fmRefrigerationcombobxfx" layoutX="14.0" layoutY="58.0" prefWidth="150.0" promptText="Refrigeration Stutus " />
+      <TableView fx:id="fmtablefx" layoutX="27.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="tempareture" />
-          <TableColumn prefWidth="75.0" text="stutus" />
+          <TableColumn fx:id="fmtempareturecollumfx" prefWidth="75.0" text="tempareture" />
+          <TableColumn fx:id="fmstutuscollumfx" prefWidth="75.0" text="stutus" />
         </columns>
       </TableView>
-      <Button layoutX="69.0" layoutY="323.0" mnemonicParsing="false" text="Strat Collection" />
+      <Button layoutX="69.0" layoutY="323.0" mnemonicParsing="false" onAction="#fmstartcollectionbuttonfx" text="Strat Collection" />
+      <TextField fx:id="fmstutustextfieldfx" layoutX="203.0" layoutY="58.0" text="stutus" />
+      <TextField fx:id="fmtempareturetextfieldfx" layoutX="204.0" layoutY="14.0" text="tempareture" />
    </children>
 </AnchorPane>

@@ -6,14 +6,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.MilkSeperation">
    <children>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
-      <ComboBox layoutX="21.0" layoutY="61.0" prefWidth="150.0" promptText="milk componant" />
-      <ComboBox layoutX="21.0" layoutY="107.0" prefWidth="150.0" promptText="milk type " />
-      <TextField layoutX="22.0" layoutY="156.0" text="amount of milk" />
-      <Label layoutX="252.0" layoutY="173.0" text="massage " />
-      <Button layoutX="103.0" layoutY="227.0" mnemonicParsing="false" text="Run Seperation" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#msbackbuttonfx" text="Back" />
+      <ComboBox fx:id="msmilkcomponantcomboboxfx" layoutX="21.0" layoutY="61.0" prefWidth="150.0" promptText="milk componant" />
+      <ComboBox fx:id="msmilktypecomboboxfx" layoutX="21.0" layoutY="107.0" prefWidth="150.0" promptText="milk type " />
+      <TextField fx:id="msamountofmilktextfieldfx" layoutX="22.0" layoutY="156.0" text="amount of milk" />
+      <Label fx:id="mslabelmassagefx" layoutX="252.0" layoutY="173.0" text="massage " />
+      <Button layoutX="103.0" layoutY="227.0" mnemonicParsing="false" onAction="#msRunSeperationbuttonfx" text="Run Seperation" />
    </children>
 </AnchorPane>

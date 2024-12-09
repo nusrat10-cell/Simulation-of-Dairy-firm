@@ -5,12 +5,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.PasteurizeMilk">
    <children>
-      <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" text="Back" />
-      <ComboBox layoutX="34.0" layoutY="80.0" prefWidth="150.0" promptText="type of milk" />
-      <Label layoutX="55.0" layoutY="159.0" prefHeight="18.0" prefWidth="150.0" text="tempareture 72 c" />
-      <Button layoutX="97.0" layoutY="219.0" mnemonicParsing="false" text="Finish " />
+      <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#pmbckbuttonfx" text="Back" />
+      <ComboBox fx:id="pmmilktypecomboxfx" layoutX="34.0" layoutY="80.0" prefWidth="150.0" promptText="type of milk" />
+      <Label fx:id="pmmassagefxlabel" layoutX="55.0" layoutY="159.0" prefHeight="18.0" prefWidth="150.0" text="tempareture 72 c" />
+      <Button layoutX="97.0" layoutY="219.0" mnemonicParsing="false" onAction="#pmfinishfx" text="Finish " />
    </children>
 </AnchorPane>
