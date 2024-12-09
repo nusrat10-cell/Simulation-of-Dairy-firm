@@ -8,25 +8,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.PaymentManagement">
    <children>
-      <TextField layoutX="75.0" layoutY="42.0" />
-      <TextField layoutX="75.0" layoutY="108.0" />
+      <TextField fx:id="pmnametextfieldfx" layoutX="75.0" layoutY="42.0" />
+      <TextField fx:id="pmamounttextfieldfx" layoutX="75.0" layoutY="108.0" />
       <Text layoutX="14.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="name" />
       <Text layoutX="14.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="amount" />
-      <DatePicker layoutX="109.0" layoutY="180.0" />
+      <DatePicker fx:id="pmdatefx" layoutX="109.0" layoutY="180.0" />
       <Text layoutX="20.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paymentdate" />
-      <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" text="back" />
-      <Button layoutX="44.0" layoutY="256.0" mnemonicParsing="false" text="Record payment" />
-      <TableView layoutX="309.0" layoutY="68.0" prefHeight="200.0" prefWidth="258.0">
+      <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#pmbckbutton" text="back" />
+      <Button layoutX="44.0" layoutY="256.0" mnemonicParsing="false" onAction="#pmrecordpaymentbuttonfx" text="Record payment" />
+      <TableView fx:id="pmtablefx" layoutX="309.0" layoutY="68.0" prefHeight="200.0" prefWidth="258.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="name" />
-          <TableColumn prefWidth="75.0" text="date" />
-            <TableColumn prefWidth="75.0" text="amount" />
+          <TableColumn fx:id="pmnamecollumfx" prefWidth="75.0" text="name" />
+          <TableColumn fx:id="pmdatecollumfx" prefWidth="75.0" text="date" />
+            <TableColumn fx:id="pmamountcollumfx" prefWidth="75.0" text="amount" />
         </columns>
       </TableView>
-      <Button layoutX="456.0" layoutY="292.0" mnemonicParsing="false" text="Clear payment" />
-      <Button layoutX="269.0" layoutY="292.0" mnemonicParsing="false" text="save payment" />
+      <Button layoutX="456.0" layoutY="292.0" mnemonicParsing="false" onAction="#pmclearpaymentbuttonfx" text="Clear payment" />
+      <Button layoutX="269.0" layoutY="292.0" mnemonicParsing="false" onAction="#pmsavepaymentbuttonfx" text="save payment" />
    </children>
 </AnchorPane>
