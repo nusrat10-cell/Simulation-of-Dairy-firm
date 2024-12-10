@@ -9,18 +9,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User8.PendingOrderList">
    <children>
-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
       <Text layoutX="232.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending Order List" underline="true">
          <font>
             <Font size="25.0" />
          </font>
       </Text>
-      <TableView layoutX="119.0" layoutY="178.0" prefHeight="297.0" prefWidth="432.0">
+      <TableView fx:id="pendingOrderListTable" layoutX="119.0" layoutY="178.0" prefHeight="297.0" prefWidth="432.0">
         <columns>
-          <TableColumn prefWidth="119.99999237060547" text="Order Id" />
-          <TableColumn prefWidth="106.66664123535156" text="Product  Name" />
-            <TableColumn prefWidth="89.99993896484375" text="Quantity" />
-            <TableColumn prefWidth="113.99996948242188" text="Status" />
+          <TableColumn fx:id="OrderIdTableview" prefWidth="119.99999237060547" text="Order Id" />
+          <TableColumn fx:id="productNameTableview" prefWidth="106.66664123535156" text="Product  Name" />
+            <TableColumn fx:id="quantityTableview" prefWidth="89.99993896484375" text="Quantity" />
+            <TableColumn fx:id="statusTableview" prefWidth="113.99996948242188" text="Status" />
         </columns>
       </TableView>
    </children>

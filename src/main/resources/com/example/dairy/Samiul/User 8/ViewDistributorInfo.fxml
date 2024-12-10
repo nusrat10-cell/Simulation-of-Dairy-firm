@@ -9,17 +9,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User8.ViewDistributorInfo">
    <children>
-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
       <Text layoutX="221.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Distributor Info" underline="true">
          <font>
             <Font size="25.0" />
          </font>
       </Text>
-      <TableView layoutX="103.0" layoutY="171.0" prefHeight="257.0" prefWidth="463.0">
+      <TableView fx:id="distributorInfoTable" layoutX="103.0" layoutY="171.0" prefHeight="257.0" prefWidth="463.0">
         <columns>
-          <TableColumn prefWidth="99.33330535888672" text="Name" />
-          <TableColumn prefWidth="122.66670227050781" text="Number" />
-            <TableColumn prefWidth="241.33328247070312" text="Email" />
+          <TableColumn fx:id="nameTableview" prefWidth="99.33330535888672" text="Name" />
+          <TableColumn fx:id="numberTableview" prefWidth="122.66670227050781" text="Number" />
+            <TableColumn fx:id="emailTableview" prefWidth="241.33328247070312" text="Email" />
         </columns>
       </TableView>
    </children>

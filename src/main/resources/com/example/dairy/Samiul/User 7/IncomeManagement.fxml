@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.IncomeManagement">
    <children>
-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
       <Text layoutX="217.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income Management" underline="true">
          <font>
             <Font size="25.0" />
@@ -29,8 +29,8 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Label layoutX="236.0" layoutY="179.0" text="Label" />
-      <Label layoutX="245.0" layoutY="230.0" text="Label" />
-      <Label layoutX="231.0" layoutY="277.0" text="Label" />
+      <Label fx:id="totalSalesLabel" layoutX="236.0" layoutY="179.0" text="Label" />
+      <Label fx:id="campaignCostLabel" layoutX="245.0" layoutY="230.0" text="Label" />
+      <Label fx:id="profitLabel" layoutX="231.0" layoutY="277.0" text="Label" />
    </children>
 </AnchorPane>
