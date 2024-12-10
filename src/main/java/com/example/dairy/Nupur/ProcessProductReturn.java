@@ -1,34 +1,31 @@
-package com.example.Nupur;
+package com.example.dairy.Nupur;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class ManageProductReturns
+public class ProcessProductReturn
 {
     @javafx.fxml.FXML
     private TableView productReturnTV;
     @javafx.fxml.FXML
     private TableColumn<productReturnModelClass,String> productNameTC;
     @javafx.fxml.FXML
-    private ComboBox<String> selectProductCB;
+    private RadioButton rejectRB;
+    @javafx.fxml.FXML
+    private TableColumn<productReturnModelClass,Integer> returnidTC;
     @javafx.fxml.FXML
     private TableColumn<productReturnModelClass,String> returnReasonTC;
     @javafx.fxml.FXML
-    private TableColumn<productReturnModelClass,Integer> productIdTC;
-    @javafx.fxml.FXML
-    private Label label;
-    @javafx.fxml.FXML
-    private ComboBox<String> chooseActionTC;
+    private RadioButton approveRB;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void confirmActionButton(ActionEvent actionEvent) {
+    public void updateInventoryButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

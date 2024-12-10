@@ -1,4 +1,4 @@
-package com.example.Nupur;
+package com.example.dairy.Nupur;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;

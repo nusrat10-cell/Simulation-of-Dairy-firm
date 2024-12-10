@@ -1,4 +1,4 @@
-package com.example.Nupur;
+package com.example.dairy.Nupur;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
@@ -10,7 +10,7 @@ public class CustomerComplaints
     @javafx.fxml.FXML
     private TableColumn<complaintsClass,String> productTC;
     @javafx.fxml.FXML
-    private TableView complaintsTV;
+    private TableView<complaintsClass> complaintsTV;
     @javafx.fxml.FXML
     private TableColumn<complaintsClass,String> customernameTC;
     @javafx.fxml.FXML
@@ -18,6 +18,7 @@ public class CustomerComplaints
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @Deprecated
