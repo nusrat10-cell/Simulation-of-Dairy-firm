@@ -5,36 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3398d27-4879-4339-a04b-f5158c2cda97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/SalesDashboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/CustomerDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/BudgetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/BudgetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/CollectionData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PaymentmanagementModelClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimizationModelClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/freshmilkModelClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/quantityModelClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/CampaignManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/CampaignManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/IncomeManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/IncomeManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/InhouseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/InhouseOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/OrderApprovalPortal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/OrderApprovalPortal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/OrderList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/OrderList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/ProductManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/ReportProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/ReportProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/SalesAndMarketingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User7/SalesAndMarketingManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/BuyingPortal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/BuyingPortal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/CustomerQualityReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/CustomerQualityReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/PendingOrderList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/PendingOrderList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/ReportProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/ReportProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/ViewCampaign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/ViewCampaign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/ViewDistributorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/ViewDistributorInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/ViewProductDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Samiul/User8/ViewProductDescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Samiul/User 7/ProductManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Samiul/User 7/ProductManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Samiul/User 7/ReportProblem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Samiul/User 7/ReportProblem.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Samiul/User 7/sales and marketing manager dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Samiul/User 7/sales and marketing manager dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Samiul/User 8/customer dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Samiul/User 8/customer dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/FreshMilk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/FreshMilk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkReception.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkReception.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkSeperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkSeperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/Packaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/Packaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PasteurizeMilk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PasteurizeMilk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PaymentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PaymentManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ProductionRecords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ProductionRecords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/QualityControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/QualityControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ReportIssues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ReportIssues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/SupplierManagemen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/SupplierManagemen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Fresh milk.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Fresh milk.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Route Optimization.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Route Optimization.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +82,7 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/oop project/Simulation-of-Dairy-firm",
     "node.js.detected.package.eslint": "true",

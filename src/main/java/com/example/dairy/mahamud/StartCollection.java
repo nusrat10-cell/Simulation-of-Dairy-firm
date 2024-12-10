@@ -1,28 +1,80 @@
 package com.example.dairy.mahamud;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
+import java.io.IOException;
+import java.time.LocalDate;
 
-public class StartCollection
-{
-    @javafx.fxml.FXML
+public class StartCollection {
+    @FXML
     private DatePicker datefx;
-    @javafx.fxml.FXML
+    @FXML
     private TextField farmernamefx;
-    @javafx.fxml.FXML
+    @FXML
     private TextField quantityfx;
 
-    @javafx.fxml.FXML
+    private ObservableList<CollectionData> collectionData = FXCollections.observableArrayList();
+
+    @FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void confirmcollectionbuttonfx(ActionEvent actionEvent) {
+        String farmerName = farmernamefx.getText();
+        String quantityStr = quantityfx.getText();
+        LocalDate date = datefx.getValue();
+
+        if (farmerName.isEmpty() || quantityStr.isEmpty() || date == null) {
+            // Handle validation error
+            System.out.println("Please fill in all fields.");
+            return;
+        }
+
+        try {
+            double quantity = Double.parseDouble(quantityStr);
+
+            CollectionData data = new CollectionData(farmerName, quantity, date);
+            collectionData.add(data);
+
+            // For testing, print the collection data
+            for (CollectionData entry : collectionData) {
+                System.out.println(entry);
+            }
+
+            // Clear the fields after submission
+            farmernamefx.clear();
+            quantityfx.clear();
+            datefx.setValue(null);
+
+        } catch (NumberFormatException e) {
+            // Handle parsing error
+            System.out.println("Please enter a valid quantity.");
+        }
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void backbuttonfx(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Milk Collector.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+        // Handle back button action
+        System.out.println("Back button clicked.");
     }
 }

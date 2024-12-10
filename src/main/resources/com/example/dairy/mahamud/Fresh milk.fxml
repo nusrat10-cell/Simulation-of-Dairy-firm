@@ -18,7 +18,6 @@
         </columns>
       </TableView>
       <Button layoutX="69.0" layoutY="323.0" mnemonicParsing="false" onAction="#fmstartcollectionbuttonfx" text="Strat Collection" />
-      <TextField fx:id="fmstutustextfieldfx" layoutX="203.0" layoutY="58.0" text="stutus" />
       <TextField fx:id="fmtempareturetextfieldfx" layoutX="204.0" layoutY="14.0" text="tempareture" />
    </children>
 </AnchorPane>

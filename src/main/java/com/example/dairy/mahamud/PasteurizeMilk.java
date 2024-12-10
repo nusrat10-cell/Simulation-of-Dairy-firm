@@ -1,5 +1,10 @@
 package com.example.dairy.mahamud;
 
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+
+import java.awt.event.ActionEvent;
+
 public class PasteurizeMilk
 {
     @javafx.fxml.FXML

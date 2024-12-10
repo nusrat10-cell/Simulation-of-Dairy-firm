@@ -1,5 +1,7 @@
 package com.example.dairy.mahamud;
 
+import javafx.scene.control.TableColumn;
+
 public class RouteOptimization
 {
     @javafx.fxml.FXML
@@ -15,9 +17,11 @@ public class RouteOptimization
     @javafx.fxml.FXML
     private TableColumn ronametablecollumfx;
     @javafx.fxml.FXML
-    private TableColumn rototaltablecollumfx;
-    @javafx.fxml.FXML
     private TableView rotablefx;
+    @javafx.fxml.FXML
+    private TextField rodestinationfx;
+    @javafx.fxml.FXML
+    private TableColumn rodestinationtablecollumfx;
 
     @javafx.fxml.FXML
     public void initialize() {
