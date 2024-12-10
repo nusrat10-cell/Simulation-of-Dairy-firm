@@ -7,23 +7,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.OrderList">
    <children>
       <Text layoutX="281.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order List" underline="true">
          <font>
             <Font size="25.0" />
          </font>
       </Text>
-      <TableView layoutX="35.0" layoutY="95.0" prefHeight="435.0" prefWidth="599.0">
+      <TableView fx:id="orderListTable" layoutX="35.0" layoutY="95.0" prefHeight="435.0" prefWidth="599.0">
         <columns>
-          <TableColumn prefWidth="90.66668319702148" text="Customer id" />
-          <TableColumn prefWidth="83.33336639404297" text="Name" />
-            <TableColumn prefWidth="113.33332824707031" text="Phone number" />
-            <TableColumn prefWidth="103.33331298828125" text="Product name" />
-            <TableColumn text="Quantity" />
-            <TableColumn prefWidth="125.99990844726562" text="Date" />
+          <TableColumn fx:id="customerIdTableview" prefWidth="90.66668319702148" text="Customer id" />
+          <TableColumn fx:id="customerNameTableview" prefWidth="83.33336639404297" text="Name" />
+            <TableColumn fx:id="numberTableview" prefWidth="113.33332824707031" text="Phone number" />
+            <TableColumn fx:id="productNameTableview" prefWidth="103.33331298828125" text="Product name" />
+            <TableColumn fx:id="quantityTableview" text="Quantity" />
+            <TableColumn fx:id="dateTableview" prefWidth="125.99990844726562" text="Date" />
         </columns>
       </TableView>
-      <Button layoutX="28.0" layoutY="26.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="28.0" layoutY="26.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

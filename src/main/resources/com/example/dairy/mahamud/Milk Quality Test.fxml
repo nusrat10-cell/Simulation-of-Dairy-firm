@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.MilkQualityTest">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.mahamud.MilkQualityTest">
    <children>
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#mqtbackbuttonfx" text="Back" />
       <TextField fx:id="mqtsampleidtextfieldfx" layoutX="14.0" layoutY="59.0" text="Sample ID" />
@@ -16,7 +16,6 @@
       <ComboBox fx:id="mqtqualitycomboboxfx" layoutX="24.0" layoutY="187.0" prefWidth="150.0" promptText="Quality" />
       <RadioButton fx:id="mqtpassradiobuttonfx" layoutX="55.0" layoutY="276.0" mnemonicParsing="false" text="Pass" />
       <RadioButton fx:id="mqtfailradiobuttonfx" layoutX="116.0" layoutY="276.0" mnemonicParsing="false" text="Fail" />
-      <Button layoutX="153.0" layoutY="327.0" mnemonicParsing="false" onAction="#mqtRejectbuttonfx" text="Reject" />
       <Button layoutX="57.0" layoutY="327.0" mnemonicParsing="false" onAction="#mqtprocedbuttonfx" text="Proceed" />
       <Label fx:id="mqtlabelmassagefx" layoutX="246.0" layoutY="360.0" prefHeight="18.0" prefWidth="214.0" text="Successfully  Pass " />
    </children>

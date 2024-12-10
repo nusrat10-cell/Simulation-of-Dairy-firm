@@ -10,18 +10,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User8.CustomerDashboard">
    <left>
       <VBox prefHeight="375.0" prefWidth="115.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="115.0" text="Buy here" />
-            <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="123.0" text="Distributer Information" textAlignment="CENTER" wrapText="true" />
-            <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="133.0" text="Pending orders" textAlignment="CENTER" wrapText="true" />
-            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="129.0" text="Product details" />
-            <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="157.0" text="View campaigns" textAlignment="CENTER" wrapText="true" />
-            <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="149.0" text="Customer quality" textAlignment="CENTER" wrapText="true" />
-            <Button mnemonicParsing="false" prefHeight="67.0" prefWidth="135.0" text="Invoice" />
-            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="115.0" text="Report Problem" />
+            <Button mnemonicParsing="false" onAction="#buyHere" prefHeight="57.0" prefWidth="115.0" text="Buy here" />
+            <Button mnemonicParsing="false" onAction="#distributorInformation" prefHeight="61.0" prefWidth="123.0" text="Distributer Information" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#pendingOrders" prefHeight="61.0" prefWidth="133.0" text="Pending orders" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#productDetails" prefHeight="58.0" prefWidth="129.0" text="Product details" />
+            <Button mnemonicParsing="false" onAction="#viewCampaigns" prefHeight="59.0" prefWidth="157.0" text="View campaigns" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#customerQuality" prefHeight="63.0" prefWidth="149.0" text="Customer quality" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#invoice" prefHeight="67.0" prefWidth="135.0" text="Invoice" />
+            <Button mnemonicParsing="false" onAction="#reportProblemCustomer" prefHeight="69.0" prefWidth="115.0" text="Report Problem" />
          </children>
       </VBox>
    </left>

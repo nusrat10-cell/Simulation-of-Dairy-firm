@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.milestone3.Dashboard2Controller">
+<AnchorPane prefHeight="400.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.ParvezHassan.Dashboard2Controller">
    <children>
       <Button layoutX="106.0" layoutY="131.0" mnemonicParsing="false" onAction="#budget_button" prefHeight="40.0" prefWidth="40.0" AnchorPane.bottomAnchor="229.0" AnchorPane.topAnchor="131.0" />
       <Button layoutX="200.0" layoutY="131.0" mnemonicParsing="false" onAction="#expenses_button" prefHeight="40.0" prefWidth="40.0" AnchorPane.bottomAnchor="229.0" AnchorPane.topAnchor="131.0" />

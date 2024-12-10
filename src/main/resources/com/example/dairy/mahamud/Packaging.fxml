@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairyfirmms3.Packaging">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.mahamud.Packaging">
    <children>
       <ComboBox fx:id="pProductTypecomboxfx" layoutX="134.0" layoutY="48.0" prefWidth="150.0" />
       <ComboBox fx:id="pquantitycomboxfx" layoutX="134.0" layoutY="147.0" prefWidth="150.0" />
