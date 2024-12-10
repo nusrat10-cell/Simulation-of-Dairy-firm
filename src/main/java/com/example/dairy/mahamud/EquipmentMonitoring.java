@@ -1,5 +1,12 @@
 package com.example.dairy.mahamud;
 
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
+import java.awt.event.ActionEvent;
+
 public class EquipmentMonitoring
 {
     @javafx.fxml.FXML

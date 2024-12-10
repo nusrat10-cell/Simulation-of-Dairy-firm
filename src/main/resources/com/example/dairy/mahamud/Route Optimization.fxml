@@ -19,8 +19,9 @@
           <TableColumn fx:id="roidtablecollumfx" prefWidth="75.0" text="id" />
           <TableColumn fx:id="ronametablecollumfx" prefWidth="75.0" text="name" />
             <TableColumn fx:id="roquantitytablecollumfx" prefWidth="75.0" text="quality" />
-            <TableColumn fx:id="rototaltablecollumfx" prefWidth="75.0" text="Total" />
+            <TableColumn fx:id="rodestinationtablecollumfx" prefWidth="75.0" text="destination" />
         </columns>
       </TableView>
+      <TextField fx:id="rodestinationfx" layoutX="35.0" layoutY="207.0" text="destination" />
    </children>
 </AnchorPane>

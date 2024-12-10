@@ -5,8 +5,6 @@ public class FreshMilk
     @javafx.fxml.FXML
     private TextField fmtempareturetextfieldfx;
     @javafx.fxml.FXML
-    private TextField fmstutustextfieldfx;
-    @javafx.fxml.FXML
     private ComboBox fmRefrigerationcombobxfx;
     @javafx.fxml.FXML
     private TableColumn fmstutuscollumfx;

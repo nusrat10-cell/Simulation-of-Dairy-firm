@@ -1,5 +1,11 @@
 package com.example.dairy.mahamud;
 
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
+import java.awt.event.ActionEvent;
+
 public class MilkQuantity
 {
     @javafx.fxml.FXML

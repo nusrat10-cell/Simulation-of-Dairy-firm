@@ -57,8 +57,15 @@ public class LogInController {
                 stage.setScene(new Scene(root));
                 stage.show();
                 verified =true;
-
-            }if (!verified) {
+            }
+            if (userID == 1234 && password.equals("1234") && designation.equals("Milk Collector")){
+                // Load Page 2
+                Parent root = FXMLLoader.load(getClass().getResource("Milk Collector.fxml"));
+                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
+                verified =true;
+            if (!verified) {
                 // Show error message
                 showError("Invalid credentials. Please try again.");
             }
