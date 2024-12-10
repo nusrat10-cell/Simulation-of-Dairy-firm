@@ -11,6 +11,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -36,29 +37,28 @@ public class StartCollection {
         LocalDate date = datefx.getValue();
 
         if (farmerName.isEmpty() || quantityStr.isEmpty() || date == null) {
-            // Handle validation error
+
             System.out.println("Please fill in all fields.");
             return;
         }
 
-        try {
+        try  {
             double quantity = Double.parseDouble(quantityStr);
 
             CollectionData data = new CollectionData(farmerName, quantity, date);
             collectionData.add(data);
 
-            // For testing, print the collection data
             for (CollectionData entry : collectionData) {
                 System.out.println(entry);
             }
 
-            // Clear the fields after submission
+
             farmernamefx.clear();
             quantityfx.clear();
             datefx.setValue(null);
 
         } catch (NumberFormatException e) {
-            // Handle parsing error
+
             System.out.println("Please enter a valid quantity.");
         }
     }
