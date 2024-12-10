@@ -1,35 +1,35 @@
 package com.example.dairy.mahamud;
 
 public class freshmilkModelClass {
-    private double quantity;
-    private  double tempareture;
+    private double temperature;
+    private String status;
 
-    public freshmilkModelClass(double quantity, double tempareture) {
-        this.quantity = quantity;
-        this.tempareture = tempareture;
+    public freshmilkModelClass(double temperature, String status) {
+        this.temperature = temperature;
+        this.status = status;
     }
 
-    public double getQuantity() {
-        return quantity;
+    public double getTemperature() {
+        return temperature;
     }
 
-    public void setQuantity(double quantity) {
-        this.quantity = quantity;
+    public void setTemperature(double temperature) {
+        this.temperature = temperature;
     }
 
-    public double getTempareture() {
-        return tempareture;
+    public String getStatus() {
+        return status;
     }
 
-    public void setTempareture(double tempareture) {
-        this.tempareture = tempareture;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override
     public String toString() {
-        return "freshmilkModelClass{" +
-                "quantity=" + quantity +
-                ", tempareture=" + tempareture +
+        return "MilkData{" +
+                "temperature=" + temperature +
+                ", status='" + status + '\'' +
                 '}';
     }
 }

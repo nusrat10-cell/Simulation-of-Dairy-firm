@@ -57,19 +57,19 @@ public class ExpiryDates
 
     }
 
-    @javafx.fxml.FXML
-    public void confirmActionButton(ActionEvent actionEvent) {
-        String selectedProduct = selectProductCB.getValue();
-        String selectedAction = chooseActionCB.getValue();
-
-        if (selectedProduct == null || selectedAction == null) {
-            showAlert("Error", "Please select a product and an action.", Alert.AlertType.ERROR);
-            return;
-        }
-
-
-
-    }
+//    @javafx.fxml.FXML
+//    public void confirmActionButton(ActionEvent actionEvent) {
+//        String selectedProduct = selectProductCB.getValue();
+//        String selectedAction = chooseActionCB.getValue();
+//
+//        if (selectedProduct == null || selectedAction == null) {
+//            showAlert("Error", "Please select a product and an action.", Alert.AlertType.ERROR);
+//            return;
+//        }
+//
+//
+//
+//    }
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) {

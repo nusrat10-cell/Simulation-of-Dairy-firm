@@ -4,8 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3398d27-4879-4339-a04b-f5158c2cda97" name="Changes" comment="class update 3">
+    <list default="true" id="a3398d27-4879-4339-a04b-f5158c2cda97" name="Changes" comment="class update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/QuantityData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/milkqualitytestModelClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ExpiryDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ExpiryDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/BudgetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/BudgetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/CombinedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/CombinedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Customers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Dashboard2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Dashboard2Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/DataStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/DataStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/ExpensesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/ExpensesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/InventoryManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/InventoryManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/OrderManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/OrderManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/ProfitAndLossController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/ProfitAndLossController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Transactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/Transactions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/FreshMilk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/FreshMilk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimizationModelClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/freshmilkModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/freshmilkModelClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/Budget.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/Budget.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/Dashboard2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/Dashboard2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/Expenses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/Expenses.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/InventoryManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/InventoryManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/LogIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/LogIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/OrderManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/OrderManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/ProfitAndLoss.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/ProfitAndLoss.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/ParvezHassan/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk Quality Test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk Quality Test.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Route Optimization.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Route Optimization.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +100,9 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/APPLE STORE/IdeaProjects/Midterm_sec2_2210968",
+    "last_opened_file_path": "C:/oop project/Simulation-of-Dairy-firm",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,13 +122,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a3398d27-4879-4339-a04b-f5158c2cda97" name="Changes" comment="class update" />
+      <changelist id="f3dd0d90-a238-43da-b2dc-1ed424774aab" name="Changes" comment="" />
+      <changelist id="0894e6d4-4d95-4c4c-9635-2ede4b6879ea" name="Changes" comment="" />
       <created>1733636393676</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733636393676</updated>
-      <workItem from="1733827351953" duration="5676000" />
-      <workItem from="1733841489056" duration="8051000" />
     </task>
     <task id="LOCAL-00001" summary="class update">
       <option name="closed" value="true" />
