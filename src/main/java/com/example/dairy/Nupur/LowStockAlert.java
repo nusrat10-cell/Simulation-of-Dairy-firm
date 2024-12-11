@@ -1,4 +1,4 @@
-package com.example.Nupur;
+package com.example.dairy.Nupur;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
@@ -6,22 +6,20 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-import java.time.LocalDate;
-
-public class ManageInventoryLevel
+public class LowStockAlert
 {
     @javafx.fxml.FXML
-    private TableView inventoryTV;
+    private TableView lowStockAlertTV;
     @javafx.fxml.FXML
-    private TableColumn<inventoryModelClass,Integer> stockLevelTC;
-    @javafx.fxml.FXML
-    private TableColumn<inventoryModelClass,String> productNameTC;
+    private TableColumn<expiryDateModelClass,String> productNameTC;
     @javafx.fxml.FXML
     private ComboBox<String> selectProductCB;
     @javafx.fxml.FXML
-    private TableColumn<inventoryModelClass,Integer> minimumStockTC;
+    private ComboBox<String> chooseOptionCB;
     @javafx.fxml.FXML
-    private TableColumn<inventoryModelClass, LocalDate> expiryDateTC;
+    private TableColumn<expiryDateModelClass,Integer> currentStockTC;
+    @javafx.fxml.FXML
+    private TableColumn<expiryDateModelClass,Integer> minimumStockTC;
     @javafx.fxml.FXML
     private Label label;
 
@@ -30,10 +28,14 @@ public class ManageInventoryLevel
     }
 
     @javafx.fxml.FXML
-    public void restockButton(ActionEvent actionEvent) {
+    public void takeActionButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void confirmButton(ActionEvent actionEvent) {
     }
 }
