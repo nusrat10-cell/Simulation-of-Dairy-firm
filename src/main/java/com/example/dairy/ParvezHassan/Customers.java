@@ -2,8 +2,9 @@ package com.example.dairy.ParvezHassan;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import java.io.Serializable;
 
-public class Customers {
+public class Customers implements Serializable{
     int customerID;
     String customerName;
     int customerNumber;

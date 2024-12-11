@@ -2,8 +2,9 @@ package com.example.dairy.ParvezHassan;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import java.io.Serializable;
 
-public class Inventory {
+public class Inventory implements Serializable{
     String product_name;
     int product_price;
     int product_stockLevel;

@@ -1,7 +1,8 @@
 package com.example.dairy.ParvezHassan;
 import java.time.LocalDate;
+import java.io.Serializable;
 
-    public class CombinedList {
+    public class CombinedList implements Serializable {
         // Attributes from Inventory
         private final String itemName;
         private final int itemPrice;
