@@ -3,9 +3,16 @@ package com.example.dairy.mahamud;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MilkQualityTest {
     @FXML
@@ -87,7 +94,14 @@ public class MilkQualityTest {
 
     @FXML
     public void mqtbackbuttonfx(ActionEvent actionEvent) {
-        // Handle back button action
-        System.out.println("Back button clicked.");
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Milk Collector.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            // Handle FXML loading error
+            e.printStackTrace();
+        }
     }
 }
