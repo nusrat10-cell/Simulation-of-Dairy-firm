@@ -23,7 +23,7 @@ public class MilkCollector
     @javafx.fxml.FXML
     public void mcstartcollectionbuttonfx(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("Start_Collection.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Start _Collection.fxml"));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();

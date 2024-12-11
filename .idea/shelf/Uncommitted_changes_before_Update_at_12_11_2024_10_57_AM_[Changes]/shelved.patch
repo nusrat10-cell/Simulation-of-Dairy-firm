@@ -1,0 +1,3072 @@
+Index: src/main/java/module-info.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>module com.example.dairy {\r\n    requires javafx.controls;\r\n    requires javafx.fxml;\r\n    requires java.desktop;\r\n\r\n\r\n    opens com.example.dairy to javafx.fxml;\r\n    exports com.example.dairy.mahamud;\r\n    opens com.example.dairy.mahamud to javafx.fxml;\r\n    opens com.example.dairy.Samiul.User7 to javafx.fxml;\r\n    opens com.example.dairy.Samiul.User8 to javafx.fxml;\r\n\r\n    exports com.example.dairy;\r\n\r\n\r\n    opens com.example.dairy.ParvezHassan to javafx.fxml, javafx.graphics;\r\n    exports com.example.dairy.ParvezHassan;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/module-info.java b/src/main/java/module-info.java
+--- a/src/main/java/module-info.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/module-info.java	(date 1733892738890)
+@@ -3,6 +3,14 @@
+     requires javafx.fxml;
+     requires java.desktop;
+ 
++<<<<<<< HEAD
++    exports com.example.dairy;
++    opens com.example.dairy to javafx.graphics;
++
++    exports com.example.dairy.Nupur;
++    opens com.example.dairy.Nupur to javafx.fxml;
++}
++=======
+ 
+     opens com.example.dairy to javafx.fxml;
+     exports com.example.dairy.mahamud;
+@@ -15,4 +23,5 @@
+ 
+     opens com.example.dairy.ParvezHassan to javafx.fxml, javafx.graphics;
+     exports com.example.dairy.ParvezHassan;
+-}
+\ No newline at end of file
++}
++>>>>>>> 9bc02a48fdd84a39b6db8b30a6ba4c38024277de
+Index: src/main/java/com/example/dairy/HelloApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy;\r\n\r\n\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Scene;\r\nimport javafx.stage.Stage;\r\n\r\n\r\nimport java.io.IOException;\r\n\r\npublic class HelloApplication extends Application {\r\n    @Override\r\n    public void start(Stage stage) throws IOException {\r\n        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(\"/com/example/dairy/mahamud/Start _Collection.fxml\"));\r\n        Scene scene = new Scene(fxmlLoader.load());\r\n        stage.setTitle(\"Hello!\");\r\n        stage.setScene(scene);\r\n        stage.show();\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        launch();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/HelloApplication.java b/src/main/java/com/example/dairy/HelloApplication.java
+--- a/src/main/java/com/example/dairy/HelloApplication.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/HelloApplication.java	(date 1733892981555)
+@@ -6,13 +6,12 @@
+ import javafx.scene.Scene;
+ import javafx.stage.Stage;
+ 
+-
+ import java.io.IOException;
+ 
+ public class HelloApplication extends Application {
+     @Override
+     public void start(Stage stage) throws IOException {
+-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/mahamud/Start _Collection.fxml"));
++        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
+         Scene scene = new Scene(fxmlLoader.load());
+         stage.setTitle("Hello!");
+         stage.setScene(scene);
+Index: src/main/java/com/example/Nupur/ManageInventoryLevel.java
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/ManageInventoryLevel.java b/src/main/java/com/example/Nupur/ManageInventoryLevel.java
+deleted file mode 100644
+--- a/src/main/java/com/example/Nupur/ManageInventoryLevel.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ /dev/null	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
+@@ -1,39 +0,0 @@
+-package com.example.Nupur;
+-
+-import javafx.event.ActionEvent;
+-import javafx.scene.control.ComboBox;
+-import javafx.scene.control.Label;
+-import javafx.scene.control.TableColumn;
+-import javafx.scene.control.TableView;
+-
+-import java.time.LocalDate;
+-
+-public class ManageInventoryLevel
+-{
+-    @javafx.fxml.FXML
+-    private TableView inventoryTV;
+-    @javafx.fxml.FXML
+-    private TableColumn<inventoryModelClass,Integer> stockLevelTC;
+-    @javafx.fxml.FXML
+-    private TableColumn<inventoryModelClass,String> productNameTC;
+-    @javafx.fxml.FXML
+-    private ComboBox<String> selectProductCB;
+-    @javafx.fxml.FXML
+-    private TableColumn<inventoryModelClass,Integer> minimumStockTC;
+-    @javafx.fxml.FXML
+-    private TableColumn<inventoryModelClass, LocalDate> expiryDateTC;
+-    @javafx.fxml.FXML
+-    private Label label;
+-
+-    @javafx.fxml.FXML
+-    public void initialize() {
+-    }
+-
+-    @javafx.fxml.FXML
+-    public void restockButton(ActionEvent actionEvent) {
+-    }
+-
+-    @javafx.fxml.FXML
+-    public void backButton(ActionEvent actionEvent) {
+-    }
+-}
+\ No newline at end of file
+Index: src/main/java/com/example/Nupur/FeedbackModule.java
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/FeedbackModule.java b/src/main/java/com/example/Nupur/FeedbackModule.java
+deleted file mode 100644
+--- a/src/main/java/com/example/Nupur/FeedbackModule.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ /dev/null	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
+@@ -1,34 +0,0 @@
+-package com.example.Nupur;
+-
+-import javafx.event.ActionEvent;
+-import javafx.scene.control.*;
+-
+-public class FeedbackModule
+-{
+-    @javafx.fxml.FXML
+-    private ComboBox<String> feedbackTypeCB;
+-    @javafx.fxml.FXML
+-    private TableColumn<feedbackModelClass,String> feedbackTypeTC;
+-    @javafx.fxml.FXML
+-    private TableColumn<feedbackModelClass,String> customerNameTC;
+-    @javafx.fxml.FXML
+-    private TextField customerNameTF;
+-    @javafx.fxml.FXML
+-    private TextArea feedbackTA;
+-    @javafx.fxml.FXML
+-    private TableColumn<feedbackModelClass,String> feedbackTC;
+-    @javafx.fxml.FXML
+-    private TableView feedbackTV;
+-
+-    @javafx.fxml.FXML
+-    public void initialize() {
+-    }
+-
+-    @javafx.fxml.FXML
+-    public void backButton(ActionEvent actionEvent) {
+-    }
+-
+-    @javafx.fxml.FXML
+-    public void generateTableButton(ActionEvent actionEvent) {
+-    }
+-}
+\ No newline at end of file
+Index: src/main/java/com/example/Nupur/ManageDispatchRequest.java
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/ManageDispatchRequest.java b/src/main/java/com/example/Nupur/ManageDispatchRequest.java
+deleted file mode 100644
+--- a/src/main/java/com/example/Nupur/ManageDispatchRequest.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ /dev/null	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
+@@ -1,39 +0,0 @@
+-package com.example.Nupur;
+-
+-import javafx.event.ActionEvent;
+-import javafx.scene.control.ComboBox;
+-import javafx.scene.control.DatePicker;
+-import javafx.scene.control.TableColumn;
+-import javafx.scene.control.TableView;
+-
+-public class ManageDispatchRequest
+-{
+-    @javafx.fxml.FXML
+-    private DatePicker dispatchDateDP;
+-    @javafx.fxml.FXML
+-    private ComboBox<String> selectProductsCB;
+-    @javafx.fxml.FXML
+-    private TableColumn<productDispatchmodelClass,String> productNameTC;
+-    @javafx.fxml.FXML
+-    private TableView dispatchTV;
+-    @javafx.fxml.FXML
+-    private TableColumn<productDispatchmodelClass,String> destinationTC;
+-    @javafx.fxml.FXML
+-    private TableColumn<productDispatchmodelClass,Integer> quantityTC;
+-    @javafx.fxml.FXML
+-    private ComboBox<String> logisticProviderCB;
+-    @javafx.fxml.FXML
+-    private TableColumn<productDispatchmodelClass,Integer>requestidTC;
+-
+-    @javafx.fxml.FXML
+-    public void initialize() {
+-    }
+-
+-    @javafx.fxml.FXML
+-    public void processButton(ActionEvent actionEvent) {
+-    }
+-
+-    @javafx.fxml.FXML
+-    public void dispatchButton(ActionEvent actionEvent) {
+-    }
+-}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User7/InhouseOrder.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User7;\r\n\r\npublic class InhouseOrder\r\n{\r\n    SalesAndMarketingManager user;\r\n    public void setter (SalesAndMarketingManager manager){\r\n        this.user = manager;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User7/InhouseOrder.java b/src/main/java/com/example/dairy/Samiul/User7/InhouseOrder.java
+--- a/src/main/java/com/example/dairy/Samiul/User7/InhouseOrder.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User7/InhouseOrder.java	(date 1733892738890)
+@@ -1,11 +1,60 @@
+ package com.example.dairy.Samiul.User7;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.*;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class InhouseOrder
+ {
+     SalesAndMarketingManager user;
++    @javafx.fxml.FXML
++    private TableColumn idTableview;
++    @javafx.fxml.FXML
++    private DatePicker deliveryDatePicker;
++    @javafx.fxml.FXML
++    private TableColumn statusTableview;
++    @javafx.fxml.FXML
++    private TableColumn deliveryDateTableview;
++    @javafx.fxml.FXML
++    private TableColumn nameTableview;
++    @javafx.fxml.FXML
++    private TableColumn quantityTableview;
++    @javafx.fxml.FXML
++    private ComboBox selectProductCombobox;
++    @javafx.fxml.FXML
++    private TextField quantityTF;
++    @javafx.fxml.FXML
++    private TableView inhouseOrderTable;
++
+     public void setter (SalesAndMarketingManager manager){
+         this.user = manager;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User7/sales and marketing manager dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        SalesDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++
++    @javafx.fxml.FXML
++    public void placeOrderButton(ActionEvent actionEvent) {
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User7/IncomeManagement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User7;\r\n\r\npublic class IncomeManagement\r\n{\r\n    SalesAndMarketingManager user;\r\n    public void setter (SalesAndMarketingManager manager){\r\n        this.user = manager;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User7/IncomeManagement.java b/src/main/java/com/example/dairy/Samiul/User7/IncomeManagement.java
+--- a/src/main/java/com/example/dairy/Samiul/User7/IncomeManagement.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User7/IncomeManagement.java	(date 1733892738890)
+@@ -1,11 +1,44 @@
+ package com.example.dairy.Samiul.User7;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.Label;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class IncomeManagement
+ {
+     SalesAndMarketingManager user;
++    @javafx.fxml.FXML
++    private Label totalSalesLabel;
++    @javafx.fxml.FXML
++    private Label campaignCostLabel;
++    @javafx.fxml.FXML
++    private Label profitLabel;
++
+     public void setter (SalesAndMarketingManager manager){
+         this.user = manager;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User7/sales and marketing manager dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        SalesDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User7/OrderList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User7;\r\n\r\npublic class OrderList\r\n{\r\n    SalesAndMarketingManager user;\r\n    public void setter (SalesAndMarketingManager manager){\r\n        this.user = manager;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User7/OrderList.java b/src/main/java/com/example/dairy/Samiul/User7/OrderList.java
+--- a/src/main/java/com/example/dairy/Samiul/User7/OrderList.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User7/OrderList.java	(date 1733892738890)
+@@ -1,11 +1,53 @@
+ package com.example.dairy.Samiul.User7;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.TableColumn;
++import javafx.scene.control.TableView;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class OrderList
+ {
+     SalesAndMarketingManager user;
++    @javafx.fxml.FXML
++    private TableColumn customerNameTableview;
++    @javafx.fxml.FXML
++    private TableColumn customerIdTableview;
++    @javafx.fxml.FXML
++    private TableColumn numberTableview;
++    @javafx.fxml.FXML
++    private TableColumn productNameTableview;
++    @javafx.fxml.FXML
++    private TableColumn dateTableview;
++    @javafx.fxml.FXML
++    private TableColumn quantityTableview;
++    @javafx.fxml.FXML
++    private TableView orderListTable;
++
+     public void setter (SalesAndMarketingManager manager){
+         this.user = manager;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User7/sales and marketing manager dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        SalesDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User7/OrderApprovalPortal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User7;\r\n\r\npublic class OrderApprovalPortal\r\n{\r\n    SalesAndMarketingManager user;\r\n    public void setter (SalesAndMarketingManager manager){\r\n        this.user = manager;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User7/OrderApprovalPortal.java b/src/main/java/com/example/dairy/Samiul/User7/OrderApprovalPortal.java
+--- a/src/main/java/com/example/dairy/Samiul/User7/OrderApprovalPortal.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User7/OrderApprovalPortal.java	(date 1733892738890)
+@@ -1,11 +1,51 @@
+ package com.example.dairy.Samiul.User7;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.ComboBox;
++import javafx.scene.control.Label;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class OrderApprovalPortal
+ {
+     SalesAndMarketingManager user;
++    @javafx.fxml.FXML
++    private Label orderDetailsLabel;
++    @javafx.fxml.FXML
++    private ComboBox selectIdCombobox;
++
+     public void setter (SalesAndMarketingManager manager){
+         this.user = manager;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void declineButton(ActionEvent actionEvent) {
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User7/sales and marketing manager dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        SalesDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++
++    @javafx.fxml.FXML
++    public void approveButton(ActionEvent actionEvent) {
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User7/ReportProblem.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User7;\r\n\r\npublic class ReportProblem\r\n{\r\n    SalesAndMarketingManager user;\r\n    public void setter (SalesAndMarketingManager manager){\r\n        this.user = manager;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User7/ReportProblem.java b/src/main/java/com/example/dairy/Samiul/User7/ReportProblem.java
+--- a/src/main/java/com/example/dairy/Samiul/User7/ReportProblem.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User7/ReportProblem.java	(date 1733892738890)
+@@ -1,11 +1,46 @@
+ package com.example.dairy.Samiul.User7;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.TextField;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class ReportProblem
+ {
+     SalesAndMarketingManager user;
++    @javafx.fxml.FXML
++    private TextField reportTopicTF;
++    @javafx.fxml.FXML
++    private TextField describeProblemTF;
++
+     public void setter (SalesAndMarketingManager manager){
+         this.user = manager;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User7/sales and marketing manager dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        SalesDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++
++    @javafx.fxml.FXML
++    public void sendReportButton(ActionEvent actionEvent) {
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User7/ProductManagement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User7;\r\n\r\npublic class ProductManagement\r\n{\r\n    SalesAndMarketingManager user;\r\n    public void setter (SalesAndMarketingManager manager){\r\n        this.user = manager;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User7/ProductManagement.java b/src/main/java/com/example/dairy/Samiul/User7/ProductManagement.java
+--- a/src/main/java/com/example/dairy/Samiul/User7/ProductManagement.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User7/ProductManagement.java	(date 1733892738890)
+@@ -1,11 +1,66 @@
+ package com.example.dairy.Samiul.User7;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.ComboBox;
++import javafx.scene.control.Label;
++import javafx.scene.control.TextField;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class ProductManagement
+ {
+     SalesAndMarketingManager user;
++    @javafx.fxml.FXML
++    private Label showPriceLabel;
++    @javafx.fxml.FXML
++    private ComboBox productSelectCombobox;
++    @javafx.fxml.FXML
++    private TextField updateUpcomingStockTF;
++    @javafx.fxml.FXML
++    private Label upcomingStockLabel;
++    @javafx.fxml.FXML
++    private TextField updateRemainingStockTF;
++    @javafx.fxml.FXML
++    private TextField updatePriceTF;
++    @javafx.fxml.FXML
++    private Label remainingStockLabel;
++
+     public void setter (SalesAndMarketingManager manager){
+         this.user = manager;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void updateRemainingStockButton(ActionEvent actionEvent) {
++    }
++
++    @javafx.fxml.FXML
++    public void updatePriceButton(ActionEvent actionEvent) {
++    }
++
++    @javafx.fxml.FXML
++    public void updateUpcomingStockButton(ActionEvent actionEvent) {
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User7/sales and marketing manager dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        SalesDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User8/BuyingPortal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User8;\r\n\r\npublic class BuyingPortal\r\n{\r\n    Customer user;\r\n    public void setter (Customer customer){\r\n        this.user = customer;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User8/BuyingPortal.java b/src/main/java/com/example/dairy/Samiul/User8/BuyingPortal.java
+--- a/src/main/java/com/example/dairy/Samiul/User8/BuyingPortal.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User8/BuyingPortal.java	(date 1733892738890)
+@@ -1,11 +1,56 @@
+ package com.example.dairy.Samiul.User8;
+ 
++import com.example.dairy.Samiul.User7.SalesDashboard;
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.ComboBox;
++import javafx.scene.control.DatePicker;
++import javafx.scene.control.Label;
++import javafx.scene.control.TextField;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class BuyingPortal
+ {
+     Customer user;
++    @javafx.fxml.FXML
++    private DatePicker deliveryDatePicker;
++    @javafx.fxml.FXML
++    private ComboBox selectProductCombobox;
++    @javafx.fxml.FXML
++    private TextField quantityTF;
++    @javafx.fxml.FXML
++    private Label priceLabel;
++    @javafx.fxml.FXML
++    private Label nameLabel;
++
+     public void setter (Customer customer){
+         this.user = customer;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void orderNowButton(ActionEvent actionEvent) {
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/customer dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        CustomerDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++}
+\ No newline at end of file
+Index: src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.shape.Line?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane prefHeight=\"519.0\" prefWidth=\"752.0\" xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Nupur.ManageInventoryLevel\">\r\n   <children>\r\n      <TableView fx:id=\"inventoryTV\" layoutX=\"47.0\" layoutY=\"84.0\" prefHeight=\"184.0\" prefWidth=\"355.0\">\r\n        <columns>\r\n          <TableColumn fx:id=\"productNameTC\" prefWidth=\"91.199951171875\" text=\"Product Name\" />\r\n          <TableColumn fx:id=\"stockLevelTC\" prefWidth=\"82.39996337890625\" text=\"Stock level\" />\r\n            <TableColumn fx:id=\"minimumStockTC\" prefWidth=\"96.79998779296875\" text=\"minimum stock \" />\r\n            <TableColumn fx:id=\"expiryDateTC\" prefWidth=\"110.39996337890625\" text=\"Expiry date\" />\r\n        </columns>\r\n      </TableView>\r\n      <Button layoutX=\"663.0\" layoutY=\"467.0\" mnemonicParsing=\"false\" onAction=\"#backButton\" prefHeight=\"26.0\" prefWidth=\"74.0\" text=\"Back\" />\r\n      <Text layoutX=\"304.0\" layoutY=\"46.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Manage Inventory\">\r\n         <font>\r\n            <Font size=\"18.0\" />\r\n         </font>\r\n      </Text>\r\n      <Line endX=\"76.79998779296875\" endY=\"7.62939453125E-6\" layoutX=\"376.0\" layoutY=\"58.0\" startX=\"-77.5999755859375\" startY=\"7.62939453125E-6\" />\r\n      <Label fx:id=\"label\" layoutX=\"47.0\" layoutY=\"330.0\" prefHeight=\"18.0\" prefWidth=\"74.0\" text=\"label\" />\r\n      <ComboBox fx:id=\"selectProductCB\" layoutX=\"46.0\" layoutY=\"287.0\" prefHeight=\"26.0\" prefWidth=\"195.0\" promptText=\"Select Product\" />\r\n      <Button layoutX=\"121.0\" layoutY=\"365.0\" mnemonicParsing=\"false\" onAction=\"#restockButton\" text=\"Restock\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml b/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml
+--- a/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml	(date 1733892738906)
+@@ -12,12 +12,12 @@
+ 
+ <AnchorPane prefHeight="519.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.ManageInventoryLevel">
+    <children>
+-      <TableView fx:id="inventoryTV" layoutX="47.0" layoutY="84.0" prefHeight="184.0" prefWidth="355.0">
++      <TableView fx:id="inventoryTV" layoutX="47.0" layoutY="84.0" prefHeight="184.0" prefWidth="526.0">
+         <columns>
+-          <TableColumn fx:id="productNameTC" prefWidth="91.199951171875" text="Product Name" />
+-          <TableColumn fx:id="stockLevelTC" prefWidth="82.39996337890625" text="Stock level" />
+-            <TableColumn fx:id="minimumStockTC" prefWidth="96.79998779296875" text="minimum stock " />
+-            <TableColumn fx:id="expiryDateTC" prefWidth="110.39996337890625" text="Expiry date" />
++          <TableColumn fx:id="productNameTC" prefWidth="112.0" text="Product Name" />
++          <TableColumn fx:id="stockLevelTC" prefWidth="104.79998779296875" text="Stock level" />
++            <TableColumn fx:id="minimumStockTC" prefWidth="123.20001220703125" text="minimum stock " />
++            <TableColumn fx:id="expiryDateTC" prefWidth="184.800048828125" text="Expiry date" />
+         </columns>
+       </TableView>
+       <Button layoutX="663.0" layoutY="467.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="74.0" text="Back" />
+@@ -27,8 +27,8 @@
+          </font>
+       </Text>
+       <Line endX="76.79998779296875" endY="7.62939453125E-6" layoutX="376.0" layoutY="58.0" startX="-77.5999755859375" startY="7.62939453125E-6" />
+-      <Label fx:id="label" layoutX="47.0" layoutY="330.0" prefHeight="18.0" prefWidth="74.0" text="label" />
++      <Label fx:id="label" layoutX="112.0" layoutY="424.0" prefHeight="18.0" prefWidth="490.0" text="label" />
+       <ComboBox fx:id="selectProductCB" layoutX="46.0" layoutY="287.0" prefHeight="26.0" prefWidth="195.0" promptText="Select Product" />
+-      <Button layoutX="121.0" layoutY="365.0" mnemonicParsing="false" onAction="#restockButton" text="Restock" />
++      <Button layoutX="85.0" layoutY="351.0" mnemonicParsing="false" onAction="#restockButton" prefHeight="26.0" prefWidth="86.0" text="Restock" />
+    </children>
+ </AnchorPane>
+Index: src/main/java/com/example/dairy/Samiul/User8/PendingOrderList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User8;\r\n\r\npublic class PendingOrderList\r\n{\r\n    Customer user;\r\n    public void setter (Customer customer){\r\n        this.user = customer;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User8/PendingOrderList.java b/src/main/java/com/example/dairy/Samiul/User8/PendingOrderList.java
+--- a/src/main/java/com/example/dairy/Samiul/User8/PendingOrderList.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User8/PendingOrderList.java	(date 1733892738890)
+@@ -1,11 +1,49 @@
+ package com.example.dairy.Samiul.User8;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.TableColumn;
++import javafx.scene.control.TableView;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class PendingOrderList
+ {
+     Customer user;
++    @javafx.fxml.FXML
++    private TableColumn OrderIdTableview;
++    @javafx.fxml.FXML
++    private TableColumn statusTableview;
++    @javafx.fxml.FXML
++    private TableColumn productNameTableview;
++    @javafx.fxml.FXML
++    private TableView pendingOrderListTable;
++    @javafx.fxml.FXML
++    private TableColumn quantityTableview;
++
+     public void setter (Customer customer){
+         this.user = customer;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/customer dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        CustomerDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User8/Invoice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User8;\r\n\r\npublic class Invoice\r\n{\r\n    Customer user;\r\n    public void setter (Customer customer){\r\n        this.user = customer;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User8/Invoice.java b/src/main/java/com/example/dairy/Samiul/User8/Invoice.java
+--- a/src/main/java/com/example/dairy/Samiul/User8/Invoice.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User8/Invoice.java	(date 1733892738890)
+@@ -1,11 +1,44 @@
+ package com.example.dairy.Samiul.User8;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.ComboBox;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class Invoice
+ {
+     Customer user;
++    @javafx.fxml.FXML
++    private ComboBox selectOrderIdCombobox;
++
+     public void setter (Customer customer){
+         this.user = customer;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void createInvoiceButton(ActionEvent actionEvent) {
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/customer dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        CustomerDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User8/ViewCampaign.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User8;\r\n\r\npublic class ViewCampaign\r\n{\r\n    Customer user;\r\n    public void setter (Customer customer){\r\n        this.user = customer;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User8/ViewCampaign.java b/src/main/java/com/example/dairy/Samiul/User8/ViewCampaign.java
+--- a/src/main/java/com/example/dairy/Samiul/User8/ViewCampaign.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User8/ViewCampaign.java	(date 1733892738890)
+@@ -1,11 +1,58 @@
+ package com.example.dairy.Samiul.User8;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.DatePicker;
++import javafx.scene.control.TableColumn;
++import javafx.scene.control.TableView;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class ViewCampaign
+ {
+     Customer user;
++    @javafx.fxml.FXML
++    private TableColumn statusTableview;
++    @javafx.fxml.FXML
++    private DatePicker endDatePicker;
++    @javafx.fxml.FXML
++    private TableColumn dateTableview;
++    @javafx.fxml.FXML
++    private DatePicker startDatePicker;
++    @javafx.fxml.FXML
++    private TableColumn nameTableview;
++    @javafx.fxml.FXML
++    private TableView viewCampaignTable;
++    @javafx.fxml.FXML
++    private TableColumn venueTableview;
++
+     public void setter (Customer customer){
+         this.user = customer;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/customer dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        CustomerDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++
++    @javafx.fxml.FXML
++    public void filterButton(ActionEvent actionEvent) {
++    }
++}
+\ No newline at end of file
+Index: src/main/resources/com/example/dairy/Samiul/User 7/Order list.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User7.OrderList\">>\r\n   <children>\r\n      <Text layoutX=\"281.0\" layoutY=\"53.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Order List\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <TableView layoutX=\"35.0\" layoutY=\"95.0\" prefHeight=\"435.0\" prefWidth=\"599.0\">\r\n        <columns>\r\n          <TableColumn prefWidth=\"90.66668319702148\" text=\"Customer id\" />\r\n          <TableColumn prefWidth=\"83.33336639404297\" text=\"Name\" />\r\n            <TableColumn prefWidth=\"113.33332824707031\" text=\"Phone number\" />\r\n            <TableColumn prefWidth=\"103.33331298828125\" text=\"Product name\" />\r\n            <TableColumn text=\"Quantity\" />\r\n            <TableColumn prefWidth=\"125.99990844726562\" text=\"Date\" />\r\n        </columns>\r\n      </TableView>\r\n      <Button layoutX=\"28.0\" layoutY=\"26.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 7/Order list.fxml b/src/main/resources/com/example/dairy/Samiul/User 7/Order list.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 7/Order list.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 7/Order list.fxml	(date 1733892738906)
+@@ -7,23 +7,23 @@
+ <?import javafx.scene.text.Font?>
+ <?import javafx.scene.text.Text?>
+ 
+-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.OrderList">>
++<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.OrderList">
+    <children>
+       <Text layoutX="281.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order List" underline="true">
+          <font>
+             <Font size="25.0" />
+          </font>
+       </Text>
+-      <TableView layoutX="35.0" layoutY="95.0" prefHeight="435.0" prefWidth="599.0">
++      <TableView fx:id="orderListTable" layoutX="35.0" layoutY="95.0" prefHeight="435.0" prefWidth="599.0">
+         <columns>
+-          <TableColumn prefWidth="90.66668319702148" text="Customer id" />
+-          <TableColumn prefWidth="83.33336639404297" text="Name" />
+-            <TableColumn prefWidth="113.33332824707031" text="Phone number" />
+-            <TableColumn prefWidth="103.33331298828125" text="Product name" />
+-            <TableColumn text="Quantity" />
+-            <TableColumn prefWidth="125.99990844726562" text="Date" />
++          <TableColumn fx:id="customerIdTableview" prefWidth="90.66668319702148" text="Customer id" />
++          <TableColumn fx:id="customerNameTableview" prefWidth="83.33336639404297" text="Name" />
++            <TableColumn fx:id="numberTableview" prefWidth="113.33332824707031" text="Phone number" />
++            <TableColumn fx:id="productNameTableview" prefWidth="103.33331298828125" text="Product name" />
++            <TableColumn fx:id="quantityTableview" text="Quantity" />
++            <TableColumn fx:id="dateTableview" prefWidth="125.99990844726562" text="Date" />
+         </columns>
+       </TableView>
+-      <Button layoutX="28.0" layoutY="26.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="26.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+    </children>
+ </AnchorPane>
+Index: src/main/java/com/example/dairy/Samiul/User8/ReportProblem.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User8;\r\n\r\npublic class ReportProblem\r\n{\r\n    Customer user;\r\n    public void setter (Customer customer){\r\n        this.user = customer;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User8/ReportProblem.java b/src/main/java/com/example/dairy/Samiul/User8/ReportProblem.java
+--- a/src/main/java/com/example/dairy/Samiul/User8/ReportProblem.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User8/ReportProblem.java	(date 1733892738890)
+@@ -1,11 +1,46 @@
+ package com.example.dairy.Samiul.User8;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.TextField;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class ReportProblem
+ {
+     Customer user;
++    @javafx.fxml.FXML
++    private TextField reportTopicTF;
++    @javafx.fxml.FXML
++    private TextField describeProblemTF;
++
+     public void setter (Customer customer){
+         this.user = customer;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/customer dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        CustomerDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++
++    @javafx.fxml.FXML
++    public void sendReportButton(ActionEvent actionEvent) {
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User8/ViewProductDescription.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User8;\r\n\r\npublic class ViewProductDescription\r\n{\r\n    Customer user;\r\n    public void setter (Customer customer){\r\n        this.user = customer;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User8/ViewProductDescription.java b/src/main/java/com/example/dairy/Samiul/User8/ViewProductDescription.java
+--- a/src/main/java/com/example/dairy/Samiul/User8/ViewProductDescription.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User8/ViewProductDescription.java	(date 1733892738890)
+@@ -1,11 +1,43 @@
+ package com.example.dairy.Samiul.User8;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.ComboBox;
++import javafx.scene.control.TextArea;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class ViewProductDescription
+ {
+     Customer user;
++    @javafx.fxml.FXML
++    private TextArea productDescriptionTextarea;
++    @javafx.fxml.FXML
++    private ComboBox selectProductCombobox;
++
+     public void setter (Customer customer){
+         this.user = customer;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/customer dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        CustomerDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++}
+\ No newline at end of file
+Index: src/main/resources/com/example/dairy/Samiul/User 7/Campaign management.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.DatePicker?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User7.CampaignManagement\">\r\n   <children>\r\n      <Text layoutX=\"263.0\" layoutY=\"61.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Create Campaign\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"19.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"50.0\" layoutY=\"116.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Campaign name:\">\r\n         <font>\r\n            <Font size=\"15.0\" />\r\n         </font>\r\n      </Text>\r\n      <TextField layoutX=\"174.0\" layoutY=\"97.0\" />\r\n      <Text layoutX=\"50.0\" layoutY=\"162.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Start date:\">\r\n         <font>\r\n            <Font size=\"15.0\" />\r\n         </font>\r\n      </Text>\r\n      <DatePicker layoutX=\"174.0\" layoutY=\"144.0\" />\r\n      <Text layoutX=\"50.0\" layoutY=\"207.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"End date:\">\r\n         <font>\r\n            <Font size=\"15.0\" />\r\n         </font>\r\n      </Text>\r\n      <DatePicker layoutX=\"174.0\" layoutY=\"189.0\" />\r\n      <Text layoutX=\"50.0\" layoutY=\"256.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Venue location:\">\r\n         <font>\r\n            <Font size=\"15.0\" />\r\n         </font>\r\n      </Text>\r\n      <TextField layoutX=\"174.0\" layoutY=\"238.0\" prefHeight=\"21.0\" prefWidth=\"358.0\" />\r\n      <Text layoutX=\"50.0\" layoutY=\"307.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Budget allocated:\">\r\n         <font>\r\n            <Font size=\"15.0\" />\r\n         </font>\r\n      </Text>\r\n      <TextField layoutX=\"174.0\" layoutY=\"288.0\" />\r\n      <Button layoutX=\"52.0\" layoutY=\"351.0\" mnemonicParsing=\"false\" text=\"Create Campaign\" />\r\n      <TableView layoutX=\"96.0\" layoutY=\"405.0\" prefHeight=\"144.0\" prefWidth=\"454.0\">\r\n        <columns>\r\n          <TableColumn prefWidth=\"75.0\" text=\"ID\" />\r\n          <TableColumn prefWidth=\"75.0\" text=\"Name\" />\r\n            <TableColumn prefWidth=\"75.0\" text=\"Date\" />\r\n            <TableColumn prefWidth=\"75.0\" text=\"Venue\" />\r\n            <TableColumn prefWidth=\"75.0\" text=\"Budget\" />\r\n            <TableColumn prefWidth=\"75.0\" text=\"Status\" />\r\n        </columns>\r\n      </TableView>\r\n      <Button layoutX=\"27.0\" layoutY=\"27.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 7/Campaign management.fxml b/src/main/resources/com/example/dairy/Samiul/User 7/Campaign management.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 7/Campaign management.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 7/Campaign management.fxml	(date 1733892738906)
+@@ -21,42 +21,42 @@
+             <Font size="15.0" />
+          </font>
+       </Text>
+-      <TextField layoutX="174.0" layoutY="97.0" />
++      <TextField fx:id="campaignNameTF" layoutX="174.0" layoutY="97.0" />
+       <Text layoutX="50.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start date:">
+          <font>
+             <Font size="15.0" />
+          </font>
+       </Text>
+-      <DatePicker layoutX="174.0" layoutY="144.0" />
++      <DatePicker fx:id="startDatePicker" layoutX="174.0" layoutY="144.0" />
+       <Text layoutX="50.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End date:">
+          <font>
+             <Font size="15.0" />
+          </font>
+       </Text>
+-      <DatePicker layoutX="174.0" layoutY="189.0" />
++      <DatePicker fx:id="ednDatePicker" layoutX="174.0" layoutY="189.0" />
+       <Text layoutX="50.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Venue location:">
+          <font>
+             <Font size="15.0" />
+          </font>
+       </Text>
+-      <TextField layoutX="174.0" layoutY="238.0" prefHeight="21.0" prefWidth="358.0" />
++      <TextField fx:id="venueLocationTF" layoutX="174.0" layoutY="238.0" prefHeight="21.0" prefWidth="358.0" />
+       <Text layoutX="50.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget allocated:">
+          <font>
+             <Font size="15.0" />
+          </font>
+       </Text>
+-      <TextField layoutX="174.0" layoutY="288.0" />
+-      <Button layoutX="52.0" layoutY="351.0" mnemonicParsing="false" text="Create Campaign" />
+-      <TableView layoutX="96.0" layoutY="405.0" prefHeight="144.0" prefWidth="454.0">
++      <TextField fx:id="budgetAllocatedTF" layoutX="174.0" layoutY="288.0" />
++      <Button layoutX="52.0" layoutY="351.0" mnemonicParsing="false" onAction="#createCampaignButton" text="Create Campaign" />
++      <TableView fx:id="campaignTable" layoutX="96.0" layoutY="405.0" prefHeight="144.0" prefWidth="454.0">
+         <columns>
+-          <TableColumn prefWidth="75.0" text="ID" />
+-          <TableColumn prefWidth="75.0" text="Name" />
+-            <TableColumn prefWidth="75.0" text="Date" />
+-            <TableColumn prefWidth="75.0" text="Venue" />
+-            <TableColumn prefWidth="75.0" text="Budget" />
+-            <TableColumn prefWidth="75.0" text="Status" />
++          <TableColumn fx:id="idTableview" prefWidth="75.0" text="ID" />
++          <TableColumn fx:id="nameTableview" prefWidth="75.0" text="Name" />
++            <TableColumn fx:id="dateTableview" prefWidth="75.0" text="Date" />
++            <TableColumn fx:id="venueTableview" prefWidth="75.0" text="Venue" />
++            <TableColumn fx:id="budgetTableview" prefWidth="75.0" text="Budget" />
++            <TableColumn fx:id="statusTableview" prefWidth="75.0" text="Status" />
+         </columns>
+       </TableView>
+-      <Button layoutX="27.0" layoutY="27.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="27.0" layoutY="27.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+    </children>
+ </AnchorPane>
+Index: src/main/java/com/example/dairy/Samiul/User8/ViewDistributorInfo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User8;\r\n\r\npublic class ViewDistributorInfo\r\n{\r\n    Customer user;\r\n    public void setter (Customer customer){\r\n        this.user = customer;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User8/ViewDistributorInfo.java b/src/main/java/com/example/dairy/Samiul/User8/ViewDistributorInfo.java
+--- a/src/main/java/com/example/dairy/Samiul/User8/ViewDistributorInfo.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User8/ViewDistributorInfo.java	(date 1733892738890)
+@@ -1,11 +1,47 @@
+ package com.example.dairy.Samiul.User8;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.TableColumn;
++import javafx.scene.control.TableView;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class ViewDistributorInfo
+ {
+     Customer user;
++    @javafx.fxml.FXML
++    private TableColumn numberTableview;
++    @javafx.fxml.FXML
++    private TableView distributorInfoTable;
++    @javafx.fxml.FXML
++    private TableColumn nameTableview;
++    @javafx.fxml.FXML
++    private TableColumn emailTableview;
++
+     public void setter (Customer customer){
+         this.user = customer;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/customer dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        CustomerDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++}
+\ No newline at end of file
+Index: src/main/resources/com/example/dairy/Samiul/User 7/IncomeManagement.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User7.IncomeManagement\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"217.0\" layoutY=\"62.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Income Management\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"82.0\" layoutY=\"191.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Total lifetime sales:\">\r\n         <font>\r\n            <Font size=\"16.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"81.0\" layoutY=\"244.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Total campaign cost:\">\r\n         <font>\r\n            <Font size=\"16.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"80.0\" layoutY=\"291.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Total lifetime profit:\">\r\n         <font>\r\n            <Font size=\"16.0\" />\r\n         </font>\r\n      </Text>\r\n      <Label layoutX=\"236.0\" layoutY=\"179.0\" text=\"Label\" />\r\n      <Label layoutX=\"245.0\" layoutY=\"230.0\" text=\"Label\" />\r\n      <Label layoutX=\"231.0\" layoutY=\"277.0\" text=\"Label\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 7/IncomeManagement.fxml b/src/main/resources/com/example/dairy/Samiul/User 7/IncomeManagement.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 7/IncomeManagement.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 7/IncomeManagement.fxml	(date 1733892738906)
+@@ -8,7 +8,7 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.IncomeManagement">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="217.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income Management" underline="true">
+          <font>
+             <Font size="25.0" />
+@@ -29,8 +29,8 @@
+             <Font size="16.0" />
+          </font>
+       </Text>
+-      <Label layoutX="236.0" layoutY="179.0" text="Label" />
+-      <Label layoutX="245.0" layoutY="230.0" text="Label" />
+-      <Label layoutX="231.0" layoutY="277.0" text="Label" />
++      <Label fx:id="totalSalesLabel" layoutX="236.0" layoutY="179.0" text="Label" />
++      <Label fx:id="campaignCostLabel" layoutX="245.0" layoutY="230.0" text="Label" />
++      <Label fx:id="profitLabel" layoutX="231.0" layoutY="277.0" text="Label" />
+    </children>
+ </AnchorPane>
+Index: src/main/resources/com/example/dairy/Samiul/User 7/InhouseOrder.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.DatePicker?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User7.InhouseOrder\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"256.0\" layoutY=\"62.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Inhouse Order\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <ComboBox layoutX=\"69.0\" layoutY=\"126.0\" prefWidth=\"150.0\" promptText=\"Select product\" />\r\n      <Text layoutX=\"293.0\" layoutY=\"136.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Quantity:\" />\r\n      <TextField layoutX=\"379.0\" layoutY=\"119.0\" />\r\n      <Text layoutX=\"293.0\" layoutY=\"175.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Delivery date:\" />\r\n      <DatePicker layoutX=\"379.0\" layoutY=\"158.0\" />\r\n      <Button layoutX=\"239.0\" layoutY=\"222.0\" mnemonicParsing=\"false\" text=\"Place Order\" />\r\n      <TableView layoutX=\"105.0\" layoutY=\"293.0\" prefHeight=\"200.0\" prefWidth=\"472.0\">\r\n        <columns>\r\n          <TableColumn prefWidth=\"96.66661834716797\" text=\"Name\" />\r\n          <TableColumn prefWidth=\"69.33331298828125\" text=\"ID\" />\r\n            <TableColumn prefWidth=\"73.33332824707031\" text=\"Quantity\" />\r\n            <TableColumn prefWidth=\"128.0\" text=\"Delivery Date\" />\r\n            <TableColumn prefWidth=\"103.33334350585938\" text=\"Status\" />\r\n        </columns>\r\n      </TableView>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 7/InhouseOrder.fxml b/src/main/resources/com/example/dairy/Samiul/User 7/InhouseOrder.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 7/InhouseOrder.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 7/InhouseOrder.fxml	(date 1733892738906)
+@@ -12,25 +12,25 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.InhouseOrder">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="256.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inhouse Order" underline="true">
+          <font>
+             <Font size="25.0" />
+          </font>
+       </Text>
+-      <ComboBox layoutX="69.0" layoutY="126.0" prefWidth="150.0" promptText="Select product" />
++      <ComboBox fx:id="selectProductCombobox" layoutX="69.0" layoutY="126.0" prefWidth="150.0" promptText="Select product" />
+       <Text layoutX="293.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:" />
+-      <TextField layoutX="379.0" layoutY="119.0" />
++      <TextField fx:id="quantityTF" layoutX="379.0" layoutY="119.0" />
+       <Text layoutX="293.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery date:" />
+-      <DatePicker layoutX="379.0" layoutY="158.0" />
+-      <Button layoutX="239.0" layoutY="222.0" mnemonicParsing="false" text="Place Order" />
+-      <TableView layoutX="105.0" layoutY="293.0" prefHeight="200.0" prefWidth="472.0">
++      <DatePicker fx:id="deliveryDatePicker" layoutX="379.0" layoutY="158.0" />
++      <Button layoutX="239.0" layoutY="222.0" mnemonicParsing="false" onAction="#placeOrderButton" text="Place Order" />
++      <TableView fx:id="inhouseOrderTable" layoutX="105.0" layoutY="293.0" prefHeight="200.0" prefWidth="472.0">
+         <columns>
+-          <TableColumn prefWidth="96.66661834716797" text="Name" />
+-          <TableColumn prefWidth="69.33331298828125" text="ID" />
+-            <TableColumn prefWidth="73.33332824707031" text="Quantity" />
+-            <TableColumn prefWidth="128.0" text="Delivery Date" />
+-            <TableColumn prefWidth="103.33334350585938" text="Status" />
++          <TableColumn fx:id="nameTableview" prefWidth="96.66661834716797" text="Name" />
++          <TableColumn fx:id="idTableview" prefWidth="69.33331298828125" text="ID" />
++            <TableColumn fx:id="quantityTableview" prefWidth="73.33332824707031" text="Quantity" />
++            <TableColumn fx:id="deliveryDateTableview" prefWidth="128.0" text="Delivery Date" />
++            <TableColumn fx:id="statusTableview" prefWidth="103.33334350585938" text="Status" />
+         </columns>
+       </TableView>
+    </children>
+Index: src/main/resources/com/example/dairy/Samiul/User 8/Buying Portal.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.DatePicker?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User8.BuyingPortal\">\r\n   <children>\r\n      <Text layoutX=\"264.0\" layoutY=\"55.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Buying Portal\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"24.0\" />\r\n         </font>\r\n      </Text>\r\n      <ComboBox layoutX=\"60.0\" layoutY=\"124.0\" prefWidth=\"150.0\" promptText=\"Select Product\" />\r\n      <Label layoutX=\"121.0\" layoutY=\"185.0\" text=\"Label\" />\r\n      <Text layoutX=\"60.0\" layoutY=\"201.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Name:\">\r\n         <font>\r\n            <Font size=\"17.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"60.0\" layoutY=\"251.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Price:\">\r\n         <font>\r\n            <Font size=\"17.0\" />\r\n         </font>\r\n      </Text>\r\n      <Label layoutX=\"121.0\" layoutY=\"238.0\" text=\"Label\" />\r\n      <Button layoutX=\"60.0\" layoutY=\"416.0\" mnemonicParsing=\"false\" text=\"Order now\" />\r\n      <Button layoutX=\"32.0\" layoutY=\"29.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <TextField layoutX=\"149.0\" layoutY=\"285.0\" />\r\n      <Text layoutX=\"61.0\" layoutY=\"304.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Quantity:\">\r\n         <font>\r\n            <Font size=\"17.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"61.0\" layoutY=\"365.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Delivery Date:\">\r\n         <font>\r\n            <Font size=\"17.0\" />\r\n         </font>\r\n      </Text>\r\n      <DatePicker layoutX=\"183.0\" layoutY=\"346.0\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 8/Buying Portal.fxml b/src/main/resources/com/example/dairy/Samiul/User 8/Buying Portal.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 8/Buying Portal.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 8/Buying Portal.fxml	(date 1733892738906)
+@@ -16,8 +16,8 @@
+             <Font size="24.0" />
+          </font>
+       </Text>
+-      <ComboBox layoutX="60.0" layoutY="124.0" prefWidth="150.0" promptText="Select Product" />
+-      <Label layoutX="121.0" layoutY="185.0" text="Label" />
++      <ComboBox fx:id="selectProductCombobox" layoutX="60.0" layoutY="124.0" prefWidth="150.0" promptText="Select Product" />
++      <Label fx:id="nameLabel" layoutX="121.0" layoutY="188.0" text="Label" />
+       <Text layoutX="60.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+          <font>
+             <Font size="17.0" />
+@@ -28,10 +28,10 @@
+             <Font size="17.0" />
+          </font>
+       </Text>
+-      <Label layoutX="121.0" layoutY="238.0" text="Label" />
+-      <Button layoutX="60.0" layoutY="416.0" mnemonicParsing="false" text="Order now" />
+-      <Button layoutX="32.0" layoutY="29.0" mnemonicParsing="false" text="Back" />
+-      <TextField layoutX="149.0" layoutY="285.0" />
++      <Label fx:id="priceLabel" layoutX="121.0" layoutY="238.0" text="Label" />
++      <Button layoutX="60.0" layoutY="416.0" mnemonicParsing="false" onAction="#orderNowButton" text="Order now" />
++      <Button layoutX="32.0" layoutY="29.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
++      <TextField fx:id="quantityTF" layoutX="149.0" layoutY="285.0" />
+       <Text layoutX="61.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:">
+          <font>
+             <Font size="17.0" />
+@@ -42,6 +42,6 @@
+             <Font size="17.0" />
+          </font>
+       </Text>
+-      <DatePicker layoutX="183.0" layoutY="346.0" />
++      <DatePicker fx:id="deliveryDatePicker" layoutX="183.0" layoutY="346.0" />
+    </children>
+ </AnchorPane>
+Index: src/main/resources/com/example/dairy/Samiul/User 7/ProductManagement.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User7.ProductManagement\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <ComboBox layoutX=\"69.0\" layoutY=\"129.0\" prefWidth=\"150.0\" />\r\n      <Text layoutX=\"69.0\" layoutY=\"205.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Price:\">\r\n         <font>\r\n            <Font size=\"15.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"69.0\" layoutY=\"262.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Remaining stock:\">\r\n         <font>\r\n            <Font size=\"15.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"69.0\" layoutY=\"320.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Upcoming stock:\">\r\n         <font>\r\n            <Font size=\"15.0\" />\r\n         </font>\r\n      </Text>\r\n      <TextField layoutX=\"64.0\" layoutY=\"419.0\" />\r\n      <TextField layoutX=\"267.0\" layoutY=\"419.0\" />\r\n      <TextField layoutX=\"486.0\" layoutY=\"419.0\" />\r\n      <Button layoutX=\"83.0\" layoutY=\"468.0\" mnemonicParsing=\"false\" text=\"Update price\" />\r\n      <Button layoutX=\"270.0\" layoutY=\"468.0\" mnemonicParsing=\"false\" text=\"Update remaining stock\" />\r\n      <Button layoutX=\"489.0\" layoutY=\"468.0\" mnemonicParsing=\"false\" text=\"Update upcoming stock\" />\r\n      <Text layoutX=\"103.0\" layoutY=\"400.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Update price:\" />\r\n      <Text layoutX=\"277.0\" layoutY=\"400.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Update remaining stock:\" />\r\n      <Text layoutX=\"496.0\" layoutY=\"400.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Update upcoming stock:\" />\r\n      <Text layoutX=\"215.0\" layoutY=\"63.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Product Management\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <Label layoutX=\"128.0\" layoutY=\"193.0\" text=\"Label\" />\r\n      <Label layoutX=\"199.0\" layoutY=\"247.0\" text=\"Label\" />\r\n      <Label layoutX=\"199.0\" layoutY=\"305.0\" text=\"Label\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 7/ProductManagement.fxml b/src/main/resources/com/example/dairy/Samiul/User 7/ProductManagement.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 7/ProductManagement.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 7/ProductManagement.fxml	(date 1733892738906)
+@@ -10,8 +10,8 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.ProductManagement">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
+-      <ComboBox layoutX="69.0" layoutY="129.0" prefWidth="150.0" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
++      <ComboBox fx:id="productSelectCombobox" layoutX="69.0" layoutY="129.0" prefWidth="150.0" promptText="Select Product" />
+       <Text layoutX="69.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:">
+          <font>
+             <Font size="15.0" />
+@@ -27,12 +27,12 @@
+             <Font size="15.0" />
+          </font>
+       </Text>
+-      <TextField layoutX="64.0" layoutY="419.0" />
+-      <TextField layoutX="267.0" layoutY="419.0" />
+-      <TextField layoutX="486.0" layoutY="419.0" />
+-      <Button layoutX="83.0" layoutY="468.0" mnemonicParsing="false" text="Update price" />
+-      <Button layoutX="270.0" layoutY="468.0" mnemonicParsing="false" text="Update remaining stock" />
+-      <Button layoutX="489.0" layoutY="468.0" mnemonicParsing="false" text="Update upcoming stock" />
++      <TextField fx:id="updatePriceTF" layoutX="64.0" layoutY="419.0" />
++      <TextField fx:id="updateRemainingStockTF" layoutX="267.0" layoutY="419.0" />
++      <TextField fx:id="updateUpcomingStockTF" layoutX="486.0" layoutY="419.0" />
++      <Button layoutX="83.0" layoutY="468.0" mnemonicParsing="false" onAction="#updatePriceButton" text="Update price" />
++      <Button layoutX="270.0" layoutY="468.0" mnemonicParsing="false" onAction="#updateRemainingStockButton" text="Update remaining stock" />
++      <Button layoutX="489.0" layoutY="468.0" mnemonicParsing="false" onAction="#updateUpcomingStockButton" text="Update upcoming stock" />
+       <Text layoutX="103.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update price:" />
+       <Text layoutX="277.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update remaining stock:" />
+       <Text layoutX="496.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update upcoming stock:" />
+@@ -41,8 +41,8 @@
+             <Font size="25.0" />
+          </font>
+       </Text>
+-      <Label layoutX="128.0" layoutY="193.0" text="Label" />
+-      <Label layoutX="199.0" layoutY="247.0" text="Label" />
+-      <Label layoutX="199.0" layoutY="305.0" text="Label" />
++      <Label fx:id="showPriceLabel" layoutX="128.0" layoutY="193.0" text="Label" />
++      <Label fx:id="remainingStockLabel" layoutX="199.0" layoutY="247.0" text="Label" />
++      <Label fx:id="upcomingStockLabel" layoutX="199.0" layoutY="305.0" text="Label" />
+    </children>
+ </AnchorPane>
+Index: src/main/resources/com/example/dairy/Samiul/User 7/OrderApprovalPortal.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User7.OrderApprovalPortal\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"214.0\" layoutY=\"62.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Order Approval portal\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <ComboBox layoutX=\"69.0\" layoutY=\"130.0\" prefWidth=\"150.0\" promptText=\"Select order id\" />\r\n      <Text layoutX=\"69.0\" layoutY=\"223.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Order details:\">\r\n         <font>\r\n            <Font size=\"15.0\" />\r\n         </font>\r\n      </Text>\r\n      <Label layoutX=\"175.0\" layoutY=\"211.0\" text=\"Label\" />\r\n      <Button layoutX=\"69.0\" layoutY=\"321.0\" mnemonicParsing=\"false\" text=\"Approve\" />\r\n      <Button layoutX=\"175.0\" layoutY=\"321.0\" mnemonicParsing=\"false\" text=\"Decline\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 7/OrderApprovalPortal.fxml b/src/main/resources/com/example/dairy/Samiul/User 7/OrderApprovalPortal.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 7/OrderApprovalPortal.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 7/OrderApprovalPortal.fxml	(date 1733892738906)
+@@ -9,20 +9,20 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.OrderApprovalPortal">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="214.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Approval portal" underline="true">
+          <font>
+             <Font size="25.0" />
+          </font>
+       </Text>
+-      <ComboBox layoutX="69.0" layoutY="130.0" prefWidth="150.0" promptText="Select order id" />
++      <ComboBox fx:id="selectIdCombobox" layoutX="69.0" layoutY="130.0" prefWidth="150.0" promptText="Select order id" />
+       <Text layoutX="69.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order details:">
+          <font>
+             <Font size="15.0" />
+          </font>
+       </Text>
+-      <Label layoutX="175.0" layoutY="211.0" text="Label" />
+-      <Button layoutX="69.0" layoutY="321.0" mnemonicParsing="false" text="Approve" />
+-      <Button layoutX="175.0" layoutY="321.0" mnemonicParsing="false" text="Decline" />
++      <Label fx:id="orderDetailsLabel" layoutX="175.0" layoutY="211.0" text="Label" />
++      <Button layoutX="69.0" layoutY="321.0" mnemonicParsing="false" onAction="#approveButton" text="Approve" />
++      <Button layoutX="175.0" layoutY="321.0" mnemonicParsing="false" onAction="#declineButton" text="Decline" />
+    </children>
+ </AnchorPane>
+Index: src/main/resources/com/example/dairy/Samiul/User 7/AnalyzeSalesPerformance.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User7.AnalyzeSalesPerformance\">\r\n   <children>\r\n      <TableView layoutX=\"125.0\" layoutY=\"184.0\" prefHeight=\"200.0\" prefWidth=\"420.0\">\r\n        <columns>\r\n          <TableColumn prefWidth=\"111.99999237060547\" text=\"Customer name\" />\r\n          <TableColumn prefWidth=\"87.33332824707031\" text=\"Weekly sales\" />\r\n            <TableColumn minWidth=\"0.66668701171875\" prefWidth=\"104.66668701171875\" text=\"Monthly sales\" />\r\n            <TableColumn minWidth=\"0.0\" prefWidth=\"113.33331298828125\" text=\"Customer Quality\" />\r\n        </columns>\r\n      </TableView>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"188.0\" layoutY=\"63.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Analyze Sales Performance\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 7/AnalyzeSalesPerformance.fxml b/src/main/resources/com/example/dairy/Samiul/User 7/AnalyzeSalesPerformance.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 7/AnalyzeSalesPerformance.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 7/AnalyzeSalesPerformance.fxml	(date 1733892738906)
+@@ -9,15 +9,15 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.AnalyzeSalesPerformance">
+    <children>
+-      <TableView layoutX="125.0" layoutY="184.0" prefHeight="200.0" prefWidth="420.0">
++      <TableView fx:id="salesPerformanceTable" layoutX="125.0" layoutY="184.0" prefHeight="200.0" prefWidth="420.0">
+         <columns>
+-          <TableColumn prefWidth="111.99999237060547" text="Customer name" />
+-          <TableColumn prefWidth="87.33332824707031" text="Weekly sales" />
+-            <TableColumn minWidth="0.66668701171875" prefWidth="104.66668701171875" text="Monthly sales" />
+-            <TableColumn minWidth="0.0" prefWidth="113.33331298828125" text="Customer Quality" />
++          <TableColumn fx:id="customerName" prefWidth="111.99999237060547" text="Customer name" />
++          <TableColumn fx:id="weeklySales" prefWidth="87.33332824707031" text="Weekly sales" />
++            <TableColumn fx:id="monthlySales" minWidth="0.66668701171875" prefWidth="104.66668701171875" text="Monthly sales" />
++            <TableColumn fx:id="customerQuality" minWidth="0.0" prefWidth="113.33331298828125" text="Customer Quality" />
+         </columns>
+       </TableView>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="188.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Analyze Sales Performance" underline="true">
+          <font>
+             <Font size="25.0" />
+Index: src/main/resources/com/example/dairy/Samiul/User 7/ReportProblem.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User7.ReportProblem\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"248.0\" layoutY=\"62.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Report Problem\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"69.0\" layoutY=\"157.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Report Topic:\">\r\n         <font>\r\n            <Font size=\"22.0\" />\r\n         </font>\r\n      </Text>\r\n      <TextField layoutX=\"217.0\" layoutY=\"137.0\" prefHeight=\"25.0\" prefWidth=\"191.0\" />\r\n      <Text layoutX=\"69.0\" layoutY=\"214.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Describe your problem:\">\r\n         <font>\r\n            <Font size=\"22.0\" />\r\n         </font>\r\n      </Text>\r\n      <TextField layoutX=\"69.0\" layoutY=\"251.0\" prefHeight=\"187.0\" prefWidth=\"520.0\" />\r\n      <Button layoutX=\"510.0\" layoutY=\"487.0\" mnemonicParsing=\"false\" text=\"Send report\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 7/ReportProblem.fxml b/src/main/resources/com/example/dairy/Samiul/User 7/ReportProblem.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 7/ReportProblem.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 7/ReportProblem.fxml	(date 1733892738906)
+@@ -8,7 +8,7 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.ReportProblem">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="248.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Problem" underline="true">
+          <font>
+             <Font size="25.0" />
+@@ -19,13 +19,13 @@
+             <Font size="22.0" />
+          </font>
+       </Text>
+-      <TextField layoutX="217.0" layoutY="137.0" prefHeight="25.0" prefWidth="191.0" />
++      <TextField fx:id="reportTopicTF" layoutX="217.0" layoutY="137.0" prefHeight="25.0" prefWidth="191.0" />
+       <Text layoutX="69.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Describe your problem:">
+          <font>
+             <Font size="22.0" />
+          </font>
+       </Text>
+-      <TextField layoutX="69.0" layoutY="251.0" prefHeight="187.0" prefWidth="520.0" />
+-      <Button layoutX="510.0" layoutY="487.0" mnemonicParsing="false" text="Send report" />
++      <TextField fx:id="describeProblemTF" layoutX="69.0" layoutY="251.0" prefHeight="187.0" prefWidth="520.0" />
++      <Button layoutX="510.0" layoutY="487.0" mnemonicParsing="false" onAction="#sendReportButton" text="Send report" />
+    </children>
+ </AnchorPane>
+Index: src/main/java/com/example/Nupur/complaintsClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/complaintsClass.java b/src/main/java/com/example/dairy/Nupur/complaintsClass.java
+rename from src/main/java/com/example/Nupur/complaintsClass.java
+rename to src/main/java/com/example/dairy/Nupur/complaintsClass.java
+--- a/src/main/java/com/example/Nupur/complaintsClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/complaintsClass.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ public class complaintsClass {
+     public String productName;
+Index: src/main/java/com/example/Nupur/CustomerInquiries.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/CustomerInquiries.java b/src/main/java/com/example/dairy/Nupur/CustomerInquiries.java
+rename from src/main/java/com/example/Nupur/CustomerInquiries.java
+rename to src/main/java/com/example/dairy/Nupur/CustomerInquiries.java
+--- a/src/main/java/com/example/Nupur/CustomerInquiries.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/CustomerInquiries.java	(date 1733892738858)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.TableColumn;
+Index: src/main/java/com/example/Nupur/CustomerComplaints.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/CustomerComplaints.java b/src/main/java/com/example/dairy/Nupur/CustomerComplaints.java
+rename from src/main/java/com/example/Nupur/CustomerComplaints.java
+rename to src/main/java/com/example/dairy/Nupur/CustomerComplaints.java
+--- a/src/main/java/com/example/Nupur/CustomerComplaints.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/CustomerComplaints.java	(date 1733892738858)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.TableColumn;
+@@ -10,7 +10,7 @@
+     @javafx.fxml.FXML
+     private TableColumn<complaintsClass,String> productTC;
+     @javafx.fxml.FXML
+-    private TableView complaintsTV;
++    private TableView<complaintsClass> complaintsTV;
+     @javafx.fxml.FXML
+     private TableColumn<complaintsClass,String> customernameTC;
+     @javafx.fxml.FXML
+@@ -18,6 +18,7 @@
+ 
+     @javafx.fxml.FXML
+     public void initialize() {
++
+     }
+ 
+     @Deprecated
+Index: src/main/java/com/example/Nupur/expiryDateModelClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/expiryDateModelClass.java b/src/main/java/com/example/dairy/Nupur/expiryDateModelClass.java
+rename from src/main/java/com/example/Nupur/expiryDateModelClass.java
+rename to src/main/java/com/example/dairy/Nupur/expiryDateModelClass.java
+--- a/src/main/java/com/example/Nupur/expiryDateModelClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/expiryDateModelClass.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import java.time.LocalDate;
+ 
+Index: src/main/java/com/example/Nupur/CustomerRepresentativeDashboard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/CustomerRepresentativeDashboard.java b/src/main/java/com/example/dairy/Nupur/CustomerRepresentativeDashboard.java
+rename from src/main/java/com/example/Nupur/CustomerRepresentativeDashboard.java
+rename to src/main/java/com/example/dairy/Nupur/CustomerRepresentativeDashboard.java
+--- a/src/main/java/com/example/Nupur/CustomerRepresentativeDashboard.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/CustomerRepresentativeDashboard.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ 
+Index: src/main/java/com/example/Nupur/feedbackModelClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/feedbackModelClass.java b/src/main/java/com/example/dairy/Nupur/feedbackModelClass.java
+rename from src/main/java/com/example/Nupur/feedbackModelClass.java
+rename to src/main/java/com/example/dairy/Nupur/feedbackModelClass.java
+--- a/src/main/java/com/example/Nupur/feedbackModelClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/feedbackModelClass.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ public class feedbackModelClass {
+     public String customerName;
+Index: src/main/java/com/example/dairy/Nupur/ExpiryDates.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Nupur/ExpiryDates.java b/src/main/java/com/example/dairy/Nupur/ExpiryDates.java
+new file mode 100644
+--- /dev/null	(date 1733892738874)
++++ b/src/main/java/com/example/dairy/Nupur/ExpiryDates.java	(date 1733892738874)
+@@ -0,0 +1,126 @@
++package com.example.dairy.Nupur;
++
++import javafx.collections.FXCollections;
++import javafx.collections.ObservableList;
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.*;
++import javafx.scene.control.cell.PropertyValueFactory;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++import java.time.LocalDate;
++import java.time.temporal.ChronoUnit;
++
++public class ExpiryDates {
++    @javafx.fxml.FXML
++    private TableColumn<expiryDateModelClass, String> productNameTC;
++    @javafx.fxml.FXML
++    private ComboBox<String> selectProductCB;
++    @javafx.fxml.FXML
++    private TableView<expiryDateModelClass> expiryDateTV;
++    @javafx.fxml.FXML
++    private TableColumn<expiryDateModelClass, Integer> currentStockTC;
++    @javafx.fxml.FXML
++    private TableColumn<expiryDateModelClass, LocalDate> expiryDateTC;
++    @javafx.fxml.FXML
++    private Label label;
++    @javafx.fxml.FXML
++    private ComboBox<String> chooseActionCB;
++
++
++    private ObservableList<expiryDateModelClass> productList = FXCollections.observableArrayList();
++
++
++    @javafx.fxml.FXML
++    public void initialize() {
++        productNameTC.setCellValueFactory(new PropertyValueFactory<>("productName"));
++        currentStockTC.setCellValueFactory(new PropertyValueFactory<>("currentStock"));
++        expiryDateTC.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
++
++
++        productList.addAll(
++                new expiryDateModelClass("Milk", 100, LocalDate.now().plusDays(5)),
++                new expiryDateModelClass("Butter", 50, LocalDate.now().plusDays(10)),
++                new expiryDateModelClass("Yogurt", 30, LocalDate.now().plusDays(3)),
++                new expiryDateModelClass("Cheese", 60, LocalDate.now().plusDays(15)),
++                new expiryDateModelClass("Cream", 40, LocalDate.now().plusDays(6)),
++                new expiryDateModelClass("Ghee", 70, LocalDate.now().plusDays(17)),
++                new expiryDateModelClass("Paneer", 65, LocalDate.now().plusDays(12)),
++                new expiryDateModelClass("IceCream", 80, LocalDate.now().plusDays(20))
++        );
++        expiryDateTV.setItems(productList);
++
++        selectProductCB.getItems().addAll("Milk", "Butter", "Cheese", "Yogurt", "Cream", "Ghee", "Paneer", "IceCream");
++        chooseActionCB.getItems().addAll("Discount", "Discard");
++
++
++    }
++
++    @FXML
++    public void confirmActionButton(ActionEvent actionEvent) {
++        String selectedProductName = selectProductCB.getValue();
++        String selectedAction = chooseActionCB.getValue();
++
++        if (selectedProductName == null || selectedAction == null) {
++            showAlert("Error", "Please select a product and an action.", Alert.AlertType.ERROR);
++            return;
++        }
++
++        for (expiryDateModelClass product : productList) {
++            if (product.getProductName().equals(selectedProductName)) {
++                long daysToExpiry = ChronoUnit.DAYS.between(LocalDate.now(), product.getExpiryDate());
++                if (daysToExpiry <= 7) { // If the product is nearing expiry
++                    if (selectedAction.equals("Discount")) {
++                        applyDiscount(product); // Pass the product object
++                        label.setText("Discount applied to " + product.getProductName() + ". New stock: " + product.getCurrentStock());
++
++                    } else if (selectedAction.equals("Discard")) {
++                        applyDiscard(product); // Pass the product object
++                        label.setText(product.getProductName() + " discarded. Stock is now zero.");
++                    }
++                    break;
++                } else {
++                    showAlert("Info", "The selected product is not nearing expiry.", Alert.AlertType.INFORMATION);
++                    break;
++                }
++            }
++        }
++    }
++
++    private void applyDiscount(expiryDateModelClass product) {
++        int currentStock = product.getCurrentStock();
++        int discountedStock = (int) (currentStock * 0.9); // Reduce stock by 10%
++        product.setCurrentStock(discountedStock);
++    }
++
++    private void applyDiscard(expiryDateModelClass product) {
++        product.setCurrentStock(0); // Set stock to zero
++    }
++
++    @FXML
++    public void backButton(ActionEvent actionEvent) {
++        try {
++            Parent root = FXMLLoader.load(getClass().getResource("Inventory Manger Dashboard.fxml"));
++            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
++            stage.setScene(new Scene(root));
++            stage.show();
++        } catch (IOException e) {
++            // Handle FXML loading error
++            e.printStackTrace();
++        }
++
++    }
++
++    private void showAlert(String title, String message, Alert.AlertType alertType) {
++        Alert alert = new Alert(alertType);
++        alert.setTitle(title);
++        alert.setHeaderText(null);
++        alert.setContentText(message);
++        alert.showAndWait();
++    }
++}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_21\" default=\"true\" project-jdk-name=\"temurin-21\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/.idea/misc.xml	(date 1733892738858)
+@@ -8,7 +8,5 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="temurin-21" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="temurin-21" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: src/main/java/com/example/Nupur/inquiryClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/inquiryClass.java b/src/main/java/com/example/dairy/Nupur/inquiryClass.java
+rename from src/main/java/com/example/Nupur/inquiryClass.java
+rename to src/main/java/com/example/dairy/Nupur/inquiryClass.java
+--- a/src/main/java/com/example/Nupur/inquiryClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/inquiryClass.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ public class inquiryClass {
+     public String customerName;
+Index: src/main/java/com/example/dairy/Nupur/FeedbackModule.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Nupur/FeedbackModule.java b/src/main/java/com/example/dairy/Nupur/FeedbackModule.java
+new file mode 100644
+--- /dev/null	(date 1733892738874)
++++ b/src/main/java/com/example/dairy/Nupur/FeedbackModule.java	(date 1733892738874)
+@@ -0,0 +1,85 @@
++package com.example.dairy.Nupur;
++
++import javafx.collections.FXCollections;
++import javafx.collections.ObservableList;
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.*;
++import javafx.scene.control.cell.PropertyValueFactory;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
++public class FeedbackModule
++{
++    @javafx.fxml.FXML
++    private ComboBox<String> feedbackTypeCB;
++    @javafx.fxml.FXML
++    private TableColumn<feedbackModelClass,String> feedbackTypeTC;
++    @javafx.fxml.FXML
++    private TableColumn<feedbackModelClass,String> customerNameTC;
++    @javafx.fxml.FXML
++    private TextField customerNameTF;
++    @javafx.fxml.FXML
++    private TextArea feedbackTA;
++    @javafx.fxml.FXML
++    private TableColumn<feedbackModelClass,String> feedbackTC;
++    @javafx.fxml.FXML
++    private TableView<feedbackModelClass>feedbackTV;
++
++    private ObservableList<feedbackModelClass> feedbackList = FXCollections.observableArrayList();
++
++    @FXML
++    public void initialize() {
++        feedbackTypeTC.setCellValueFactory(new PropertyValueFactory<>("feedbackType"));
++        customerNameTC.setCellValueFactory(new PropertyValueFactory<>("customerName"));
++        feedbackTC.setCellValueFactory(new PropertyValueFactory<>("feedback"));
++
++        feedbackTypeCB.getItems().addAll("Positive", "Negative", "Neutral");
++        feedbackTV.setItems(feedbackList);
++    }
++
++
++
++
++    @javafx.fxml.FXML
++    public void generateTableButton(ActionEvent actionEvent) {
++        String customerName = customerNameTF.getText();
++        String feedbackType = feedbackTypeCB.getValue();
++        String feedback = feedbackTA.getText();
++        if (customerName.isEmpty() || feedbackType == null || feedback.isEmpty()) {
++            Alert alert = new Alert(Alert.AlertType.WARNING);
++            alert.setTitle("Input Error");
++            alert.setHeaderText(null);
++            alert.setContentText("Please fill out all fields.");
++            alert.showAndWait();
++            return;
++        }
++        feedbackModelClass newFeedback = new feedbackModelClass(customerName, feedback, feedbackType);
++        feedbackList.add(newFeedback);
++
++        // Clear input fields
++        customerNameTF.clear();
++        feedbackTypeCB.setValue(null);
++        feedbackTA.clear();
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) {
++        try {
++            Parent root = FXMLLoader.load(getClass().getResource("customer representative dashboard.fxml"));
++            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
++            stage.setScene(new Scene(root));
++            stage.show();
++        } catch (IOException e) {
++            // Handle FXML loading error
++            e.printStackTrace();
++        }
++
++    }
++    }
++
+Index: src/main/java/com/example/Nupur/inventoryModelClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/inventoryModelClass.java b/src/main/java/com/example/dairy/Nupur/inventoryModelClass.java
+rename from src/main/java/com/example/Nupur/inventoryModelClass.java
+rename to src/main/java/com/example/dairy/Nupur/inventoryModelClass.java
+--- a/src/main/java/com/example/Nupur/inventoryModelClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/inventoryModelClass.java	(date 1733892738874)
+@@ -1,13 +1,21 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import java.time.LocalDate;
+ 
+ public class inventoryModelClass {
+-    public String productName;
+-    public Integer StockLevel;
+-    public Integer minimumStock;
+-    public LocalDate expiryDate;
++    private String productName;
++    private Integer stockLevel;
++    private Integer minimumStock;
++    private LocalDate expiryDate;
+ 
++    public inventoryModelClass(String productName, LocalDate expiryDate, Integer minimumStock, Integer stockLevel) {
++        this.productName = productName;
++        this.expiryDate = expiryDate;
++        this.minimumStock = minimumStock;
++        this.stockLevel = stockLevel;
++    }
++
++    // Getter and Setter for productName
+     public String getProductName() {
+         return productName;
+     }
+@@ -16,14 +24,16 @@
+         this.productName = productName;
+     }
+ 
+-    public LocalDate getExpiryDate() {
+-        return expiryDate;
++    // Getter and Setter for stockLevel
++    public Integer getStockLevel() {
++        return stockLevel;
+     }
+ 
+-    public void setExpiryDate(LocalDate expiryDate) {
+-        this.expiryDate = expiryDate;
++    public void setStockLevel(Integer stockLevel) {
++        this.stockLevel = stockLevel;
+     }
+ 
++    // Getter and Setter for minimumStock
+     public Integer getMinimumStock() {
+         return minimumStock;
+     }
+@@ -32,29 +42,22 @@
+         this.minimumStock = minimumStock;
+     }
+ 
+-    public Integer getStockLevel() {
+-        return StockLevel;
++    // Getter and Setter for expiryDate
++    public LocalDate getExpiryDate() {
++        return expiryDate;
+     }
+ 
+-    public void setStockLevel(Integer stockLevel) {
+-        StockLevel = stockLevel;
++    public void setExpiryDate(LocalDate expiryDate) {
++        this.expiryDate = expiryDate;
+     }
+ 
+     @Override
+     public String toString() {
+         return "inventoryModelClass{" +
+                 "productName='" + productName + '\'' +
+-                ", StockLevel=" + StockLevel +
++                ", stockLevel=" + stockLevel +
+                 ", minimumStock=" + minimumStock +
+                 ", expiryDate=" + expiryDate +
+                 '}';
+     }
+-
+-    public inventoryModelClass(String productName, LocalDate expiryDate, Integer minimumStock, Integer stockLevel) {
+-        this.productName = productName;
+-        this.expiryDate = expiryDate;
+-        this.minimumStock = minimumStock;
+-        StockLevel = stockLevel;
+-
+-    }
+ }
+Index: src/main/java/com/example/Nupur/InventoryManagerDashboard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/InventoryManagerDashboard.java b/src/main/java/com/example/dairy/Nupur/InventoryManagerDashboard.java
+rename from src/main/java/com/example/Nupur/InventoryManagerDashboard.java
+rename to src/main/java/com/example/dairy/Nupur/InventoryManagerDashboard.java
+--- a/src/main/java/com/example/Nupur/InventoryManagerDashboard.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/InventoryManagerDashboard.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ 
+Index: src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java b/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java
+new file mode 100644
+--- /dev/null	(date 1733892738874)
++++ b/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java	(date 1733892738874)
+@@ -0,0 +1,126 @@
++package com.example.dairy.Nupur;
++
++import javafx.collections.FXCollections;
++import javafx.collections.ObservableList;
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.*;
++import javafx.scene.control.cell.PropertyValueFactory;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
++public class ManageDispatchRequest {
++
++    @FXML
++    private DatePicker dispatchDateDP;
++    @FXML
++    private TableColumn<productDispatchmodelClass, String> productNameTC;
++    @FXML
++    private TableView<productDispatchmodelClass> dispatchTV;
++    @FXML
++    private TableColumn<productDispatchmodelClass, String> destinationTC;
++    @FXML
++    private TableColumn<productDispatchmodelClass, Integer> quantityTC;
++    @FXML
++    private ComboBox<String> logisticProviderCB;
++    @FXML
++    private TableColumn<productDispatchmodelClass, Integer> requestidTC;
++
++    //private ObservableList<productDispatchmodelClass> productList;
++    @FXML
++    private ComboBox<String> selectproductsCB;
++    @FXML
++    private TextField destinationTF;
++    @FXML
++    private ComboBox<String> selectproductCB;
++
++    @FXML
++    private TextField quantityTF;
++
++    private ObservableList<productDispatchmodelClass> productList = FXCollections.observableArrayList();
++
++
++    @FXML
++    public void initialize() {
++
++        productNameTC.setCellValueFactory(new PropertyValueFactory<>("productName"));
++        quantityTC.setCellValueFactory(new PropertyValueFactory<>("quantity"));
++        destinationTC.setCellValueFactory(new PropertyValueFactory<>("destination"));
++
++        selectproductCB.getItems().addAll("Milk", "Butter", "Cheese", "Yogurt", "Cream", "Ghee", "Paneer", "IceCream");
++        logisticProviderCB.getItems().addAll("Dairy Deliveries", "Fresh Freight", "Rapid Dispatch");
++        selectproductsCB.getItems().addAll("Milk", "Butter", "Cheese", "Yogurt", "Cream", "Ghee", "Paneer", "IceCream");
++
++        dispatchTV.setItems(productList);
++    }
++
++    @FXML
++    public void processButton(ActionEvent actionEvent) {
++        String productName = selectproductCB.getValue();
++        int quantity = Integer.parseInt(quantityTF.getText());
++        String destination = destinationTF.getText();
++
++        if (productName == null || destination.isEmpty() || quantity <= 0) {
++            // showAlert(Alert.AlertType.WARNING, "Input Error", "Please fill out all fields correctly.");
++            Alert alert = new Alert(Alert.AlertType.WARNING);
++            alert.setTitle("Input Error");
++            alert.setHeaderText(null);
++            alert.setContentText("Please fill out all fields correctly.");
++            alert.showAndWait();
++            return;
++        }
++
++        productDispatchmodelClass newProduct = new productDispatchmodelClass(productName, destination, quantity);
++        productList.add(newProduct);
++
++        //clearProductInputs();
++        // Clear input fields
++
++        selectproductCB.setValue(null);
++        destinationTF.clear();
++        quantityTF.clear();
++    }
++
++
++    @FXML
++    public void dispatchButton(ActionEvent actionEvent) {
++        String logisticProvider = logisticProviderCB.getValue();
++        String dispatchDate = dispatchDateDP.getValue() != null ? dispatchDateDP.getValue().toString() : null;
++
++        if (logisticProvider == null || dispatchDate == null) {
++            //showAlert(Alert.AlertType.WARNING, "Input Error", "Please select a logistic provider and dispatch date.");
++            Alert alert = new Alert(Alert.AlertType.WARNING);
++            alert.setTitle("Input Error");
++            alert.setHeaderText(null);
++            alert.setContentText("Please select a logistic provider and dispatch date.");
++            alert.showAndWait();
++            return;
++        }
++        Alert alert = new Alert(Alert.AlertType.INFORMATION);
++        alert.setTitle("Dispatch");
++        alert.setHeaderText(null);
++        alert.setContentText("Product dispatched with " + logisticProvider + " on " + dispatchDate + ".");
++        alert.showAndWait(); }
++
++        //showAlert(Alert.AlertType.INFORMATION, "Dispatch", "Product dispatched with " + logisticProvider + " on " + dispatchDate + ".");
++
++
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) {
++        try {
++            Parent root = FXMLLoader.load(getClass().getResource("customer representative dashboard.fxml"));
++            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
++            stage.setScene(new Scene(root));
++            stage.show();
++        } catch (IOException e) {
++            // Handle FXML loading error
++            e.printStackTrace();
++        }
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/Nupur/LowStockAlert.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/LowStockAlert.java b/src/main/java/com/example/dairy/Nupur/LowStockAlert.java
+rename from src/main/java/com/example/Nupur/LowStockAlert.java
+rename to src/main/java/com/example/dairy/Nupur/LowStockAlert.java
+--- a/src/main/java/com/example/Nupur/LowStockAlert.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/LowStockAlert.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.ComboBox;
+Index: src/main/java/com/example/Nupur/ManageProductReturns.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/ManageProductReturns.java b/src/main/java/com/example/dairy/Nupur/ManageProductReturns.java
+rename from src/main/java/com/example/Nupur/ManageProductReturns.java
+rename to src/main/java/com/example/dairy/Nupur/ManageProductReturns.java
+--- a/src/main/java/com/example/Nupur/ManageProductReturns.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/ManageProductReturns.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.ComboBox;
+Index: src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java b/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java
+new file mode 100644
+--- /dev/null	(date 1733892738874)
++++ b/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java	(date 1733892738874)
+@@ -0,0 +1,120 @@
++package com.example.dairy.Nupur;
++
++import javafx.collections.FXCollections;
++import javafx.collections.ObservableList;
++import javafx.event.ActionEvent;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.*;
++import javafx.scene.control.cell.PropertyValueFactory;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++import java.time.LocalDate;
++
++public class ManageInventoryLevel {
++
++    @FXML
++    private TableView<inventoryModelClass> inventoryTV;
++    @FXML
++    private TableColumn<inventoryModelClass, Integer> stockLevelTC;
++    @FXML
++    private TableColumn<inventoryModelClass, String> productNameTC;
++    @FXML
++    private ComboBox<String> selectProductCB;
++    @FXML
++    private TableColumn<inventoryModelClass, Integer> minimumStockTC;
++    @FXML
++    private TableColumn<inventoryModelClass, LocalDate> expiryDateTC;
++    @FXML
++    private Label label;
++    @FXML
++    private Button restockButton;
++
++    private ObservableList<inventoryModelClass> productList = FXCollections.observableArrayList();
++
++    @FXML
++    public void initialize() {
++        productNameTC.setCellValueFactory(new PropertyValueFactory<>("productName"));
++        stockLevelTC.setCellValueFactory(new PropertyValueFactory<>("stockLevel"));
++        minimumStockTC.setCellValueFactory(new PropertyValueFactory<>("minimumStock"));
++        expiryDateTC.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
++
++        productList.addAll(
++                new inventoryModelClass("Milk", LocalDate.of(2024, 12, 31), 20, 50),
++                new inventoryModelClass("Cheese", LocalDate.of(2024, 10, 15), 30, 8),
++                new inventoryModelClass("Butter", LocalDate.of(2024, 11, 20), 25, 45),
++                new inventoryModelClass("Yogurt", LocalDate.of(2024, 12, 10), 35, 70),
++                new inventoryModelClass("Cream", LocalDate.of(2024, 12, 20), 15, 17),
++                new inventoryModelClass("Ghee", LocalDate.of(2024, 12, 25), 25, 20),
++                new inventoryModelClass("IceCream", LocalDate.of(2024, 12, 18), 30, 17),
++                new inventoryModelClass("Paneer", LocalDate.of(2024, 12, 9), 20, 75)
++
++        );
++
++        inventoryTV.setItems(productList);
++        selectProductCB.setItems(FXCollections.observableArrayList("Milk", "Cheese", "Butter", "Yogurt","Cream","IceCream","Paneer","Ghee"));
++
++
++    }
++
++
++    @FXML
++    public void restockButton(ActionEvent actionEvent) {
++        String selectedProductName = selectProductCB.getValue();
++
++        if (selectedProductName == null) {
++            showAlert("Error", "Please select a product to restock.", Alert.AlertType.ERROR);
++            return;
++        }
++
++        for (inventoryModelClass product : productList) {
++            if (product.getProductName().equals(selectedProductName)) {
++                // Check if the current stock level is less than or equal to the minimum stock level
++                if (product.getStockLevel() <= product.getMinimumStock()) {
++                    // If the condition is true, restock the product and increase stock level by 10)
++                    int newStockLevel = product.getStockLevel() + 10;
++                    product.setStockLevel(newStockLevel);
++
++                    // Refresh the TableView to reflect the updated stock level
++                    inventoryTV.refresh();
++
++                    // Update the label to show success message
++                    label.setText(selectedProductName + " restocked. New stock level: " + newStockLevel);
++                } else {
++                    // If the condition is false, show a message
++                    label.setText(selectedProductName + " already has sufficient stock.");
++                }
++                return; // Exit the loop once the product is found
++            }
++        }
++
++        // If the product is not found in the list (edge case)
++        showAlert("Error", "Product not found in the inventory.", Alert.AlertType.ERROR);
++    }
++
++    private void showAlert(String title, String message, Alert.AlertType alertType) {
++        Alert alert = new Alert(alertType);
++        alert.setTitle(title);
++        alert.setContentText(message);
++        alert.showAndWait();
++        {
++        }
++    }
++    @FXML
++    public void backButton(ActionEvent actionEvent) {
++
++        try {
++            Parent root = FXMLLoader.load(getClass().getResource("Inventory Manager Dashboard.fxml"));
++            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
++            stage.setScene(new Scene(root));
++            stage.show();
++        } catch (IOException e) {
++            // Handle FXML loading error
++            e.printStackTrace();
++        }
++    }
++}
+Index: src/main/java/com/example/Nupur/NewProduct.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/NewProduct.java b/src/main/java/com/example/dairy/Nupur/NewProduct.java
+rename from src/main/java/com/example/Nupur/NewProduct.java
+rename to src/main/java/com/example/dairy/Nupur/NewProduct.java
+--- a/src/main/java/com/example/Nupur/NewProduct.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/NewProduct.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.TextArea;
+Index: src/main/java/com/example/Nupur/ManageSubscription.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/ManageSubscription.java b/src/main/java/com/example/dairy/Nupur/ManageSubscription.java
+rename from src/main/java/com/example/Nupur/ManageSubscription.java
+rename to src/main/java/com/example/dairy/Nupur/ManageSubscription.java
+--- a/src/main/java/com/example/Nupur/ManageSubscription.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/ManageSubscription.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.ComboBox;
+Index: src/main/java/com/example/Nupur/ProcessProductReturn.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/ProcessProductReturn.java b/src/main/java/com/example/dairy/Nupur/ProcessProductReturn.java
+rename from src/main/java/com/example/Nupur/ProcessProductReturn.java
+rename to src/main/java/com/example/dairy/Nupur/ProcessProductReturn.java
+--- a/src/main/java/com/example/Nupur/ProcessProductReturn.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/ProcessProductReturn.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.RadioButton;
+Index: src/main/java/com/example/Nupur/packagingmaterialModelClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/packagingmaterialModelClass.java b/src/main/java/com/example/dairy/Nupur/packagingmaterialModelClass.java
+rename from src/main/java/com/example/Nupur/packagingmaterialModelClass.java
+rename to src/main/java/com/example/dairy/Nupur/packagingmaterialModelClass.java
+--- a/src/main/java/com/example/Nupur/packagingmaterialModelClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/packagingmaterialModelClass.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ public class packagingmaterialModelClass {
+     public String productName;
+Index: src/main/java/com/example/Nupur/productRecommandationClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/productRecommandationClass.java b/src/main/java/com/example/dairy/Nupur/productRecommandationClass.java
+rename from src/main/java/com/example/Nupur/productRecommandationClass.java
+rename to src/main/java/com/example/dairy/Nupur/productRecommandationClass.java
+--- a/src/main/java/com/example/Nupur/productRecommandationClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/productRecommandationClass.java	(date 1733892738890)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ public class productRecommandationClass {
+     public String customerName;
+Index: src/main/java/com/example/Nupur/productDispatchmodelClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/productDispatchmodelClass.java b/src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java
+rename from src/main/java/com/example/Nupur/productDispatchmodelClass.java
+rename to src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java
+--- a/src/main/java/com/example/Nupur/productDispatchmodelClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java	(date 1733892738890)
+@@ -1,17 +1,16 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+-public class productDispatchmodelClass {
+-    public Integer requestID;
+-    public Integer quantity;
+-    public String productName;
+-    public String destination;
++public class productDispatchmodelClass{
++    private String ProductName;
++    private Integer quantity;
++    private String destination;
+ 
+-    public Integer getRequestID() {
+-        return requestID;
++    public String getProductName() {
++        return ProductName;
+     }
+ 
+-    public void setRequestID(Integer requestID) {
+-        this.requestID = requestID;
++    public void setProductName(String productName) {
++        ProductName = productName;
+     }
+ 
+     public String getDestination() {
+@@ -22,14 +21,6 @@
+         this.destination = destination;
+     }
+ 
+-    public String getProductName() {
+-        return productName;
+-    }
+-
+-    public void setProductName(String productName) {
+-        this.productName = productName;
+-    }
+-
+     public Integer getQuantity() {
+         return quantity;
+     }
+@@ -37,22 +28,19 @@
+     public void setQuantity(Integer quantity) {
+         this.quantity = quantity;
+     }
++
++    public productDispatchmodelClass(String productName, String destination, Integer quantity) {
++        ProductName = productName;
++        this.destination = destination;
++        this.quantity = quantity;
++    }
+ 
+     @Override
+     public String toString() {
+         return "productDispatchmodelClass{" +
+-                "requestID=" + requestID +
++                "ProductName='" + ProductName + '\'' +
+                 ", quantity=" + quantity +
+-                ", productName='" + productName + '\'' +
+                 ", destination='" + destination + '\'' +
+                 '}';
+     }
+-
+-    public productDispatchmodelClass(Integer requestID, String destination, String productName, Integer quantity) {
+-        this.requestID = requestID;
+-        this.destination = destination;
+-        this.productName = productName;
+-        this.quantity = quantity;
+-
+-    }
+-}
++}
+\ No newline at end of file
+Index: src/main/java/com/example/Nupur/productReturnModelClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/productReturnModelClass.java b/src/main/java/com/example/dairy/Nupur/productReturnModelClass.java
+rename from src/main/java/com/example/Nupur/productReturnModelClass.java
+rename to src/main/java/com/example/dairy/Nupur/productReturnModelClass.java
+--- a/src/main/java/com/example/Nupur/productReturnModelClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/productReturnModelClass.java	(date 1733892738890)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ public class productReturnModelClass {
+     public String productName;
+Index: src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.DatePicker?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.shape.Line?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane prefHeight=\"472.0\" prefWidth=\"662.0\" xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Nupur.ManageDispatchRequest\">\r\n   <children>\r\n      <TableView fx:id=\"dispatchTV\" layoutX=\"51.0\" layoutY=\"99.0\" prefHeight=\"200.0\" prefWidth=\"290.0\">\r\n        <columns>\r\n          <TableColumn fx:id=\"requestidTC\" prefWidth=\"72.79995346069336\" text=\"Request ID\" />\r\n          <TableColumn fx:id=\"productNameTC\" prefWidth=\"84.0\" text=\"product name\" />\r\n            <TableColumn fx:id=\"quantityTC\" prefWidth=\"56.00001525878906\" text=\"Quantity\" />\r\n            <TableColumn fx:id=\"destinationTC\" prefWidth=\"88.79998779296875\" text=\"Destination\" />\r\n        </columns>\r\n      </TableView>\r\n      <ComboBox fx:id=\"selectProductsCB\" layoutX=\"51.0\" layoutY=\"323.0\" prefWidth=\"150.0\" promptText=\"Select Product\" />\r\n      <Button layoutX=\"209.0\" layoutY=\"378.0\" mnemonicParsing=\"false\" onAction=\"#processButton\" text=\"Process\" />\r\n      <Line endX=\"-100.0\" endY=\"424.0\" layoutX=\"503.0\" layoutY=\"48.0\" startX=\"-100.0\" startY=\"-48.0\" />\r\n      <Label layoutX=\"419.0\" layoutY=\"36.0\" prefHeight=\"18.0\" prefWidth=\"150.0\" text=\"Fill-up the form\">\r\n         <font>\r\n            <Font size=\"14.0\" />\r\n         </font>\r\n      </Label>\r\n      <ComboBox fx:id=\"logisticProviderCB\" layoutX=\"419.0\" layoutY=\"85.0\" prefHeight=\"26.0\" prefWidth=\"201.0\" promptText=\"Select Logistic Provider\" />\r\n      <DatePicker fx:id=\"dispatchDateDP\" layoutX=\"419.0\" layoutY=\"136.0\" promptText=\"Dispatch date\" />\r\n      <Button layoutX=\"482.0\" layoutY=\"199.0\" mnemonicParsing=\"false\" onAction=\"#dispatchButton\" text=\"Dispatch\" />\r\n      <Line endX=\"100.0\" startX=\"-100.0\" />\r\n      <Line endX=\"155.00006103515625\" layoutX=\"507.0\" layoutY=\"56.0\" startX=\"-104.5\" />\r\n      <Line endX=\"157.300048828125\" layoutX=\"506.0\" layoutY=\"36.0\" startX=\"-103.5\" />\r\n      <Text layoutX=\"117.0\" layoutY=\"45.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Dispatch Request\">\r\n         <font>\r\n            <Font size=\"24.0\" />\r\n         </font>\r\n      </Text>\r\n      <Line endX=\"100.0\" layoutX=\"209.0\" layoutY=\"55.0\" startX=\"-100.0\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml b/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml
+--- a/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml	(date 1733892738890)
+@@ -6,6 +6,7 @@
+ <?import javafx.scene.control.Label?>
+ <?import javafx.scene.control.TableColumn?>
+ <?import javafx.scene.control.TableView?>
++<?import javafx.scene.control.TextField?>
+ <?import javafx.scene.layout.AnchorPane?>
+ <?import javafx.scene.shape.Line?>
+ <?import javafx.scene.text.Font?>
+@@ -13,25 +14,24 @@
+ 
+ <AnchorPane prefHeight="472.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.ManageDispatchRequest">
+    <children>
+-      <TableView fx:id="dispatchTV" layoutX="51.0" layoutY="99.0" prefHeight="200.0" prefWidth="290.0">
++      <TableView fx:id="dispatchTV" layoutX="33.0" layoutY="259.0" prefHeight="200.0" prefWidth="354.0">
+         <columns>
+-          <TableColumn fx:id="requestidTC" prefWidth="72.79995346069336" text="Request ID" />
+-          <TableColumn fx:id="productNameTC" prefWidth="84.0" text="product name" />
+-            <TableColumn fx:id="quantityTC" prefWidth="56.00001525878906" text="Quantity" />
+-            <TableColumn fx:id="destinationTC" prefWidth="88.79998779296875" text="Destination" />
++          <TableColumn fx:id="productNameTC" prefWidth="110.39996719360352" text="product name" />
++            <TableColumn fx:id="quantityTC" prefWidth="90.4000244140625" text="Quantity" />
++            <TableColumn fx:id="destinationTC" prefWidth="152.00002136230466" text="Destination" />
+         </columns>
+       </TableView>
+-      <ComboBox fx:id="selectProductsCB" layoutX="51.0" layoutY="323.0" prefWidth="150.0" promptText="Select Product" />
+-      <Button layoutX="209.0" layoutY="378.0" mnemonicParsing="false" onAction="#processButton" text="Process" />
++      <ComboBox fx:id="selectproductsCB" layoutX="431.0" layoutY="98.0" prefHeight="26.0" prefWidth="194.0" promptText="Select Product" />
++      <Button layoutX="101.0" layoutY="210.0" mnemonicParsing="false" onAction="#processButton" text="Process" />
+       <Line endX="-100.0" endY="424.0" layoutX="503.0" layoutY="48.0" startX="-100.0" startY="-48.0" />
+       <Label layoutX="419.0" layoutY="36.0" prefHeight="18.0" prefWidth="150.0" text="Fill-up the form">
+          <font>
+             <Font size="14.0" />
+          </font>
+       </Label>
+-      <ComboBox fx:id="logisticProviderCB" layoutX="419.0" layoutY="85.0" prefHeight="26.0" prefWidth="201.0" promptText="Select Logistic Provider" />
+-      <DatePicker fx:id="dispatchDateDP" layoutX="419.0" layoutY="136.0" promptText="Dispatch date" />
+-      <Button layoutX="482.0" layoutY="199.0" mnemonicParsing="false" onAction="#dispatchButton" text="Dispatch" />
++      <ComboBox fx:id="logisticProviderCB" layoutX="431.0" layoutY="154.0" prefHeight="26.0" prefWidth="201.0" promptText="Select Logistic Provider" />
++      <DatePicker fx:id="dispatchDateDP" layoutX="431.0" layoutY="210.0" promptText="Dispatch date" />
++      <Button layoutX="488.0" layoutY="273.0" mnemonicParsing="false" onAction="#dispatchButton" text="Dispatch" />
+       <Line endX="100.0" startX="-100.0" />
+       <Line endX="155.00006103515625" layoutX="507.0" layoutY="56.0" startX="-104.5" />
+       <Line endX="157.300048828125" layoutX="506.0" layoutY="36.0" startX="-103.5" />
+@@ -41,5 +41,9 @@
+          </font>
+       </Text>
+       <Line endX="100.0" layoutX="209.0" layoutY="55.0" startX="-100.0" />
++      <Button layoutX="582.0" layoutY="421.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
++      <TextField fx:id="destinationTF" layoutX="42.0" layoutY="167.0" promptText="Enter Destination" />
++      <TextField fx:id="quantityTF" layoutX="42.0" layoutY="124.0" promptText="Enter Quantity" />
++      <ComboBox fx:id="selectproductCB" layoutX="41.0" layoutY="85.0" prefWidth="150.0" promptText="Select Product " />
+    </children>
+ </AnchorPane>
+Index: src/main/java/com/example/Nupur/ProductRecommendations.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/ProductRecommendations.java b/src/main/java/com/example/dairy/Nupur/ProductRecommendations.java
+rename from src/main/java/com/example/Nupur/ProductRecommendations.java
+rename to src/main/java/com/example/dairy/Nupur/ProductRecommendations.java
+--- a/src/main/java/com/example/Nupur/ProductRecommendations.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/ProductRecommendations.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.TableColumn;
+Index: src/main/java/com/example/Nupur/PromotePSpecialOffersCampaign.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/PromotePSpecialOffersCampaign.java b/src/main/java/com/example/dairy/Nupur/PromotePSpecialOffersCampaign.java
+rename from src/main/java/com/example/Nupur/PromotePSpecialOffersCampaign.java
+rename to src/main/java/com/example/dairy/Nupur/PromotePSpecialOffersCampaign.java
+--- a/src/main/java/com/example/Nupur/PromotePSpecialOffersCampaign.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/PromotePSpecialOffersCampaign.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.TextArea;
+Index: src/main/java/com/example/Nupur/PromoteNewProducts.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/PromoteNewProducts.java b/src/main/java/com/example/dairy/Nupur/PromoteNewProducts.java
+rename from src/main/java/com/example/Nupur/PromoteNewProducts.java
+rename to src/main/java/com/example/dairy/Nupur/PromoteNewProducts.java
+--- a/src/main/java/com/example/Nupur/PromoteNewProducts.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/PromoteNewProducts.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ 
+Index: src/main/java/com/example/Nupur/storageconditionClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/storageconditionClass.java b/src/main/java/com/example/dairy/Nupur/storageconditionClass.java
+rename from src/main/java/com/example/Nupur/storageconditionClass.java
+rename to src/main/java/com/example/dairy/Nupur/storageconditionClass.java
+--- a/src/main/java/com/example/Nupur/storageconditionClass.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/storageconditionClass.java	(date 1733892738890)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ public class storageconditionClass {
+     public double temperature;
+Index: src/main/java/com/example/Nupur/ProperStorage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/ProperStorage.java b/src/main/java/com/example/dairy/Nupur/ProperStorage.java
+rename from src/main/java/com/example/Nupur/ProperStorage.java
+rename to src/main/java/com/example/dairy/Nupur/ProperStorage.java
+--- a/src/main/java/com/example/Nupur/ProperStorage.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/ProperStorage.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.ComboBox;
+Index: src/main/java/com/example/Nupur/TrackPackegingMaterial.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/TrackPackegingMaterial.java b/src/main/java/com/example/dairy/Nupur/TrackPackegingMaterial.java
+rename from src/main/java/com/example/Nupur/TrackPackegingMaterial.java
+rename to src/main/java/com/example/dairy/Nupur/TrackPackegingMaterial.java
+--- a/src/main/java/com/example/Nupur/TrackPackegingMaterial.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/TrackPackegingMaterial.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.ComboBox;
+Index: src/main/java/com/example/Nupur/TrackOrder.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/TrackOrder.java b/src/main/java/com/example/dairy/Nupur/TrackOrder.java
+rename from src/main/java/com/example/Nupur/TrackOrder.java
+rename to src/main/java/com/example/dairy/Nupur/TrackOrder.java
+--- a/src/main/java/com/example/Nupur/TrackOrder.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/TrackOrder.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.Label;
+Index: src/main/java/com/example/Nupur/UpdateStock.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/Nupur/UpdateStock.java b/src/main/java/com/example/dairy/Nupur/UpdateStock.java
+rename from src/main/java/com/example/Nupur/UpdateStock.java
+rename to src/main/java/com/example/dairy/Nupur/UpdateStock.java
+--- a/src/main/java/com/example/Nupur/UpdateStock.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Nupur/UpdateStock.java	(date 1733892738874)
+@@ -1,4 +1,4 @@
+-package com.example.Nupur;
++package com.example.dairy.Nupur;
+ 
+ import javafx.event.ActionEvent;
+ import javafx.scene.control.ComboBox;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a3398d27-4879-4339-a04b-f5158c2cda97\" name=\"Changes\" comment=\"class update with proper package, fxml updated with proper package\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;mahamud-tech&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git&quot;,\r\n    &quot;accountId&quot;: &quot;078a936f-662d-4687-a4a7-3f059b46d8cf&quot;\r\n  }\r\n}</component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2pvAu1Fdp8z5ycAhLc5pm7iqoAm\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/oop project/Simulation-of-Dairy-firm&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a3398d27-4879-4339-a04b-f5158c2cda97\" name=\"Changes\" comment=\"class update\" />\r\n      <created>1733636393676</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1733636393676</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"class update\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733815831291</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733815831291</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"class update with proper package, fxml updated with proper package\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733847302909</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733847302909</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/main\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"class update\" />\r\n    <MESSAGE value=\"class update with proper package, fxml updated with proper package\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"class update with proper package, fxml updated with proper package\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/.idea/workspace.xml	(date 1733893002467)
+@@ -4,7 +4,15 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a3398d27-4879-4339-a04b-f5158c2cda97" name="Changes" comment="class update with proper package, fxml updated with proper package" />
++    <list default="true" id="a3398d27-4879-4339-a04b-f5158c2cda97" name="Changes" comment="class update with proper package, fxml updated with proper package">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ExpiryDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ExpiryDates.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/BudgetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/BudgetController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryManagement.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -26,12 +34,12 @@
+     &quot;assignee&quot;: &quot;mahamud-tech&quot;
+   }
+ }</component>
+-  <component name="GithubPullRequestsUISettings">{
+-  &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git&quot;,
+-    &quot;accountId&quot;: &quot;078a936f-662d-4687-a4a7-3f059b46d8cf&quot;
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git",
++    "accountId": "325a77ec-d633-4cfd-8e02-20913a235ea3"
+   }
+-}</component>
++}]]></component>
+   <component name="MavenImportPreferences">
+     <option name="generalSettings">
+       <MavenGeneralSettings>
+@@ -51,22 +59,22 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/oop project/Simulation-of-Dairy-firm&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.HelloApplication.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/oop project/Simulation-of-Dairy-firm",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+Index: src/main/resources/com/example/dairy/Samiul/User 8/PendingOrderList.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User8.PendingOrderList\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"232.0\" layoutY=\"62.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Pending Order List\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <TableView layoutX=\"119.0\" layoutY=\"178.0\" prefHeight=\"297.0\" prefWidth=\"432.0\">\r\n        <columns>\r\n          <TableColumn prefWidth=\"119.99999237060547\" text=\"Order Id\" />\r\n          <TableColumn prefWidth=\"106.66664123535156\" text=\"Product  Name\" />\r\n            <TableColumn prefWidth=\"89.99993896484375\" text=\"Quantity\" />\r\n            <TableColumn prefWidth=\"113.99996948242188\" text=\"Status\" />\r\n        </columns>\r\n      </TableView>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 8/PendingOrderList.fxml b/src/main/resources/com/example/dairy/Samiul/User 8/PendingOrderList.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 8/PendingOrderList.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 8/PendingOrderList.fxml	(date 1733892738906)
+@@ -9,18 +9,18 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User8.PendingOrderList">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="232.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending Order List" underline="true">
+          <font>
+             <Font size="25.0" />
+          </font>
+       </Text>
+-      <TableView layoutX="119.0" layoutY="178.0" prefHeight="297.0" prefWidth="432.0">
++      <TableView fx:id="pendingOrderListTable" layoutX="119.0" layoutY="178.0" prefHeight="297.0" prefWidth="432.0">
+         <columns>
+-          <TableColumn prefWidth="119.99999237060547" text="Order Id" />
+-          <TableColumn prefWidth="106.66664123535156" text="Product  Name" />
+-            <TableColumn prefWidth="89.99993896484375" text="Quantity" />
+-            <TableColumn prefWidth="113.99996948242188" text="Status" />
++          <TableColumn fx:id="OrderIdTableview" prefWidth="119.99999237060547" text="Order Id" />
++          <TableColumn fx:id="productNameTableview" prefWidth="106.66664123535156" text="Product  Name" />
++            <TableColumn fx:id="quantityTableview" prefWidth="89.99993896484375" text="Quantity" />
++            <TableColumn fx:id="statusTableview" prefWidth="113.99996948242188" text="Status" />
+         </columns>
+       </TableView>
+    </children>
+Index: src/main/resources/com/example/dairy/Samiul/User 8/ViewCampaign.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.DatePicker?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User8.ViewCampaign\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"255.0\" layoutY=\"68.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"View Campaign\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <TableView layoutX=\"133.0\" layoutY=\"119.0\" prefHeight=\"200.0\" prefWidth=\"416.0\">\r\n        <columns>\r\n          <TableColumn prefWidth=\"90.66664123535156\" text=\"Name\" />\r\n          <TableColumn prefWidth=\"85.99993896484375\" text=\"Date\" />\r\n            <TableColumn prefWidth=\"132.66665649414062\" text=\"Venue\" />\r\n            <TableColumn prefWidth=\"104.6666259765625\" text=\"Status\" />\r\n        </columns>\r\n      </TableView>\r\n      <Text layoutX=\"71.0\" layoutY=\"376.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Filter by Date:\">\r\n         <font>\r\n            <Font size=\"16.0\" />\r\n         </font>\r\n      </Text>\r\n      <DatePicker layoutX=\"164.0\" layoutY=\"407.0\" />\r\n      <Text layoutX=\"71.0\" layoutY=\"424.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Start Date:\">\r\n         <font>\r\n            <Font size=\"16.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"71.0\" layoutY=\"475.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"End Date:\">\r\n         <font>\r\n            <Font size=\"16.0\" />\r\n         </font>\r\n      </Text>\r\n      <DatePicker layoutX=\"163.0\" layoutY=\"457.0\" />\r\n      <Button layoutX=\"294.0\" layoutY=\"505.0\" mnemonicParsing=\"false\" text=\"Filter\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 8/ViewCampaign.fxml b/src/main/resources/com/example/dairy/Samiul/User 8/ViewCampaign.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 8/ViewCampaign.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 8/ViewCampaign.fxml	(date 1733892738906)
+@@ -10,18 +10,18 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User8.ViewCampaign">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="255.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Campaign" underline="true">
+          <font>
+             <Font size="25.0" />
+          </font>
+       </Text>
+-      <TableView layoutX="133.0" layoutY="119.0" prefHeight="200.0" prefWidth="416.0">
++      <TableView fx:id="viewCampaignTable" layoutX="133.0" layoutY="119.0" prefHeight="200.0" prefWidth="416.0">
+         <columns>
+-          <TableColumn prefWidth="90.66664123535156" text="Name" />
+-          <TableColumn prefWidth="85.99993896484375" text="Date" />
+-            <TableColumn prefWidth="132.66665649414062" text="Venue" />
+-            <TableColumn prefWidth="104.6666259765625" text="Status" />
++          <TableColumn fx:id="nameTableview" prefWidth="90.66664123535156" text="Name" />
++          <TableColumn fx:id="dateTableview" prefWidth="85.99993896484375" text="Date" />
++            <TableColumn fx:id="venueTableview" prefWidth="132.66665649414062" text="Venue" />
++            <TableColumn fx:id="statusTableview" prefWidth="104.6666259765625" text="Status" />
+         </columns>
+       </TableView>
+       <Text layoutX="71.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Date:">
+@@ -29,7 +29,7 @@
+             <Font size="16.0" />
+          </font>
+       </Text>
+-      <DatePicker layoutX="164.0" layoutY="407.0" />
++      <DatePicker fx:id="startDatePicker" layoutX="164.0" layoutY="407.0" />
+       <Text layoutX="71.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:">
+          <font>
+             <Font size="16.0" />
+@@ -40,7 +40,7 @@
+             <Font size="16.0" />
+          </font>
+       </Text>
+-      <DatePicker layoutX="163.0" layoutY="457.0" />
+-      <Button layoutX="294.0" layoutY="505.0" mnemonicParsing="false" text="Filter" />
++      <DatePicker fx:id="endDatePicker" layoutX="163.0" layoutY="457.0" />
++      <Button layoutX="294.0" layoutY="505.0" mnemonicParsing="false" onAction="#filterButton" text="Filter" />
+    </children>
+ </AnchorPane>
+Index: src/main/resources/com/example/dairy/Samiul/User 8/ViewDistributorInfo.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User8.ViewDistributorInfo\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"221.0\" layoutY=\"62.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"View Distributor Info\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <TableView layoutX=\"103.0\" layoutY=\"171.0\" prefHeight=\"257.0\" prefWidth=\"463.0\">\r\n        <columns>\r\n          <TableColumn prefWidth=\"99.33330535888672\" text=\"Name\" />\r\n          <TableColumn prefWidth=\"122.66670227050781\" text=\"Number\" />\r\n            <TableColumn prefWidth=\"241.33328247070312\" text=\"Email\" />\r\n        </columns>\r\n      </TableView>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 8/ViewDistributorInfo.fxml b/src/main/resources/com/example/dairy/Samiul/User 8/ViewDistributorInfo.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 8/ViewDistributorInfo.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 8/ViewDistributorInfo.fxml	(date 1733892738906)
+@@ -9,17 +9,17 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User8.ViewDistributorInfo">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="221.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Distributor Info" underline="true">
+          <font>
+             <Font size="25.0" />
+          </font>
+       </Text>
+-      <TableView layoutX="103.0" layoutY="171.0" prefHeight="257.0" prefWidth="463.0">
++      <TableView fx:id="distributorInfoTable" layoutX="103.0" layoutY="171.0" prefHeight="257.0" prefWidth="463.0">
+         <columns>
+-          <TableColumn prefWidth="99.33330535888672" text="Name" />
+-          <TableColumn prefWidth="122.66670227050781" text="Number" />
+-            <TableColumn prefWidth="241.33328247070312" text="Email" />
++          <TableColumn fx:id="nameTableview" prefWidth="99.33330535888672" text="Name" />
++          <TableColumn fx:id="numberTableview" prefWidth="122.66670227050781" text="Number" />
++            <TableColumn fx:id="emailTableview" prefWidth="241.33328247070312" text="Email" />
+         </columns>
+       </TableView>
+    </children>
+Index: src/main/resources/com/example/dairy/Samiul/User 8/ViewProductDescription.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.TextArea?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User8.ViewProductDescription\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"190.0\" layoutY=\"68.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"View  Product Information\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <ComboBox layoutX=\"69.0\" layoutY=\"131.0\" prefWidth=\"150.0\" promptText=\"Select Product\" />\r\n      <Text layoutX=\"69.0\" layoutY=\"216.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Product Description:\">\r\n         <font>\r\n            <Font size=\"18.0\" />\r\n         </font>\r\n      </Text>\r\n      <TextArea layoutX=\"69.0\" layoutY=\"251.0\" prefHeight=\"200.0\" prefWidth=\"543.0\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 8/ViewProductDescription.fxml b/src/main/resources/com/example/dairy/Samiul/User 8/ViewProductDescription.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 8/ViewProductDescription.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 8/ViewProductDescription.fxml	(date 1733892738906)
+@@ -9,18 +9,18 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User8.ViewProductDescription">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="190.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View  Product Information" underline="true">
+          <font>
+             <Font size="25.0" />
+          </font>
+       </Text>
+-      <ComboBox layoutX="69.0" layoutY="131.0" prefWidth="150.0" promptText="Select Product" />
++      <ComboBox fx:id="selectProductCombobox" layoutX="69.0" layoutY="131.0" prefWidth="150.0" promptText="Select Product" />
+       <Text layoutX="69.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Description:">
+          <font>
+             <Font size="18.0" />
+          </font>
+       </Text>
+-      <TextArea layoutX="69.0" layoutY="251.0" prefHeight="200.0" prefWidth="543.0" />
++      <TextArea fx:id="productDescriptionTextarea" layoutX="69.0" layoutY="251.0" prefHeight="200.0" prefWidth="543.0" />
+    </children>
+ </AnchorPane>
+Index: src/main/resources/com/example/dairy/Samiul/User 8/ReportProblem.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User8.ReportProblem\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"248.0\" layoutY=\"62.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Report Problem\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <Text layoutX=\"69.0\" layoutY=\"157.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Report Topic:\">\r\n         <font>\r\n            <Font size=\"22.0\" />\r\n         </font>\r\n      </Text>\r\n      <TextField layoutX=\"217.0\" layoutY=\"137.0\" prefHeight=\"25.0\" prefWidth=\"191.0\" />\r\n      <Text layoutX=\"69.0\" layoutY=\"214.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Describe your problem:\">\r\n         <font>\r\n            <Font size=\"22.0\" />\r\n         </font>\r\n      </Text>\r\n      <TextField layoutX=\"69.0\" layoutY=\"251.0\" prefHeight=\"187.0\" prefWidth=\"520.0\" />\r\n      <Button layoutX=\"510.0\" layoutY=\"487.0\" mnemonicParsing=\"false\" text=\"Send report\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 8/ReportProblem.fxml b/src/main/resources/com/example/dairy/Samiul/User 8/ReportProblem.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 8/ReportProblem.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 8/ReportProblem.fxml	(date 1733892738906)
+@@ -8,7 +8,7 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User8.ReportProblem">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="248.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Problem" underline="true">
+          <font>
+             <Font size="25.0" />
+@@ -19,13 +19,13 @@
+             <Font size="22.0" />
+          </font>
+       </Text>
+-      <TextField layoutX="217.0" layoutY="137.0" prefHeight="25.0" prefWidth="191.0" />
++      <TextField fx:id="reportTopicTF" layoutX="217.0" layoutY="137.0" prefHeight="25.0" prefWidth="191.0" />
+       <Text layoutX="69.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Describe your problem:">
+          <font>
+             <Font size="22.0" />
+          </font>
+       </Text>
+-      <TextField layoutX="69.0" layoutY="251.0" prefHeight="187.0" prefWidth="520.0" />
+-      <Button layoutX="510.0" layoutY="487.0" mnemonicParsing="false" text="Send report" />
++      <TextField fx:id="describeProblemTF" layoutX="69.0" layoutY="251.0" prefHeight="187.0" prefWidth="520.0" />
++      <Button layoutX="510.0" layoutY="487.0" mnemonicParsing="false" onAction="#sendReportButton" text="Send report" />
+    </children>
+ </AnchorPane>
+Index: src/main/resources/com/example/dairy/Samiul/User 8/Invoice.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n<?import javafx.scene.text.Text?>\r\n\r\n<AnchorPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"570.0\" prefWidth=\"670.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.dairy.Samiul.User8.Invoice\">\r\n   <children>\r\n      <Button layoutX=\"28.0\" layoutY=\"28.0\" mnemonicParsing=\"false\" text=\"Back\" />\r\n      <Text layoutX=\"295.0\" layoutY=\"68.0\" strokeType=\"OUTSIDE\" strokeWidth=\"0.0\" text=\"Invoice\" underline=\"true\">\r\n         <font>\r\n            <Font size=\"25.0\" />\r\n         </font>\r\n      </Text>\r\n      <ComboBox layoutX=\"225.0\" layoutY=\"155.0\" prefHeight=\"25.0\" prefWidth=\"217.0\" promptText=\"Select Order Id\" />\r\n      <Button layoutX=\"288.0\" layoutY=\"287.0\" mnemonicParsing=\"false\" text=\"Create Invoice\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/dairy/Samiul/User 8/Invoice.fxml b/src/main/resources/com/example/dairy/Samiul/User 8/Invoice.fxml
+--- a/src/main/resources/com/example/dairy/Samiul/User 8/Invoice.fxml	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/resources/com/example/dairy/Samiul/User 8/Invoice.fxml	(date 1733892738906)
+@@ -8,13 +8,13 @@
+ 
+ <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User8.Invoice">
+    <children>
+-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
++      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+       <Text layoutX="295.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoice" underline="true">
+          <font>
+             <Font size="25.0" />
+          </font>
+       </Text>
+-      <ComboBox layoutX="225.0" layoutY="155.0" prefHeight="25.0" prefWidth="217.0" promptText="Select Order Id" />
+-      <Button layoutX="288.0" layoutY="287.0" mnemonicParsing="false" text="Create Invoice" />
++      <ComboBox fx:id="selectOrderIdCombobox" layoutX="225.0" layoutY="155.0" prefHeight="25.0" prefWidth="217.0" promptText="Select Order Id" />
++      <Button layoutX="288.0" layoutY="287.0" mnemonicParsing="false" onAction="#createInvoiceButton" text="Create Invoice" />
+    </children>
+ </AnchorPane>
+Index: src/main/java/com/example/dairy/Samiul/User7/CampaignManagement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User7;\r\n\r\npublic class CampaignManagement\r\n{\r\n    SalesAndMarketingManager user;\r\n    public void setter (SalesAndMarketingManager manager){\r\n        this.user = manager;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User7/CampaignManagement.java b/src/main/java/com/example/dairy/Samiul/User7/CampaignManagement.java
+--- a/src/main/java/com/example/dairy/Samiul/User7/CampaignManagement.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User7/CampaignManagement.java	(date 1733892738890)
+@@ -1,11 +1,69 @@
+ package com.example.dairy.Samiul.User7;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.DatePicker;
++import javafx.scene.control.TableColumn;
++import javafx.scene.control.TableView;
++import javafx.scene.control.TextField;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class CampaignManagement
+ {
+     SalesAndMarketingManager user;
++    @javafx.fxml.FXML
++    private TableColumn idTableview;
++    @javafx.fxml.FXML
++    private TableColumn statusTableview;
++    @javafx.fxml.FXML
++    private TextField venueLocationTF;
++    @javafx.fxml.FXML
++    private TextField campaignNameTF;
++    @javafx.fxml.FXML
++    private TextField budgetAllocatedTF;
++    @javafx.fxml.FXML
++    private TableColumn dateTableview;
++    @javafx.fxml.FXML
++    private DatePicker startDatePicker;
++    @javafx.fxml.FXML
++    private DatePicker ednDatePicker;
++    @javafx.fxml.FXML
++    private TableColumn nameTableview;
++    @javafx.fxml.FXML
++    private TableColumn budgetTableview;
++    @javafx.fxml.FXML
++    private TableColumn venueTableview;
++    @javafx.fxml.FXML
++    private TableView campaignTable;
++
+     public void setter (SalesAndMarketingManager manager){
+         this.user = manager;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User7/sales and marketing manager dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        SalesDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++
++    @javafx.fxml.FXML
++    public void createCampaignButton(ActionEvent actionEvent) {
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/dairy/Samiul/User7/AnalyzeSalesPerformance.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dairy.Samiul.User7;\r\n\r\npublic class AnalyzeSalesPerformance\r\n{\r\n    SalesAndMarketingManager user;\r\n    public void setter (SalesAndMarketingManager manager){\r\n        this.user = manager;\r\n    }\r\n    @javafx.fxml.FXML\r\n    public void initialize() {\r\n    }}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dairy/Samiul/User7/AnalyzeSalesPerformance.java b/src/main/java/com/example/dairy/Samiul/User7/AnalyzeSalesPerformance.java
+--- a/src/main/java/com/example/dairy/Samiul/User7/AnalyzeSalesPerformance.java	(revision fcd5e2d1f182f2e18b48e3c67ed8b3b191d26e6c)
++++ b/src/main/java/com/example/dairy/Samiul/User7/AnalyzeSalesPerformance.java	(date 1733892738890)
+@@ -1,11 +1,49 @@
+ package com.example.dairy.Samiul.User7;
+ 
++import javafx.event.ActionEvent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Node;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.TableColumn;
++import javafx.scene.control.TableView;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
+ public class AnalyzeSalesPerformance
+ {
+     SalesAndMarketingManager user;
++    @javafx.fxml.FXML
++    private TableColumn weeklySales;
++    @javafx.fxml.FXML
++    private TableColumn monthlySales;
++    @javafx.fxml.FXML
++    private TableColumn customerName;
++    @javafx.fxml.FXML
++    private TableColumn customerQuality;
++    @javafx.fxml.FXML
++    private TableView salesPerformanceTable;
++
+     public void setter (SalesAndMarketingManager manager){
+         this.user = manager;
+     }
+     @javafx.fxml.FXML
+     public void initialize() {
+-    }}
+\ No newline at end of file
++    }
++
++    @javafx.fxml.FXML
++    public void backButton(ActionEvent actionEvent) throws IOException {
++        Parent root = null ;
++        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User7/sales and marketing manager dashboard.fxml"));
++        root = fxmlLoader.load() ;
++
++        SalesDashboard adc = fxmlLoader.getController() ;
++        adc.setter(this.user);
++
++        Scene scene = new Scene(root) ;
++        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
++        stage.setScene(scene);
++        stage.show();
++    }
++}
+\ No newline at end of file

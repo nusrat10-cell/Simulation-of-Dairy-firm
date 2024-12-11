@@ -9,15 +9,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.AnalyzeSalesPerformance">
    <children>
-      <TableView fx:id="salesPerformanceTable" layoutX="125.0" layoutY="184.0" prefHeight="200.0" prefWidth="420.0">
+      <TableView layoutX="125.0" layoutY="184.0" prefHeight="200.0" prefWidth="420.0">
         <columns>
-          <TableColumn fx:id="customerName" prefWidth="111.99999237060547" text="Customer name" />
-          <TableColumn fx:id="weeklySales" prefWidth="87.33332824707031" text="Weekly sales" />
-            <TableColumn fx:id="monthlySales" minWidth="0.66668701171875" prefWidth="104.66668701171875" text="Monthly sales" />
-            <TableColumn fx:id="customerQuality" minWidth="0.0" prefWidth="113.33331298828125" text="Customer Quality" />
+          <TableColumn prefWidth="111.99999237060547" text="Customer name" />
+          <TableColumn prefWidth="87.33332824707031" text="Weekly sales" />
+            <TableColumn minWidth="0.66668701171875" prefWidth="104.66668701171875" text="Monthly sales" />
+            <TableColumn minWidth="0.0" prefWidth="113.33331298828125" text="Customer Quality" />
         </columns>
       </TableView>
-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
       <Text layoutX="188.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Analyze Sales Performance" underline="true">
          <font>
             <Font size="25.0" />
