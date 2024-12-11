@@ -1,4 +1,4 @@
-package com.example.Nupur;
+package com.example.dairy.Nupur;
 
 public class productDispatchmodelClass {
     public Integer requestID;
