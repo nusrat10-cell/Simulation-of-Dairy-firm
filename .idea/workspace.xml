@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d46820c7-c379-4a42-af72-b714e5d1a2c5" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk Quality Test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk Quality Test.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Start _Collection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Start _Collection.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mahamud-tech&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git&quot;,
+    &quot;accountId&quot;: &quot;078a936f-662d-4687-a4a7-3f059b46d8cf&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2q3aheqhWYXTG4OdbWM8yZ04Ykk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.dairy.mahamud" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1733893125306</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733893125306</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d46820c7-c379-4a42-af72-b714e5d1a2c5" name="Changes" comment="commit" />
+      <created>1733893834822</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733893834822</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+</project>
