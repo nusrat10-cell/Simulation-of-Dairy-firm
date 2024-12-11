@@ -12,14 +12,14 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-<<<<<<< HEAD
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nupur/Manage Dispatch Request.fxml"));
-=======
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/mahamud/Payment Management.fxml"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nupur/Update Stock.fxml"));
+
+        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/mahamud/Payment Management.fxml"));
 
 
        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nupur/Manage inventory level.fxml"));
->>>>>>> 709cf25d6dd0e835158e7cc16a2f4663a3119591
+
 
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
 

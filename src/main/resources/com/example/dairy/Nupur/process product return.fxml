@@ -11,17 +11,19 @@
 
 <AnchorPane prefHeight="511.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.ProcessProductReturn">
    <children>
-      <TableView fx:id="productReturnTV" layoutX="104.0" layoutY="100.0" prefHeight="200.0" prefWidth="302.0">
+      <TableView fx:id="productReturnTV" layoutX="104.0" layoutY="100.0" prefHeight="200.0" prefWidth="480.0">
         <columns>
-          <TableColumn fx:id="returnidTC" prefWidth="64.0" text="Return ID" />
-          <TableColumn fx:id="productNameTC" prefWidth="101.60003662109375" text="Product Name" />
-            <TableColumn fx:id="returnReasonTC" prefWidth="140.00006103515625" text="Reason for return" />
+          <TableColumn fx:id="productNameTC" prefWidth="106.4000244140625" text="Product Name" />
+            <TableColumn fx:id="returnReasonTC" prefWidth="149.60003662109375" text="Reason for return" />
+            <TableColumn fx:id="returndateTC" prefWidth="75.0" text="ReturnDate" />
+            <TableColumn fx:id="quantityTC" prefWidth="75.0" text="Quantity" />
+            <TableColumn fx:id="statusTC" prefWidth="75.0" text="Status" />
         </columns>
       </TableView>
       <RadioButton fx:id="approveRB" layoutX="111.0" layoutY="352.0" mnemonicParsing="false" text="Approved" />
       <RadioButton fx:id="rejectRB" layoutX="280.0" layoutY="352.0" mnemonicParsing="false" text="Rejected" />
       <Text layoutX="111.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose whether you want approve or return:" />
-      <Button layoutX="111.0" layoutY="401.0" mnemonicParsing="false" onAction="#updateInventoryButton" text="Update Inventory" />
+      <Button layoutX="185.0" layoutY="396.0" mnemonicParsing="false" onAction="#submitButton" prefHeight="26.0" prefWidth="106.0" text="Submit" />
       <Button layoutX="600.0" layoutY="449.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
       <Text layoutX="256.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Return" wrappingWidth="184.7999267578125">
          <font>
