@@ -5,36 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce530416-739c-4453-a2ee-9e08f0eebf3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/CustomerComplaints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/CustomerComplaints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/CustomerInquiries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/CustomerInquiries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/CustomerRepresentativeDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/CustomerRepresentativeDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/FeedbackModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/FeedbackModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/InventoryManagerDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/InventoryManagerDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/LowStockAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/LowStockAlert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ManageDispatchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ManageInventoryLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ManageProductReturns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageProductReturns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ManageSubscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageSubscription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/NewProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/NewProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ProcessProductReturn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ProcessProductReturn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ProductRecommendations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ProductRecommendations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/PromoteNewProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/PromoteNewProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/PromotePSpecialOffersCampaign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/PromotePSpecialOffersCampaign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/ProperStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ProperStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/TrackOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/TrackOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/TrackPackegingMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/TrackPackegingMaterial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/UpdateStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/UpdateStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/complaintsClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/complaintsClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/expiryDateModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/expiryDateModelClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/feedbackModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/feedbackModelClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/inquiryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/inquiryClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/inventoryModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/inventoryModelClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/packagingmaterialModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/packagingmaterialModelClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/productDispatchmodelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/productRecommandationClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/productRecommandationClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/productReturnModelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/productReturnModelClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Nupur/storageconditionClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/storageconditionClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ExpiryDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/FeedbackModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/FeedbackModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +40,11 @@
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.dairy" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
