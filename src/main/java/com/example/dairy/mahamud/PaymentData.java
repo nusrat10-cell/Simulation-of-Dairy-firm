@@ -2,12 +2,12 @@ package com.example.dairy.mahamud;
 
 import java.time.LocalDate;
 
-public class PaymentmanagementModelClass {
+public class PaymentData {
     private String name;
     private double amount;
     private LocalDate date;
 
-    public PaymentmanagementModelClass(String name, double amount, LocalDate date) {
+    public PaymentData(String name, double amount, LocalDate date) {
         this.name = name;
         this.amount = amount;
         this.date = date;
@@ -39,7 +39,7 @@ public class PaymentmanagementModelClass {
 
     @Override
     public String toString() {
-        return "PaymentmanagementModelClass{" +
+        return "PaymentData{" +
                 "name='" + name + '\'' +
                 ", amount=" + amount +
                 ", date=" + date +

@@ -1,15 +1,16 @@
 module com.example.dairy {
     requires javafx.controls;
     requires javafx.fxml;
-    requires java.desktop;
 
-//<<<<<<< HEAD
     exports com.example.dairy;
-    opens com.example.dairy to javafx.graphics;
+    exports com.example.dairy.mahamud;
 
-    exports com.example.dairy.Nupur;
-    opens com.example.dairy.Nupur to javafx.fxml;
+    opens com.example.dairy to javafx.graphics;
+    opens com.example.dairy.mahamud to javafx.fxml;
 }
+
+
+
 //=======
 
     //opens com.example.dairy to javafx.fxml;
