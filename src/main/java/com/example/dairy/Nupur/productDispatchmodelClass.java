@@ -1,18 +1,18 @@
 package com.example.dairy.Nupur;
 
 public class productDispatchmodelClass {
-    public Integer requestID;
+    //public Integer requestID;
     public Integer quantity;
     public String productName;
     public String destination;
 
-    public Integer getRequestID() {
-        return requestID;
-    }
+    //public Integer getRequestID() {
+        //return requestID;
+    //}
 
-    public void setRequestID(Integer requestID) {
-        this.requestID = requestID;
-    }
+    //public void setRequestID(Integer requestID) {
+       // this.requestID = requestID;
+    //}
 
     public String getDestination() {
         return destination;
@@ -41,15 +41,15 @@ public class productDispatchmodelClass {
     @Override
     public String toString() {
         return "productDispatchmodelClass{" +
-                "requestID=" + requestID +
+                //"requestID=" + requestID +
                 ", quantity=" + quantity +
                 ", productName='" + productName + '\'' +
                 ", destination='" + destination + '\'' +
                 '}';
     }
 
-    public productDispatchmodelClass(Integer requestID, String destination, String productName, Integer quantity) {
-        this.requestID = requestID;
+    public productDispatchmodelClass( String destination, String productName, Integer quantity) {
+        //this.requestID = requestID;
         this.destination = destination;
         this.productName = productName;
         this.quantity = quantity;

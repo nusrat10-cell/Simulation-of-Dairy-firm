@@ -4,6 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="ce530416-739c-4453-a2ee-9e08f0eebf3a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ExpiryDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/FeedbackModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/FeedbackModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml" afterDir="false" />
+=======
     <list default="true" id="b76f6ffe-c533-4a2d-88dc-9d5b27fefa67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
@@ -13,10 +25,15 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PaymentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PaymentManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ReportIssues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ReportIssues.java" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollectionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/SupplierManagemen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/SupplierManagemen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Report Issues.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Report Issues.fxml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+>>>>>>> 709cf25d6dd0e835158e7cc16a2f4663a3119591
+>>>>>>> 3d1363a492e4bf1d7162d9ad4a0dc13379db2aea
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +70,16 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
+<<<<<<< HEAD
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.dairy" />
+    </key>
+  </component>
+=======
 }]]></component>
+>>>>>>> 709cf25d6dd0e835158e7cc16a2f4663a3119591
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
