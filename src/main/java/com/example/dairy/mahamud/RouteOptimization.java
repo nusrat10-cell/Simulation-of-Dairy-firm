@@ -52,40 +52,7 @@ public class RouteOptimization {
 
     @FXML
     public void roconfirmcollectionbuttonfx(ActionEvent actionEvent) {
-        String sampleId = rosampleidtextfieldfx.getText();
-        String farmerName = rofarmernametextfieldfx.getText();
-        String destination = rodestinationfx.getText();
-        String quantityStr = roquantitytextfieldfx.getText();
 
-        if (sampleId.isEmpty() || farmerName.isEmpty() || destination.isEmpty() || quantityStr.isEmpty()) {
-            System.out.println("Please fill in all fields.");
-            return;
-        }
-
-        try {
-            double quantity = Double.parseDouble(quantityStr);
-            if (quantity < 1 || quantity > 50) {
-                System.out.println("Please enter a quantity between 1 and 50 liters.");
-                return;
-            }
-
-            if (!isValidDestination(destination)) {
-                System.out.println("Invalid destination. Please enter a valid destination.");
-                return;
-            }
-
-            RouteData data = new RouteData(sampleId, farmerName, quantity, destination);
-            routeDataList.add(data);
-
-            // Clear the fields after submission
-            rosampleidtextfieldfx.clear();
-            rofarmernametextfieldfx.clear();
-            rodestinationfx.clear();
-            roquantitytextfieldfx.clear();
-
-        } catch (NumberFormatException e) {
-            System.out.println("Please enter a valid quantity.");
-        }
     }
 
     private boolean isValidDestination(String destination) {
@@ -97,4 +64,6 @@ public class RouteOptimization {
         }
         return false;
     }
+
+
 }

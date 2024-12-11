@@ -1,33 +1,62 @@
 package com.example.dairy.mahamud;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
-import java.awt.event.ActionEvent;
-
-public class SupplierManagemen
-{
-    @javafx.fxml.FXML
+public class SupplierManagemen {
+    @FXML
     private Label smlabelthankfx;
-    @javafx.fxml.FXML
+    @FXML
     private TextField smnametextfieldfx;
-    @javafx.fxml.FXML
+    @FXML
     private TextField smcontacttextfieldfx;
-    @javafx.fxml.FXML
+    @FXML
     private TextField smidtextfieldfx;
-    @javafx.fxml.FXML
+    @FXML
     private DatePicker smdatefx;
 
-    @javafx.fxml.FXML
+    private ArrayList<SupplierData> supplierDataList = new ArrayList<>();
+
+    @FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void smconfirmorderbuttonfx(ActionEvent actionEvent) {
+        String id = smidtextfieldfx.getText();
+        String name = smnametextfieldfx.getText();
+        String contact = smcontacttextfieldfx.getText();
+        LocalDate date = smdatefx.getValue();
+
+        if (id.isEmpty() || name.isEmpty() || contact.isEmpty() || date == null) {
+            smlabelthankfx.setText("Please fill in all fields.");
+            return;
+        }
+
+        if (contact.length() != 11 || !contact.matches("\\d+")) {
+            smlabelthankfx.setText("Contact number should be 11 digits.");
+            return;
+        }
+
+        SupplierData data = new SupplierData(id, name, contact, date);
+        supplierDataList.add(data);
+
+
+        smidtextfieldfx.clear();
+        smnametextfieldfx.clear();
+        smcontacttextfieldfx.clear();
+        smdatefx.setValue(null);
+
+        smlabelthankfx.setText("Congratulations! Data added successfully.");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void smbackbuttonfx(ActionEvent actionEvent) {
+        System.out.println("Back button clicked.");
     }
 }
