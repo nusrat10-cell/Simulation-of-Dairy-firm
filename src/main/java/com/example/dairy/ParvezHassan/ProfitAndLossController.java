@@ -11,10 +11,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ProfitAndLossController
@@ -43,6 +43,10 @@ public class ProfitAndLossController
     public void calcuProfitLoss(ActionEvent actionEvent) {
         String selectedYear = year2_CB.getSelectionModel().getSelectedItem();
         String selectedMonth = expenseMonth_CB.getSelectionModel().getSelectedItem();
+//DEBUG
+        System.out.println("expense: " + getExpense(selectedYear,selectedMonth));
+        System.out.printf("revenue " + getRevenue(selectedYear,selectedMonth));
+
 
         if (selectedYear != null && selectedMonth != null) {
             double revenue = getRevenue(selectedYear, selectedMonth);
@@ -66,30 +70,23 @@ public class ProfitAndLossController
 
 
     @javafx.fxml.FXML
-    public void showRevenueButton(ActionEvent actionEvent) {
-        String selectedYear = year_CB.getSelectionModel().getSelectedItem();
+    public void showRevenueButton(ActionEvent actionEvent) {String selectedYear = year_CB.getSelectionModel().getSelectedItem();
 
         if (selectedYear != null) {
             // Clear existing data in the chart
             revenueChart.getData().clear();
 
-            // Read revenue data from Revenue.txt
-            Map<String, Integer> monthlyRevenue = new HashMap<>();
-            try (BufferedReader br = new BufferedReader(new FileReader("Revenue.txt"))) {
-                String line;
-                while ((line = br.readLine()) != null) {
-                    String[] parts = line.split(", ");
-                    if (parts.length == 3) {
-                        String month = parts[0].trim();
-                        String year = parts[1].trim();
-                        int revenue = Integer.parseInt(parts[2].trim());
+            // Read revenue data from generateRevenue.bin
+            Map<String, Double> monthlyRevenue = new HashMap<>();
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/generateRevenue.bin"))) {
+                List<Revenue> revenues = (List<Revenue>) ois.readObject();
 
-                        if (year.equals(selectedYear)) {
-                            monthlyRevenue.put(month, revenue);
-                        }
+                for (Revenue revenue : revenues) {
+                    if (String.valueOf(revenue.getYear()).equals(selectedYear)) {
+                        monthlyRevenue.put(revenue.getMonth(), monthlyRevenue.getOrDefault(revenue.getMonth(), 0.0) + revenue.getAmount());
                     }
                 }
-            } catch (IOException e) {
+            } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
 
@@ -99,7 +96,7 @@ public class ProfitAndLossController
 
             String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
             for (String month : months) {
-                Integer revenue = monthlyRevenue.get(month);
+                Double revenue = monthlyRevenue.get(month);
                 if (revenue != null) {
                     series.getData().add(new XYChart.Data<>(month, revenue));
                 }
@@ -108,52 +105,53 @@ public class ProfitAndLossController
         } else {
             textArea.setText("Please select a year.");
         }
+
     }
 
     private double getExpense(String year, String month) {
         double expense = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader("Expenses.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(", ");
-                if (parts.length == 3) {
-                    String fileYear = parts[0].split(": ")[1].trim();
-                    String fileMonth = parts[1].split(": ")[1].trim();
-                    double fileExpense = Double.parseDouble(parts[2].split(": ")[1].trim());
+        Map<String, Map<String, Double>> yearlyExpenses = new HashMap<>();
 
-                    if (fileYear.equals(year) && fileMonth.equals(month)) {
-                        expense = fileExpense;
-                        break;
-                    }
-                }
-            }
-        } catch (IOException e) {
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/Expenses.bin"))) {
+            yearlyExpenses = (Map<String, Map<String, Double>>) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
+            return 0;
         }
+
+        if (yearlyExpenses.containsKey(year)) {
+            Map<String, Double> monthlyExpenses = yearlyExpenses.get(year);
+            if (monthlyExpenses.containsKey(month)) {
+                expense = monthlyExpenses.get(month);
+            }
+        }
+
         return expense;
+
     }
 
     private double getRevenue(String year, String month) {
         double revenue = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader("Revenue.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(", ");
-                if (parts.length == 3) {
-                    String fileMonth = parts[0].trim();
-                    String fileYear = parts[1].trim();
-                    double fileRevenue = Double.parseDouble(parts[2].trim());
+        List<Revenue> revenueList = new ArrayList<>();
 
-                    if (fileYear.equals(year) && fileMonth.equals(month)) {
-                        revenue = fileRevenue;
-                        break;
-                    }
-                }
-            }
-        } catch (IOException e) {
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/generateRevenue.bin"))) {
+            revenueList = (List<Revenue>) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
+            return 0;
         }
+
+        for (Revenue rev : revenueList) {
+            if (String.valueOf(rev.getYear()).equals(year) && rev.getMonth().equalsIgnoreCase(month)) {
+                revenue = rev.getAmount();
+                break;
+            }
+        }
+
         return revenue;
+
     }
 
 

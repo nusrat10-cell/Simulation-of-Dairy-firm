@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DataStore {
@@ -117,6 +118,8 @@ public class DataStore {
         allTransactions.add(new Transactions("rahman", LocalDate.of(2023, 11, 23), 1990, "bkash", "credit", 2001));
         allTransactions.add(new Transactions("rahman", LocalDate.of(2023, 11, 23), 1990, "bkash", "credit", 2002));
     }
+
+
 
     private static void populateCombinedList() {
         for (Orders order : orderList) {

@@ -74,4 +74,8 @@ public class Dashboard2Controller
             e.printStackTrace();
         }
     }
+
+    @javafx.fxml.FXML
+    public void loanCalculator_button(ActionEvent actionEvent) {
+    }
 }
