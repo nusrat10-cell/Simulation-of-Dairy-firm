@@ -248,7 +248,7 @@ public class OrderManagementController {
 
                 // Create a new CombinedList object with the updated order type
                 CombinedList combinedOrder = new CombinedList(
-                        productName, productPrice, productStockLevel, orderDate, orderID, orderQuantity,
+                        productName, (double) productPrice, productStockLevel, orderDate, orderID, orderQuantity,
                         orderType, customerName, customerID, customerAddress, customerNumber
                 );
                 updatedList.add(combinedOrder);
@@ -290,7 +290,7 @@ public class OrderManagementController {
         // Create a new file for warehouse data
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("WarehouseOrders.txt"))) {
             for (CombinedList order : selectedOrders) {
-                int totalPrice = order.getOrderQuantity() * order.getItemPrice();
+                Double totalPrice = order.getOrderQuantity() * order.getItemPrice();
                 String orderString = "CustomerID=" + order.getCustomerID() +
                         ", CustomerName='" + order.getCustomerName() + "'" +
                         ", CustomerAddress='" + order.getCustomerAddress() + "'" +

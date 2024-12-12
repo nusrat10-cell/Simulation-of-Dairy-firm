@@ -111,7 +111,7 @@ public class AddOrder
         // Create a new CombinedList entry
         CombinedList combinedData = new CombinedList(
                 orderName,
-                0, // Assuming item price is 0 for now
+                0.0, // Assuming item price is 0 for now
                 0, // Assuming item level is 0 for now
                 orderDate,
                 orderID,

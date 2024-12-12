@@ -1,18 +1,16 @@
 package com.example.dairy.ParvezHassan;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import java.io.Serializable;
 
 public class Inventory implements Serializable{
     String product_name;
-    int product_price;
+    Double product_price;
     int product_stockLevel;
     String product_type;
 
 
 
-    public Inventory(String product_name, int product_price, int product_stockLevel, String product_type) {
+    public Inventory(String product_name, Double product_price, int product_stockLevel, String product_type) {
         this.product_name = product_name;
         this.product_price = product_price;
         this.product_stockLevel = product_stockLevel;
@@ -28,11 +26,11 @@ public class Inventory implements Serializable{
         this.product_name = product_name;
     }
 
-    public int getProduct_price() {
+    public Double getProduct_price() {
         return product_price;
     }
 
-    public void setProduct_price(int product_price) {
+    public void setProduct_price(Double product_price) {
         this.product_price = product_price;
     }
 
