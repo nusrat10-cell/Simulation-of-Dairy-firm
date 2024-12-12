@@ -36,7 +36,7 @@ public class DashboardController
         public void coldChain_Button (ActionEvent actionEvent){
         }
 
-        @javafx.fxml.FXML
+        @Deprecated
         public void costAnalysis_Button (ActionEvent actionEvent){
         }
 
@@ -85,4 +85,18 @@ public class DashboardController
 
         @javafx.fxml.FXML
         public void initialize () {
-        }}
+        }
+
+    @javafx.fxml.FXML
+    public void updatePrice_Button(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("UpdatePrice.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            // Handle FXML loading error
+            e.printStackTrace();
+        }
+    }
+}
