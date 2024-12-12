@@ -1,17 +1,9 @@
 package com.example.dairy.Nupur;
 
-import java.time.LocalDate;
-
-public class expiryDateModelClass {
+public class lowstockModelClass {
     private String productName;
     private Integer currentStock;
-    private LocalDate expiryDate;
-
-    public expiryDateModelClass(String productName, Integer currentStock, LocalDate expiryDate) {
-        this.productName = productName;
-        this.currentStock = currentStock;
-        this.expiryDate = expiryDate;
-    }
+    private Integer minimumStock;
 
     public String getProductName() {
         return productName;
@@ -19,6 +11,14 @@ public class expiryDateModelClass {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public Integer getMinimumStock() {
+        return minimumStock;
+    }
+
+    public void setMinimumStock(Integer minimumStock) {
+        this.minimumStock = minimumStock;
     }
 
     public Integer getCurrentStock() {
@@ -29,20 +29,18 @@ public class expiryDateModelClass {
         this.currentStock = currentStock;
     }
 
-    public LocalDate getExpiryDate() {
-        return expiryDate;
-    }
-
-    public void setExpiryDate(LocalDate expiryDate) {
-        this.expiryDate = expiryDate;
+    public lowstockModelClass(String productName, Integer minimumStock, Integer currentStock) {
+        this.productName = productName;
+        this.minimumStock = minimumStock;
+        this.currentStock = currentStock;
     }
 
     @Override
     public String toString() {
-        return "expiryDateModelClass{" +
+        return "lowstockModelClass{" +
                 "productName='" + productName + '\'' +
                 ", currentStock=" + currentStock +
-                ", expiryDate=" + expiryDate +
+                ", minimumStock=" + minimumStock +
                 '}';
     }
 }

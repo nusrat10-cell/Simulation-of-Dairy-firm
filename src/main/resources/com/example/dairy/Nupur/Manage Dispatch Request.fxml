@@ -44,5 +44,6 @@
       <TextField fx:id="destinationTF" layoutX="51.0" layoutY="123.0" promptText="Enter destination" />
       <TextField fx:id="quantityTF" layoutX="52.0" layoutY="162.0" promptText="Enter Quantity" />
       <ComboBox fx:id="selectProductsCB" layoutX="425.0" layoutY="85.0" prefWidth="150.0" promptText="Select Product" />
+      <Button layoutX="574.0" layoutY="420.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

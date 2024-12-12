@@ -3,10 +3,10 @@ package com.example.dairy.Nupur;
 import java.time.LocalDate;
 
 public class inventoryModelClass {
-    public String productName;
-    public Integer StockLevel;
-    public Integer minimumStock;
-    public LocalDate expiryDate;
+    private String productName;
+    private Integer StockLevel;
+    private Integer minimumStock;
+    private LocalDate expiryDate;
 
     public String getProductName() {
         return productName;

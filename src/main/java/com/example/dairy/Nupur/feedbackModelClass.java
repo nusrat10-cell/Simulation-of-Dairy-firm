@@ -1,9 +1,9 @@
 package com.example.dairy.Nupur;
 
 public class feedbackModelClass {
-    public String customerName;
-    public String feedbackType;
-    public String feedback;
+    private String customerName;
+    private String feedbackType;
+    private String feedback;
 
     public String getFeedback() {
         return feedback;
