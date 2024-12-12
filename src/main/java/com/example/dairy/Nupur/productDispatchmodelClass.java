@@ -2,9 +2,9 @@ package com.example.dairy.Nupur;
 
 public class productDispatchmodelClass {
     //public Integer requestID;
-    public Integer quantity;
-    public String productName;
-    public String destination;
+    private Integer quantity;
+    private String productName;
+    private String destination;
 
     //public Integer getRequestID() {
         //return requestID;

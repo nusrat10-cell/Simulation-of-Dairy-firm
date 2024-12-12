@@ -18,7 +18,7 @@ public class InventoryManagerDashboard
     @javafx.fxml.FXML
     public void monitorStorageConditionButton(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("Proper Storage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Proper Storage .fxml"));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
@@ -117,5 +117,9 @@ public class InventoryManagerDashboard
             // Handle FXML loading error
             e.printStackTrace();
         }
+    }
+
+    @javafx.fxml.FXML
+    public void logoutButton(ActionEvent actionEvent) {
     }
 }

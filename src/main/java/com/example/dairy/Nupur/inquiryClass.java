@@ -1,10 +1,10 @@
 package com.example.dairy.Nupur;
 
 public class inquiryClass {
-    public String customerName;
-    public Integer inquiryID;
-    public String inquiryType;
-    public String status;
+    private String customerName;
+    private Integer inquiryID;
+    private String inquiryType;
+    private String status;
 
     public String getCustomerName() {
         return customerName;

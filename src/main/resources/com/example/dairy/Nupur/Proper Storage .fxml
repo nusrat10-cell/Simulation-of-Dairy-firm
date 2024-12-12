@@ -12,23 +12,24 @@
 
 <AnchorPane prefHeight="463.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.ProperStorage">
    <children>
-      <TableView fx:id="properStorageTV" layoutX="45.0" layoutY="82.0" prefHeight="162.0" prefWidth="302.0">
+      <TableView fx:id="properStorageTV" layoutX="39.0" layoutY="82.0" prefHeight="162.0" prefWidth="414.0">
         <columns>
-          <TableColumn fx:id="temperatureTC" prefWidth="97.5999984741211" text="Temperature" />
-          <TableColumn fx:id="humidityTC" prefWidth="92.0" text="Humidity" />
-            <TableColumn fx:id="statusTC" prefWidth="111.20001220703125" text="Status" />
+          <TableColumn fx:id="temperatureTC" prefWidth="93.5999984741211" text="Temperature" />
+          <TableColumn fx:id="humidityTC" prefWidth="106.4000244140625" text="Humidity" />
+            <TableColumn fx:id="statusTC" prefWidth="115.199951171875" text="Status" />
+            <TableColumn fx:id="productnameTC" prefWidth="100.0" text="product name" />
         </columns>
       </TableView>
-      <Text layoutX="277.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proper Storage">
+      <Text layoutX="251.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proper Storage">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Line endX="58.399993896484375" endY="7.62939453125E-6" layoutX="342.0" layoutY="57.0" startX="-70.00003051757812" startY="7.62939453125E-6" />
+      <Line endX="76.39999389648438" endY="7.62939453125E-6" layoutX="342.0" layoutY="57.0" startX="-92.39999389648438" startY="7.62939453125E-6" />
       <ComboBox fx:id="selectProductCB" layoutX="45.0" layoutY="262.0" prefWidth="150.0" promptText="Select product" />
-      <Label fx:id="label" layoutX="45.0" layoutY="304.0" prefHeight="18.0" prefWidth="330.0" text="Label" />
-      <ComboBox fx:id="takeActionCB" layoutX="45.0" layoutY="336.0" prefWidth="150.0" promptText="Take Action" />
-      <Button layoutX="196.0" layoutY="385.0" mnemonicParsing="false" onAction="#logActionButton" prefHeight="26.0" prefWidth="101.0" text="Log Action" />
+      <Label fx:id="label" layoutX="45.0" layoutY="343.0" prefHeight="18.0" prefWidth="330.0" text="Label" />
+      <ComboBox fx:id="takeActionCB" layoutX="45.0" layoutY="303.0" prefWidth="150.0" promptText="Take Action" />
+      <Button layoutX="236.0" layoutY="384.0" mnemonicParsing="false" onAction="#logActionButton" prefHeight="26.0" prefWidth="122.0" text="Submit" />
       <Button layoutX="593.0" layoutY="411.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>
