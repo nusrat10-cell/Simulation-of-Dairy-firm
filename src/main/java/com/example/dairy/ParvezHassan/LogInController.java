@@ -104,11 +104,11 @@ public class LogInController {
                 Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 stage.setScene(new Scene(root));
                 stage.show();
-                verified =true;
+                verified =true;}
             if (!verified) {
                 // Show error message
                 showError("Invalid credentials. Please try again.");
-            }}
+            }
         } catch (NumberFormatException e) {
             // Handle invalid integer input
             showError("User ID must be a number.");

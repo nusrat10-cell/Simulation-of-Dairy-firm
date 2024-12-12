@@ -47,5 +47,12 @@
       <Label layoutX="195.0" layoutY="175.0" text="Expenses" />
       <Label layoutX="289.0" layoutY="172.0" prefHeight="40.0" prefWidth="39.0" text="Profit Loss" textAlignment="CENTER" wrapText="true" />
       <Label layoutX="392.0" layoutY="171.0" prefHeight="40.0" prefWidth="39.0" text="Log Out" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="101.0" layoutY="229.0" mnemonicParsing="false" onAction="#loanCalculator_button" prefHeight="40.0" prefWidth="40.0" text="Loan Calc" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="101.0" layoutY="229.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Icons/calculator_11008563.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="91.0" layoutY="277.0" prefHeight="40.0" prefWidth="61.0" text="Loan Calculator" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>

@@ -9,12 +9,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 public class InventoryManagementController {
@@ -33,14 +36,46 @@ public class InventoryManagementController {
 
     DataStore dataStore = new DataStore();
     ObservableList<Inventory> stockItems = dataStore.getInventoryList();
+    @javafx.fxml.FXML
+    private AnchorPane viewInventoryPane;
+    @javafx.fxml.FXML
+    private TableColumn<Inventory,Integer> quantity_Col;
+    @javafx.fxml.FXML
+    private AnchorPane addinventoryPane;
+    @javafx.fxml.FXML
+    private TableView<Inventory> addedItem_tableView;
+    @javafx.fxml.FXML
+    private TableColumn<Inventory, String> name_Col;
+    @javafx.fxml.FXML
+    private TableColumn<Inventory, Double> price_Col;
+    @javafx.fxml.FXML
+    private TextField input_quantity_TF;
+    @javafx.fxml.FXML
+    private TableColumn<Inventory,String> type_Col;
 
+    private final ObservableList<Inventory> inventoryData = FXCollections.observableArrayList();
+    @javafx.fxml.FXML
+    private ComboBox item_type_ComboBox;
+    @javafx.fxml.FXML
+    private TextField input_itemName;
 
 
     @javafx.fxml.FXML
     public void initialize() {
         inventorySel_Combobox.getItems().addAll("Current Stock", "Low Stock Items", "Transactions");
         fil_type_ComboBox.getItems().addAll("Raw Material", "Finished Goods", "Packaging Material", "Storage Supplies", "Equipments");
-        inventory_TableView.setVisible(true);
+        addinventoryPane.setVisible(false);
+        viewInventoryPane.setVisible(false);
+        item_type_ComboBox.getItems().addAll("Raw Material", "Finished Goods", "Packaging Material", "Storage Supplies", "Equipments");
+
+        name_Col.setCellValueFactory(new PropertyValueFactory<>("product_name"));
+        price_Col.setCellValueFactory(new PropertyValueFactory<>("product_price"));
+        quantity_Col.setCellValueFactory(new PropertyValueFactory<>("product_stockLevel"));
+        type_Col.setCellValueFactory(new PropertyValueFactory<>("product_type"));
+
+
+        addedItem_tableView.setItems(inventoryData);
+        loadInventoryData();
 
     }
 
@@ -313,6 +348,90 @@ public class InventoryManagementController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @javafx.fxml.FXML
+    public void viewInventory_Button(ActionEvent actionEvent) {
+        addinventoryPane.setVisible(false);
+        viewInventoryPane.setVisible(true);
+    }
+
+    @javafx.fxml.FXML
+    public void addInventory_Button(ActionEvent actionEvent) {
+        addinventoryPane.setVisible(true);
+        viewInventoryPane.setVisible(false);
+    }
+
+    @javafx.fxml.FXML
+    public void addButton(ActionEvent actionEvent) {
+        String name = input_itemName.getText().trim().toLowerCase();
+        int quantity;
+        String type = (String) item_type_ComboBox.getSelectionModel().getSelectedItem();
+
+        try {
+            quantity = Integer.parseInt(input_quantity_TF.getText());
+        } catch (NumberFormatException e) {
+            System.err.println("Please enter valid numbers for quantity and price.");
+            return;
+        }
+// Check if the item already exists in the inventory
+        Optional<Inventory> existingItem = inventoryData.stream()
+                .filter(item -> item.getProduct_name().trim().toLowerCase().equals(name))
+                .findFirst();
+
+        if (existingItem.isPresent()) {
+            Inventory item = existingItem.get();
+            item.setProduct_stockLevel(item.getProduct_stockLevel() + quantity);
+            addedItem_tableView.refresh();
+        } else {
+            Inventory newItem = new Inventory(name, 0.0, quantity, type);
+            inventoryData.add(newItem);
+        }
+
+        saveInventoryData();
+    }
+
+    private void loadInventoryData() {
+        File file = new File("DataStore/InventoryList.bin");
+        if (file.exists()) {
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+                List<Inventory> inventoryList = (List<Inventory>) ois.readObject();
+                inventoryData.addAll(inventoryList);
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+    }
+    private void saveInventoryData() {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("DataStore/InventoryList.bin"))) {
+            oos.writeObject(new ArrayList<>(inventoryData));
+            System.out.println("Inventory data saved successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @javafx.fxml.FXML
+    public void back_button2(ActionEvent actionEvent) {
+        input_itemName.clear();
+        item_type_ComboBox.getSelectionModel().clearSelection();
+        input_quantity_TF.clear();
+        addedItem_tableView.getItems().clear();
+
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
 

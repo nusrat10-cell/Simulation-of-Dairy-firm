@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DataStore {
@@ -87,12 +88,12 @@ public class DataStore {
     public ObservableList<Inventory> getInventoryList() {return inventoryList;}
 
     public static void populateInventory() {
-        inventoryList.add(new Inventory("Milk", 44, 100, "Raw Material"));
-        inventoryList.add(new Inventory("Cheese", 44, 100, "Finished Goods"));
-        inventoryList.add(new Inventory("Butter", 44, 100, "Raw Material"));
-        inventoryList.add(new Inventory("Paneer", 44, 30, "Packaging Material"));
-        inventoryList.add(new Inventory("Condensed Milk", 44, 60, "Storage Supplies"));
-        inventoryList.add(new Inventory("Whey", 44, 44, "Equipments"));
+        inventoryList.add(new Inventory("Milk", 44.0, 100, "Raw Material"));
+        inventoryList.add(new Inventory("Cheese", 44.0, 100, "Finished Goods"));
+        inventoryList.add(new Inventory("Butter", 44.0, 100, "Raw Material"));
+        inventoryList.add(new Inventory("Paneer", 44.0, 30, "Packaging Material"));
+        inventoryList.add(new Inventory("Condensed Milk", 44.0, 60, "Storage Supplies"));
+        inventoryList.add(new Inventory("Whey", 44.0, 44, "Equipments"));
     }
 
     private static void populateCustomers() {
@@ -117,6 +118,8 @@ public class DataStore {
         allTransactions.add(new Transactions("rahman", LocalDate.of(2023, 11, 23), 1990, "bkash", "credit", 2001));
         allTransactions.add(new Transactions("rahman", LocalDate.of(2023, 11, 23), 1990, "bkash", "credit", 2002));
     }
+
+
 
     private static void populateCombinedList() {
         for (Orders order : orderList) {

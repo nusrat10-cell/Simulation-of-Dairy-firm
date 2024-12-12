@@ -16,6 +16,7 @@ import java.io.*;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -115,23 +116,21 @@ public class ExpensesController
 
     @javafx.fxml.FXML
     public void setTotalBudget_button(ActionEvent actionEvent) {
-        String A = itemCatagory1_CB.getSelectionModel().getSelectedItem();
-        try (BufferedReader reader = new BufferedReader(new FileReader("BudgetData.txt"))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                // Process each line of the file
-                System.out.println(line);
-                String[] parts = line.split(", ");
-                String name = parts[0].split(": ")[1];
-                String amount = parts[2].split(": ")[1];
+        String selectedCategory = itemCatagory1_CB.getSelectionModel().getSelectedItem();
 
-                if (name.equals(A)) {
-                    isAmount_TF.setText(amount);
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/BudgetData.bin"))) {
+            List<BudgetItem> budgetItems = (List<BudgetItem>) ois.readObject();
+
+            for (BudgetItem item : budgetItems) {
+                if (item.getName().equals(selectedCategory)) {
+                    isAmount_TF.setText(String.valueOf(item.getAmount()));
+                    break;
                 }
             }
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
             System.err.println("Failed to read budget data: " + e.getMessage());
         }
+
     }
 
 
@@ -160,24 +159,13 @@ public class ExpensesController
             monthlyExpenses.put(monthName, monthlyExpenses.getOrDefault(monthName, 0.0) + amount);
         }
 
-        // Write the yearly expenses to Expenses.txt
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Expenses.txt"))) {
-            for (Map.Entry<String, Map<String, Double>> yearlyEntry : yearlyExpenses.entrySet()) {
-                String year = yearlyEntry.getKey();
-                Map<String, Double> monthlyExpenses = yearlyEntry.getValue();
-                for (Map.Entry<String, Double> monthlyEntry : monthlyExpenses.entrySet()) {
-                    String month = monthlyEntry.getKey();
-                    double totalAmount = monthlyEntry.getValue();
-                    writer.write("Year: " + year + ", Month: " + month + ", Amount: " + totalAmount);
-                    writer.newLine();
-                }
-            }
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("DataStore/Expenses.bin"))) {
+            oos.writeObject(yearlyExpenses);
+            System.out.println("Expenses have been saved to DataStore/Expenses.bin");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // Optionally, display confirmation message or update UI
-        System.out.println("Expenses have been saved to Expenses.txt");
     }
 
 
