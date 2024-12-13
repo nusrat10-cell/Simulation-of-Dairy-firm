@@ -79,11 +79,11 @@ public class AddOrder
 
         // Read data from InventoryList.bin
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/InventoryList.bin"))) {
-            List<Inventory> inventoryList = (List<Inventory>) ois.readObject();
+            List<OrderToSupplier> inventoryList = (List<OrderToSupplier>) ois.readObject();
 
-            for (Inventory inventory : inventoryList) {
+            for (OrderToSupplier inventory : inventoryList) {
                 // Add item name to the list
-                inventoryNames.add(inventory.getProduct_name());
+                inventoryNames.add(inventory.getItemName());
             }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -207,19 +207,19 @@ public class AddOrder
         saveDataToFile(new ArrayList<>(orderList), "DataStore/OrderList.bin");
 
         // Read data from InventoryList.bin to find the matched item
-        Inventory matchedItem = null;
+        OrderToSupplier matchedItem = null;
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/InventoryList.bin"))) {
-            List<Inventory> inventoryList = (List<Inventory>) ois.readObject();
-            matchedItem = inventoryList.stream().filter(item -> item.getProduct_name().equals(orderName)).findFirst().orElse(null);
+            List<OrderToSupplier> inventoryList = (List<OrderToSupplier>) ois.readObject();
+            matchedItem = inventoryList.stream().filter(item -> item.getItemName().equals(orderName)).findFirst().orElse(null);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
         if (matchedItem != null) {
             CombinedList combinedData = new CombinedList(
-                    matchedItem.getProduct_name(),
-                    matchedItem.getProduct_price(),
-                    matchedItem.getProduct_stockLevel(),
+                    matchedItem.getItemName(),
+                    matchedItem.getPrice(),
+                    matchedItem.getDeliveredQuantity(),
                     orderDate,
                     orderID,
                     orderQuantity,

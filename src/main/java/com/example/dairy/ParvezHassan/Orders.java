@@ -38,7 +38,7 @@ public class Orders implements Serializable{
     public String getorderType(){
         return orderType;
     }
-    public void setOrderType(){
+    public void setOrderType(String fulfilled){
         this.orderType = orderType;
     }
 

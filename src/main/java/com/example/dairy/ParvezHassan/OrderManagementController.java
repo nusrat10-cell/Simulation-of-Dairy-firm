@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderManagementController {
@@ -211,69 +212,46 @@ public class OrderManagementController {
     @javafx.fxml.FXML
     public void markAsFulfilledButton(ActionEvent actionEvent) {
         ObservableList<CombinedList> selectedOrders = pendingOrderTableView.getItems();
-        ObservableList<CombinedList> updatedList = FXCollections.observableArrayList();
+        ObservableList<CombinedList> updatedCombinedList = FXCollections.observableArrayList();
+        ObservableList<Orders> updatedOrderList = FXCollections.observableArrayList();
 
-        // Read existing data from CombinedList.txt and update the order type if necessary
-        try (BufferedReader br = new BufferedReader(new FileReader("CombinedList.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                // Remove the class name and braces from the string
-                line = line.replace("CombinedList{", "").replace("}", "");
-
-                // Split the string by commas
-                String[] parts = line.split(", ");
-
-                // Extract and trim the values
-                String productName = parts[0].split("=")[1].trim().replace("'", "");
-                int productPrice = Integer.parseInt(parts[1].split("=")[1].trim());
-                int productStockLevel = Integer.parseInt(parts[2].split("=")[1].trim());
-                LocalDate orderDate = LocalDate.parse(parts[3].split("=")[1].trim());
-                int orderID = Integer.parseInt(parts[4].split("=")[1].trim());
-                int orderQuantity = Integer.parseInt(parts[5].split("=")[1].trim());
-                String orderType = parts[6].split("=")[1].trim().replace("'", "");
-                String customerName = parts[7].split("=")[1].trim().replace("'", "");
-                int customerID = Integer.parseInt(parts[8].split("=")[1].trim());
-                String customerAddress = parts[9].split("=")[1].trim().replace("'", "");
-                int customerNumber = Integer.parseInt(parts[10].split("=")[1].trim());
-
-                // Update orderType to "Fulfilled" if the order is in the selectedOrders list
-                boolean isFulfilled = false;
-                for (CombinedList order : selectedOrders) {
-                    if (order.getOrderID() == orderID) {
-                        orderType = "Fulfilled";
-                        isFulfilled = true;
-                        break;
-                    }
+        // Read and update CombinedList.bin
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/CombinedList.bin"))) {
+            List<CombinedList> combinedList = (List<CombinedList>) ois.readObject();
+            for (CombinedList order : combinedList) {
+                if (selectedOrders.stream().anyMatch(selectedOrder -> selectedOrder.getOrderID() == order.getOrderID())) {
+                    order.setOrderType("Fulfilled");
+                    System.out.println("Order ID " + order.getOrderID() + " marked as fulfilled and sent to the warehouse.");
                 }
-
-                // Create a new CombinedList object with the updated order type
-                CombinedList combinedOrder = new CombinedList(
-                        productName, (double) productPrice, productStockLevel, orderDate, orderID, orderQuantity,
-                        orderType, customerName, customerID, customerAddress, customerNumber
-                );
-                updatedList.add(combinedOrder);
-
-                // Print a confirmation message for the fulfilled order
-                if (isFulfilled) {
-                    System.out.println("Order ID " + orderID + " marked as fulfilled and sent to the warehouse.");
-                }
+                updatedCombinedList.add(order);
             }
-        } catch (IOException | ArrayIndexOutOfBoundsException | NumberFormatException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
-        // Write the updated list back to CombinedList.txt
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("CombinedList.txt"))) {
-            for (CombinedList order : updatedList) {
-                String orderString = "itemName='" + order.getItemName() + "', itemPrice=" + order.getItemPrice() +
-                        ", itemLevel=" + order.getItemLevel() + ", orderDate=" + order.getOrderDate() +
-                        ", orderID=" + order.getOrderID() + ", orderQuantity=" + order.getOrderQuantity() +
-                        ", orderType='" + order.getOrderType() + "', customerName='" + order.getCustomerName() +
-                        "', customerID=" + order.getCustomerID() + ", customerAddress='" + order.getCustomerAddress() +
-                        "', customerNumber=" + order.getCustomerNumber();
-                bw.write(orderString);
-                bw.newLine(); // Add a new line
+        // Write the updated CombinedList.bin
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("DataStore/CombinedList.bin"))) {
+            oos.writeObject(new ArrayList<>(updatedCombinedList));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Read and update OrderList.bin
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/OrderList.bin"))) {
+            List<Orders> orderList = (List<Orders>) ois.readObject();
+            for (Orders order : orderList) {
+                if (selectedOrders.stream().anyMatch(selectedOrder -> selectedOrder.getOrderID() == order.getOrderID())) {
+                    order.setOrderType("Fulfilled");
+                }
+                updatedOrderList.add(order);
             }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        // Write the updated OrderList.bin
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("DataStore/OrderList.bin"))) {
+            oos.writeObject(new ArrayList<>(updatedOrderList));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -281,6 +259,7 @@ public class OrderManagementController {
         // Refresh the TableView to show the updated order statuses
         showPendingOrders();
     }
+
 
 
     @javafx.fxml.FXML
