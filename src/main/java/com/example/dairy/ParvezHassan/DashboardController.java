@@ -32,7 +32,7 @@ public class DashboardController
         public void deliveryTrack_Button (ActionEvent actionEvent){
         }
 
-        @javafx.fxml.FXML
+        @Deprecated
         public void coldChain_Button (ActionEvent actionEvent){
         }
 
@@ -109,5 +109,10 @@ public class DashboardController
             // Handle FXML loading error
             e.printStackTrace();
         }
+    }
+
+
+    @javafx.fxml.FXML
+    public void supply_performance_Button(ActionEvent actionEvent) {
     }
 }

@@ -118,5 +118,19 @@ public class LogInController {
     }
 
 
+    @javafx.fxml.FXML
+    public void createNewUser_Button(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("AddUser.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            // Handle FXML loading error
+            e.printStackTrace();
+
+
+        }
+    }
 }
 
