@@ -16,8 +16,7 @@
         <columns>
           <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
           <TableColumn fx:id="quantityCol" prefWidth="75.0" text="Quantity" />
-            <TableColumn fx:id="oldPriceCol" prefWidth="75.0" text="Old Price" />
-            <TableColumn fx:id="newPriceCol" prefWidth="75.0" text="New Price" />
+            <TableColumn fx:id="oldPriceCol" prefWidth="75.0" text="Price" />
         </columns>
       </TableView>
       <Button layoutX="6.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
@@ -26,7 +25,6 @@
       <Label layoutX="274.0" layoutY="336.0" text="Update Price:" />
       <ComboBox fx:id="selectComboBox" layoutX="98.0" layoutY="332.0" prefWidth="150.0" />
       <TextField fx:id="newPriceTF" layoutX="355.0" layoutY="332.0" />
-      <Button layoutX="48.0" layoutY="371.0" mnemonicParsing="false" onAction="#updateButton" prefHeight="25.0" prefWidth="206.0" text="Update Table" />
       <Button layoutX="345.0" layoutY="371.0" mnemonicParsing="false" onAction="#setPrice_button" prefHeight="25.0" prefWidth="173.0" text="Set Price" />
       <Label fx:id="label_label" layoutX="173.0" layoutY="54.0" prefHeight="40.0" prefWidth="375.0">
          <font>

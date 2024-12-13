@@ -19,38 +19,35 @@ public class UpdatePriceController {
     @FXML
     private TextField newPriceTF;
     @FXML
-    private TableColumn<InventoryWithNewPrice, String> newPriceCol;
+    private TableColumn<OrderToSupplier, String> nameCol;
     @FXML
-    private TableColumn<InventoryWithNewPrice, String> nameCol;
+    private TableColumn<OrderToSupplier, Integer> quantityCol;
     @FXML
-    private TableColumn<InventoryWithNewPrice, Integer> quantityCol;
+    private TableColumn<OrderToSupplier, Double> oldPriceCol;
+    @FXML
+    private TableView<OrderToSupplier> priceTableView;
     @FXML
     private ComboBox<String> selectComboBox;
     @FXML
-    private TableColumn<InventoryWithNewPrice, Double> oldPriceCol;
-    @FXML
-    private TableView<InventoryWithNewPrice> priceTableView;
-
-    private final ObservableList<InventoryWithNewPrice> inventoryData = FXCollections.observableArrayList();
-    @FXML
     private Label label_label;
+
+    private final ObservableList<OrderToSupplier> inventoryData = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
         loadInventoryData();
         selectComboBox.setItems(FXCollections.observableArrayList(
-                inventoryData.stream().map(InventoryWithNewPrice::getProduct_name).distinct().sorted().toList()
+                inventoryData.stream().map(OrderToSupplier::getItemName).distinct().sorted().toList()
         ));
 
-        nameCol.setCellValueFactory(new PropertyValueFactory<>("product_name"));
-        oldPriceCol.setCellValueFactory(new PropertyValueFactory<>("product_price"));
-        quantityCol.setCellValueFactory(new PropertyValueFactory<>("product_stockLevel"));
-        newPriceCol.setCellValueFactory(new PropertyValueFactory<>("newPrice"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("itemName"));
+        oldPriceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+        quantityCol.setCellValueFactory(new PropertyValueFactory<>("deliveredQuantity"));
     }
 
     @FXML
     public void load_Button(ActionEvent actionEvent) {
-        FXCollections.sort(inventoryData, Comparator.comparing(InventoryWithNewPrice::getProduct_name));
+        FXCollections.sort(inventoryData, Comparator.comparing(OrderToSupplier::getItemName));
         priceTableView.setItems(inventoryData);
         priceTableView.refresh();
     }
@@ -72,7 +69,7 @@ public class UpdatePriceController {
     }
 
     @FXML
-    public void updateButton(ActionEvent actionEvent) {
+    public void setPrice_button(ActionEvent actionEvent) {
         String selectedItem = selectComboBox.getSelectionModel().getSelectedItem();
         double newPrice;
 
@@ -80,39 +77,38 @@ public class UpdatePriceController {
             newPrice = Double.parseDouble(newPriceTF.getText());
         } catch (NumberFormatException e) {
             System.err.println("Please enter a valid number for the new price.");
+            label_label.setText("Invalid price entry.");
             return;
         }
 
-        Optional<InventoryWithNewPrice> itemToUpdate = inventoryData.stream()
-                .filter(item -> item.getProduct_name().equals(selectedItem))
-                .findFirst();
-
-        itemToUpdate.ifPresent(item -> {
-            item.setNewPrice(String.valueOf(newPrice));
-            priceTableView.refresh();
-        });
-    }
-
-    @FXML
-    public void setPrice_button(ActionEvent actionEvent) {
-        for (InventoryWithNewPrice item : inventoryData) {
-            if (!item.getNewPrice().equals("-")) {
-                item.setProduct_price(Double.parseDouble(item.getNewPrice())); // Update the actual price
+        boolean itemFound = false;
+        for (OrderToSupplier item : inventoryData) {
+            if (item.getItemName().equals(selectedItem)) {
+                item.setPrice(newPrice);
+                itemFound = true;
+                break;
             }
         }
 
-        saveInventoryData();
-        label_label.setText("Updated Price");
+        if (itemFound) {
+            saveInventoryData();
+            label_label.setText("Price updated successfully.");
+            priceTableView.refresh();
+        } else {
+            label_label.setText("Item not found.");
+        }
+
+        // Clear the input fields
+        newPriceTF.clear();
+        selectComboBox.getSelectionModel().clearSelection();
     }
 
     private void loadInventoryData() {
         File file = new File("DataStore/InventoryList.bin");
         if (file.exists()) {
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-                List<Inventory> inventoryList = (List<Inventory>) ois.readObject();
-                for (Inventory item : inventoryList) {
-                    inventoryData.add(new InventoryWithNewPrice(item.getProduct_name(), item.getProduct_price(), item.getProduct_stockLevel(), item.getProduct_type(), "-"));
-                }
+                List<OrderToSupplier> inventoryList = (List<OrderToSupplier>) ois.readObject();
+                inventoryData.addAll(inventoryList);
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
@@ -120,33 +116,11 @@ public class UpdatePriceController {
     }
 
     private void saveInventoryData() {
-        List<Inventory> originalData = new ArrayList<>();
-        for (InventoryWithNewPrice item : inventoryData) {
-            originalData.add(new Inventory(item.getProduct_name(), item.getProduct_price(), item.getProduct_stockLevel(), item.getProduct_type()));
-        }
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("DataStore/InventoryList.bin"))) {
-            oos.writeObject(originalData);
+            oos.writeObject(new ArrayList<>(inventoryData));
             System.out.println("Inventory data saved successfully.");
-
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-    public static class InventoryWithNewPrice extends Inventory {
-        private String newPrice;
-
-        public InventoryWithNewPrice(String name, double price, int stockLevel, String type, String newPrice) {
-            super(name, price, stockLevel, type);
-            this.newPrice = newPrice;
-        }
-
-        public String getNewPrice() {
-            return newPrice;
-        }
-
-        public void setNewPrice(String newPrice) {
-            this.newPrice = newPrice;
         }
     }
 }

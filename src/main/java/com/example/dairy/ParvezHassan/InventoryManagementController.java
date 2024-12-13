@@ -22,7 +22,7 @@ import java.util.Optional;
 
 public class InventoryManagementController {
     @javafx.fxml.FXML
-    private TableView<Inventory> inventory_TableView;
+    private TableView<OrderToSupplier> inventory_TableView;
     @javafx.fxml.FXML
     private TableView<Transactions> trans_TableView;
     @javafx.fxml.FXML
@@ -39,25 +39,33 @@ public class InventoryManagementController {
     @javafx.fxml.FXML
     private AnchorPane viewInventoryPane;
     @javafx.fxml.FXML
-    private TableColumn<Inventory,Integer> quantity_Col;
-    @javafx.fxml.FXML
     private AnchorPane addinventoryPane;
-    @javafx.fxml.FXML
-    private TableView<Inventory> addedItem_tableView;
-    @javafx.fxml.FXML
-    private TableColumn<Inventory, String> name_Col;
-    @javafx.fxml.FXML
-    private TableColumn<Inventory, Double> price_Col;
+
+
+    //    for adding
     @javafx.fxml.FXML
     private TextField input_quantity_TF;
     @javafx.fxml.FXML
-    private TableColumn<Inventory,String> type_Col;
+    private TextField orderID_textField;
+    @javafx.fxml.FXML
+    private TableColumn<OrderToSupplier, LocalDate> deliveredDate_Col;
+    @javafx.fxml.FXML
+    private TableColumn<OrderToSupplier, Integer> quantityOrdered_Col;
+    @javafx.fxml.FXML
+    private TableColumn<OrderToSupplier, String> itemName_Col;
+    @javafx.fxml.FXML
+    private TableColumn<OrderToSupplier, LocalDate> orderDate_Col;
+    @javafx.fxml.FXML
+    private TableColumn<OrderToSupplier, Integer> orderID_Col;
+    @javafx.fxml.FXML
+    private TableView<OrderToSupplier> addedItem_tableView;
+    @javafx.fxml.FXML
+    private DatePicker deliveredDate_picker;
+    @javafx.fxml.FXML
+    private TableColumn<OrderToSupplier, Integer> quantityDelivered2_Col;
 
-    private final ObservableList<Inventory> inventoryData = FXCollections.observableArrayList();
-    @javafx.fxml.FXML
-    private ComboBox item_type_ComboBox;
-    @javafx.fxml.FXML
-    private TextField input_itemName;
+    private List<OrderToSupplier> placedOrders = new ArrayList<>();
+    private List<OrderToSupplier> inventoryData = new ArrayList<>();
 
 
     @javafx.fxml.FXML
@@ -66,15 +74,18 @@ public class InventoryManagementController {
         fil_type_ComboBox.getItems().addAll("Raw Material", "Finished Goods", "Packaging Material", "Storage Supplies", "Equipments");
         addinventoryPane.setVisible(false);
         viewInventoryPane.setVisible(false);
-        item_type_ComboBox.getItems().addAll("Raw Material", "Finished Goods", "Packaging Material", "Storage Supplies", "Equipments");
-
-        name_Col.setCellValueFactory(new PropertyValueFactory<>("product_name"));
-        price_Col.setCellValueFactory(new PropertyValueFactory<>("product_price"));
-        quantity_Col.setCellValueFactory(new PropertyValueFactory<>("product_stockLevel"));
-        type_Col.setCellValueFactory(new PropertyValueFactory<>("product_type"));
 
 
-        addedItem_tableView.setItems(inventoryData);
+        orderID_Col.setCellValueFactory(new PropertyValueFactory<>("orderId"));
+        itemName_Col.setCellValueFactory(new PropertyValueFactory<>("itemName"));
+        orderDate_Col.setCellValueFactory(new PropertyValueFactory<>("orderDate"));
+        quantityOrdered_Col.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        deliveredDate_Col.setCellValueFactory(new PropertyValueFactory<>("deliveryDate"));
+        quantityDelivered2_Col.setCellValueFactory(new PropertyValueFactory<>("deliveredQuantity"));
+
+
+
+
         loadInventoryData();
 
     }
@@ -93,17 +104,16 @@ public class InventoryManagementController {
         trans_TableView.setVisible(false);
         inventory_TableView.getColumns().clear();
 
-        TableColumn<Inventory, String> nameColumn = new TableColumn<>("Item Name");
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("product_name"));
-        TableColumn<Inventory, String> categoryColumn = new TableColumn<>("Category");
-        categoryColumn.setCellValueFactory(new PropertyValueFactory<>("product_type"));
-        TableColumn<Inventory, Integer> quantityColumn = new TableColumn<>("Units available");
-        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("product_stockLevel"));
-        inventory_TableView.getColumns().addAll(nameColumn, categoryColumn, quantityColumn);
+        TableColumn<OrderToSupplier, String> nameColumn = new TableColumn<>("Item Name");
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("itemName"));
+        TableColumn<OrderToSupplier, String> quantityColumn = new TableColumn<>("Quantity");
+        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("deliveredQuantity"));
 
-        ObservableList<Inventory> inventoryItems = FXCollections.observableArrayList();
+        inventory_TableView.getColumns().addAll(nameColumn, quantityColumn);
+
+        ObservableList<OrderToSupplier> inventoryItems = FXCollections.observableArrayList();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/InventoryList.bin"))) {
-            List<Inventory> inventoryList = (List<Inventory>) ois.readObject();
+            List<OrderToSupplier> inventoryList = (List<OrderToSupplier>) ois.readObject();
             inventoryItems.addAll(inventoryList);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -120,28 +130,25 @@ public class InventoryManagementController {
 
         inventory_TableView.getColumns().clear();
 
-        TableColumn<Inventory, String> nameColumn = new TableColumn<>("Item Name");
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("product_name"));
-        TableColumn<Inventory, String> categoryColumn = new TableColumn<>("Category");
-        categoryColumn.setCellValueFactory(new PropertyValueFactory<>("product_type"));
-        TableColumn<Inventory, Integer> quantityColumn = new TableColumn<>("Units available");
-        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("product_stockLevel"));
-        TableColumn<Inventory, Integer> priceColumn = new TableColumn<>("Price per Unit");
-        priceColumn.setCellValueFactory(new PropertyValueFactory<>("product_price"));
+        TableColumn<OrderToSupplier, String> nameColumn = new TableColumn<>("Item Name");
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("itemName"));
+        TableColumn<OrderToSupplier, String> quantityColumn = new TableColumn<>("Quantity");
+        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("deliveredQuantity"));
 
-        inventory_TableView.getColumns().addAll(nameColumn, categoryColumn, quantityColumn, priceColumn);
-        ObservableList<Inventory> inventoryItems = FXCollections.observableArrayList();
+
+        inventory_TableView.getColumns().addAll(nameColumn, quantityColumn);
+        ObservableList<OrderToSupplier> lowStockItems = FXCollections.observableArrayList();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/InventoryList.bin"))) {
-            List<Inventory> inventoryList = (List<Inventory>) ois.readObject();
-            for (Inventory inventory : inventoryList) {
-                if (inventory.getProduct_stockLevel() < 50) {
-                    inventoryItems.add(inventory);
+            List<OrderToSupplier> inventoryList = (List<OrderToSupplier>) ois.readObject();
+            for (OrderToSupplier item : inventoryList){
+                if (item.getDeliveredQuantity()< 50){
+                    lowStockItems.add(item);
                 }
             }
-        } catch (IOException | ClassNotFoundException e) {
+        }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        inventory_TableView.setItems(inventoryItems);
+        inventory_TableView.setItems(lowStockItems);
     }
 
 
@@ -208,10 +215,10 @@ public class InventoryManagementController {
 
         if (file != null) {
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-                for (Inventory item : inventory_TableView.getItems()) {
-                    writer.write("Name: " + item.getProduct_name() + "\n");
-                    writer.write("Category: " + item.getProduct_type() + "\n");
-                    writer.write("Units Available: " + item.getProduct_stockLevel() + "\n\n");
+                for (OrderToSupplier item : inventory_TableView.getItems()) {
+                    writer.write("Name: " + item.getItemName() + "\n");
+                    writer.write("Category: " + item.getSupplier() + "\n");
+                    writer.write("Units Available: " + item.getDeliveredQuantity() + "\n\n");
                 }
                 status_label.setText("Report saved successfully: " + file.getAbsolutePath());
             } catch (IOException e) {
@@ -229,10 +236,10 @@ public class InventoryManagementController {
 
         if (file != null) {
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-                for (Inventory item : inventory_TableView.getItems()) {
-                    writer.write("Name: " + item.getProduct_name() + "\n");
-                    writer.write("Category: " + item.getProduct_type() + "\n");
-                    writer.write("Units Available: " + item.getProduct_stockLevel() + "\n\n");
+                for (OrderToSupplier item : inventory_TableView.getItems()) {
+                    writer.write("Name: " + item.getItemName() + "\n");
+                    writer.write("Category: " + item.getSupplier() + "\n");
+                    writer.write("Units Available: " + item.getDeliveryDate() + "\n\n");
                 }
                 status_label.setText("Report saved successfully: " + file.getAbsolutePath());
             } catch (IOException e) {
@@ -295,15 +302,15 @@ public class InventoryManagementController {
         inventory_TableView.setVisible(true);
         trans_TableView.setVisible(false);
 
-        ObservableList<Inventory> filteredList = FXCollections.observableArrayList();
+        ObservableList<OrderToSupplier> filteredList = FXCollections.observableArrayList();
 
         String searchTerm = fil_search_TextFiled.getText().toLowerCase();
         String filteredType = fil_type_ComboBox.getSelectionModel().getSelectedItem();
 
         // Read data from binary file
-        ObservableList<Inventory> inventoryItems = FXCollections.observableArrayList();
+        ObservableList<OrderToSupplier> inventoryItems = FXCollections.observableArrayList();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DataStore/InventoryList.bin"))) {
-            List<Inventory> inventoryList = (List<Inventory>) ois.readObject();
+            List<OrderToSupplier> inventoryList = (List<OrderToSupplier>) ois.readObject();
             inventoryItems.addAll(inventoryList);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -311,18 +318,12 @@ public class InventoryManagementController {
 
         if (!searchTerm.isEmpty()) {
             // Search by name
-            for (Inventory inventory : inventoryItems) {
-                if (inventory.getProduct_name().toLowerCase().contains(searchTerm)) {
+            for (OrderToSupplier inventory : inventoryItems) {
+                if (inventory.getItemName().toLowerCase().contains(searchTerm)) {
                     filteredList.add(inventory);
                 }
             }
-        } else if (filteredType != null && !filteredType.isEmpty()) {
-            for (Inventory inventory : inventoryItems) {
-                if (inventory.getProduct_type().equals(filteredType)) {
-                    filteredList.add(inventory);
-                }
-            }
-        } else {
+        }  else {
             filteredList = inventoryItems;
         }
 
@@ -362,41 +363,13 @@ public class InventoryManagementController {
         viewInventoryPane.setVisible(false);
     }
 
-    @javafx.fxml.FXML
-    public void addButton(ActionEvent actionEvent) {
-        String name = input_itemName.getText().trim().toLowerCase();
-        int quantity;
-        String type = (String) item_type_ComboBox.getSelectionModel().getSelectedItem();
-
-        try {
-            quantity = Integer.parseInt(input_quantity_TF.getText());
-        } catch (NumberFormatException e) {
-            System.err.println("Please enter valid numbers for quantity and price.");
-            return;
-        }
-// Check if the item already exists in the inventory
-        Optional<Inventory> existingItem = inventoryData.stream()
-                .filter(item -> item.getProduct_name().trim().toLowerCase().equals(name))
-                .findFirst();
-
-        if (existingItem.isPresent()) {
-            Inventory item = existingItem.get();
-            item.setProduct_stockLevel(item.getProduct_stockLevel() + quantity);
-            addedItem_tableView.refresh();
-        } else {
-            Inventory newItem = new Inventory(name, 0.0, quantity, type);
-            inventoryData.add(newItem);
-        }
-
-        saveInventoryData();
-    }
 
     private void loadInventoryData() {
-        File file = new File("DataStore/InventoryList.bin");
+        File file = new File("DataStore/PlacedOrderToSupplier.bin");
         if (file.exists()) {
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-                List<Inventory> inventoryList = (List<Inventory>) ois.readObject();
-                inventoryData.addAll(inventoryList);
+                placedOrders = (List<OrderToSupplier>) ois.readObject();
+                addedItem_tableView.getItems().setAll(placedOrders);
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
@@ -417,8 +390,6 @@ public class InventoryManagementController {
 
     @javafx.fxml.FXML
     public void back_button2(ActionEvent actionEvent) {
-        input_itemName.clear();
-        item_type_ComboBox.getSelectionModel().clearSelection();
         input_quantity_TF.clear();
         addedItem_tableView.getItems().clear();
 
@@ -432,6 +403,27 @@ public class InventoryManagementController {
         }
 
 
+    }
+
+    @javafx.fxml.FXML
+    public void addItems_Button(ActionEvent actionEvent) {
+        int orderID = Integer.parseInt(orderID_textField.getText());
+        LocalDate deliveryDate = deliveredDate_picker.getValue();
+        int quantityRecieved = Integer.parseInt(input_quantity_TF.getText());
+
+        for (OrderToSupplier order : placedOrders){
+            if (order.getOrderId()== orderID){
+                order.setDeliveredQuantity(quantityRecieved);
+                order.setDeliveryDate(deliveryDate);
+
+                inventoryData.add(order);
+                break;
+            }
+        }
+        addedItem_tableView.refresh();
+        saveInventoryData();
+
+        System.out.println("Order updated");
     }
 }
 
