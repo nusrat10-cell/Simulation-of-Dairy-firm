@@ -22,6 +22,7 @@
             <Button mnemonicParsing="false" onAction="#inhouseOrder" prefHeight="63.0" prefWidth="149.0" text="View inhouse order" textAlignment="CENTER" wrapText="true" />
             <Button mnemonicParsing="false" onAction="#pendingOrders" prefHeight="67.0" prefWidth="135.0" text="Pending orders" />
             <Button mnemonicParsing="false" onAction="#reportProblemSales" prefHeight="69.0" prefWidth="115.0" text="Report Problem" />
+            <Button mnemonicParsing="false" onAction="#signOutButton" prefHeight="77.0" prefWidth="116.0" text="Sign Out" />
          </children>
       </VBox>
    </left>

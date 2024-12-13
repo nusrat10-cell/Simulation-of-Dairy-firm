@@ -1,8 +1,5 @@
 package com.example.dairy.Samiul.User8;
 
-import com.example.dairy.Samiul.User7.InhouseOrder;
-import com.example.dairy.Samiul.User7.SalesAndMarketingManager;
-import com.example.dairy.Samiul.User8.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -25,7 +22,7 @@ public class CustomerDashboard
     @javafx.fxml.FXML
     public void reportProblemCustomer(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/ReportProblem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/ReportProblem.fxml"));
         root = fxmlLoader.load() ;
 
         ReportProblem adc = fxmlLoader.getController() ;
@@ -41,7 +38,7 @@ public class CustomerDashboard
     public void buyHere(ActionEvent actionEvent) throws IOException {
 
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/Buying Portal.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/Buying Portal.fxml"));
         root = fxmlLoader.load() ;
 
         BuyingPortal adc = fxmlLoader.getController() ;
@@ -59,7 +56,7 @@ public class CustomerDashboard
     public void viewCampaigns(ActionEvent actionEvent) throws IOException {
 
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/ViewCampaign.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/ViewCampaign.fxml"));
         root = fxmlLoader.load() ;
 
         ViewCampaign adc = fxmlLoader.getController() ;
@@ -74,7 +71,7 @@ public class CustomerDashboard
     @javafx.fxml.FXML
     public void distributorInformation(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/ViewDistributorInfo.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/ViewDistributorInfo.fxml"));
         root = fxmlLoader.load() ;
 
         ViewDistributorInfo adc = fxmlLoader.getController() ;
@@ -89,7 +86,7 @@ public class CustomerDashboard
     @javafx.fxml.FXML
     public void invoice(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/Invoice.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/Invoice.fxml"));
         root = fxmlLoader.load() ;
 
         Invoice adc = fxmlLoader.getController() ;
@@ -101,13 +98,13 @@ public class CustomerDashboard
         stage.show();
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void pendingOrders(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/PendingOrderList.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/OrderHistory.fxml"));
         root = fxmlLoader.load() ;
 
-        PendingOrderList adc = fxmlLoader.getController() ;
+        OrderHistory adc = fxmlLoader.getController() ;
         adc.setter(this.user);
 
         Scene scene = new Scene(root) ;
@@ -119,7 +116,7 @@ public class CustomerDashboard
     @javafx.fxml.FXML
     public void productDetails(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/ViewProductDescription.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/ViewProductDescription.fxml"));
         root = fxmlLoader.load() ;
 
         ViewProductDescription adc = fxmlLoader.getController() ;
@@ -135,11 +132,39 @@ public class CustomerDashboard
     public void customerQuality(ActionEvent actionEvent) throws IOException {
 
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/CustomerQualityReport.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/CustomerQualityReport.fxml"));
         root = fxmlLoader.load() ;
 
         CustomerQualityReport adc = fxmlLoader.getController() ;
         adc.setter(this.user);
+
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void signOutButton(ActionEvent actionEvent) throws IOException {
+
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
+        root = fxmlLoader.load() ;
+
+
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void orderHistoryButton(ActionEvent actionEvent) throws IOException {
+
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/OrderHistory.fxml"));
+        root = fxmlLoader.load() ;
+
 
         Scene scene = new Scene(root) ;
         Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());

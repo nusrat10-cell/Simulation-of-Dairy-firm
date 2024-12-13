@@ -16,12 +16,13 @@
          <children>
             <Button mnemonicParsing="false" onAction="#buyHere" prefHeight="57.0" prefWidth="115.0" text="Buy here" />
             <Button mnemonicParsing="false" onAction="#distributorInformation" prefHeight="61.0" prefWidth="123.0" text="Distributer Information" textAlignment="CENTER" wrapText="true" />
-            <Button mnemonicParsing="false" onAction="#pendingOrders" prefHeight="61.0" prefWidth="133.0" text="Pending orders" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#orderHistoryButton" prefHeight="61.0" prefWidth="133.0" text="Order History" textAlignment="CENTER" wrapText="true" />
             <Button mnemonicParsing="false" onAction="#productDetails" prefHeight="58.0" prefWidth="129.0" text="Product details" />
             <Button mnemonicParsing="false" onAction="#viewCampaigns" prefHeight="59.0" prefWidth="157.0" text="View campaigns" textAlignment="CENTER" wrapText="true" />
             <Button mnemonicParsing="false" onAction="#customerQuality" prefHeight="63.0" prefWidth="149.0" text="Customer quality" textAlignment="CENTER" wrapText="true" />
             <Button mnemonicParsing="false" onAction="#invoice" prefHeight="67.0" prefWidth="135.0" text="Invoice" />
             <Button mnemonicParsing="false" onAction="#reportProblemCustomer" prefHeight="69.0" prefWidth="115.0" text="Report Problem" />
+            <Button mnemonicParsing="false" onAction="#signOutButton" prefHeight="75.0" prefWidth="115.0" text="Sign Out" />
          </children>
       </VBox>
    </left>

@@ -28,9 +28,8 @@
         <columns>
           <TableColumn fx:id="nameTableview" prefWidth="96.66661834716797" text="Name" />
           <TableColumn fx:id="idTableview" prefWidth="69.33331298828125" text="ID" />
-            <TableColumn fx:id="quantityTableview" prefWidth="73.33332824707031" text="Quantity" />
-            <TableColumn fx:id="deliveryDateTableview" prefWidth="128.0" text="Delivery Date" />
-            <TableColumn fx:id="statusTableview" prefWidth="103.33334350585938" text="Status" />
+            <TableColumn fx:id="quantityTableview" prefWidth="122.66668701171875" text="Quantity" />
+            <TableColumn fx:id="deliveryDateTableview" prefWidth="182.66659545898438" text="Delivery Date" />
         </columns>
       </TableView>
    </children>

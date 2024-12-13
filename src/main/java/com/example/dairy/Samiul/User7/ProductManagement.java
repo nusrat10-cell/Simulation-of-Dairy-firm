@@ -1,5 +1,7 @@
 package com.example.dairy.Samiul.User7;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class ProductManagement
 {
@@ -18,7 +21,7 @@ public class ProductManagement
     @javafx.fxml.FXML
     private Label showPriceLabel;
     @javafx.fxml.FXML
-    private ComboBox productSelectCombobox;
+    private ComboBox<String> productSelectCombobox;
     @javafx.fxml.FXML
     private TextField updateUpcomingStockTF;
     @javafx.fxml.FXML
@@ -30,11 +33,14 @@ public class ProductManagement
     @javafx.fxml.FXML
     private Label remainingStockLabel;
 
+    ObservableList<ProductClass> products = FXCollections.observableArrayList();
+
     public void setter (SalesAndMarketingManager manager){
         this.user = manager;
     }
     @javafx.fxml.FXML
     public void initialize() {
+        productSelectCombobox.getItems().addAll("Milk", "Cheese", "Yogurt", "Butter", "Cream");
     }
 
     @javafx.fxml.FXML
@@ -52,7 +58,7 @@ public class ProductManagement
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User7/sales and marketing manager dashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User7/salesAndMarketingManagerDashboard.fxml"));
         root = fxmlLoader.load() ;
 
         SalesDashboard adc = fxmlLoader.getController() ;
@@ -62,5 +68,20 @@ public class ProductManagement
         Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
         stage.setScene(scene);
         stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void selectProductOnAction(ActionEvent actionEvent) {
+        for(ProductClass p: products) {
+            if (Objects.equals(p.getName(), productSelectCombobox.getValue())) {
+                showPriceLabel.setText(Integer.toString(p.getPrice()));
+                remainingStockLabel.setText(Integer.toString(p.getRemainingStock()));
+                upcomingStockLabel.setText(Integer.toString(p.getUpcomingStock()));
+                break;
+            }
+
+        }
+
+
     }
 }
