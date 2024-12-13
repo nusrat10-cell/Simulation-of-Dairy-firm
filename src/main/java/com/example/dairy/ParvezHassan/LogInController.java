@@ -63,7 +63,7 @@ public class LogInController {
             System.out.println("Password: " +password);
             System.out.println("Designation " +designation);
 
-            // Read existing user data from UserData.bin
+
             List<User> users = new ArrayList<>();
             File file = new File("DataStore/UserData.bin");
             if (file.exists()) {
@@ -76,11 +76,12 @@ public class LogInController {
                 }
             }
 
-            // Verify user credentials
             for (User user : users) {
+//                DEBUG
                 System.out.println("StoredID: " + user.getUserID());
                 System.out.println("StoredPassword: " +user.getPassword());
                 System.out.println("StoredDesignation: " +user.getDesignation());
+
                 if (String.valueOf(user.getUserID()).equals(userID) && user.getPassword().equals(password) && user.getDesignation().equals(designation)) {
                     verified = true;
                     break;
@@ -114,14 +115,11 @@ public class LogInController {
                 stage.setScene(new Scene(root));
                 stage.show();
             } else {
-                // Show error message
                 showError("Invalid credentials. Please try again.");
             }
         } catch (NumberFormatException e) {
-            // Handle invalid integer input
             showError("User ID must be a number.");
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
             showError("Unable to load the next page.");
         }
