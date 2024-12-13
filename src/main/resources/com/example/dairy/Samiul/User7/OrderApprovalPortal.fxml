@@ -9,20 +9,20 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.OrderApprovalPortal">
    <children>
-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
       <Text layoutX="214.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Approval portal" underline="true">
          <font>
             <Font size="25.0" />
          </font>
       </Text>
-      <ComboBox layoutX="69.0" layoutY="130.0" prefWidth="150.0" promptText="Select order id" />
+      <ComboBox fx:id="selectIdCombobox" layoutX="69.0" layoutY="130.0" prefWidth="150.0" promptText="Select order id" />
       <Text layoutX="69.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order details:">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Label layoutX="175.0" layoutY="211.0" text="Label" />
-      <Button layoutX="69.0" layoutY="321.0" mnemonicParsing="false" text="Approve" />
-      <Button layoutX="175.0" layoutY="321.0" mnemonicParsing="false" text="Decline" />
+      <Label fx:id="orderDetailsLabel" layoutX="175.0" layoutY="211.0" text="Label" />
+      <Button layoutX="69.0" layoutY="321.0" mnemonicParsing="false" onAction="#approveButton" text="Approve" />
+      <Button layoutX="175.0" layoutY="321.0" mnemonicParsing="false" onAction="#declineButton" text="Decline" />
    </children>
 </AnchorPane>

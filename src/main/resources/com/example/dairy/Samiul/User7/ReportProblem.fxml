@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.ReportProblem">
    <children>
-      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
       <Text layoutX="248.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Problem" underline="true">
          <font>
             <Font size="25.0" />
@@ -19,13 +19,13 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <TextField layoutX="217.0" layoutY="137.0" prefHeight="25.0" prefWidth="191.0" />
+      <TextField fx:id="reportTopicTF" layoutX="217.0" layoutY="137.0" prefHeight="25.0" prefWidth="191.0" />
       <Text layoutX="69.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Describe your problem:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <TextField layoutX="69.0" layoutY="251.0" prefHeight="187.0" prefWidth="520.0" />
-      <Button layoutX="510.0" layoutY="487.0" mnemonicParsing="false" text="Send report" />
+      <TextField fx:id="describeProblemTF" layoutX="69.0" layoutY="251.0" prefHeight="187.0" prefWidth="520.0" />
+      <Button layoutX="510.0" layoutY="487.0" mnemonicParsing="false" onAction="#sendReportButton" text="Send report" />
    </children>
 </AnchorPane>
