@@ -52,9 +52,7 @@ public class DashboardController
                 e.printStackTrace();
         }}
 
-        @javafx.fxml.FXML
-        public void supplierPerfomance_Button (ActionEvent actionEvent){
-        }
+
 
         @javafx.fxml.FXML
         public void order_Button (ActionEvent actionEvent){
@@ -91,6 +89,19 @@ public class DashboardController
     public void updatePrice_Button(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("UpdatePrice.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            // Handle FXML loading error
+            e.printStackTrace();
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void orderToSupplier_Button(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("PlacedOrder.fxml"));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();

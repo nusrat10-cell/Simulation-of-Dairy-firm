@@ -30,7 +30,7 @@
             <Image url="@Icons/shopping-cart_6054136.png" />
          </image>
       </ImageView>
-      <Button layoutX="123.0" layoutY="243.0" mnemonicParsing="false" onAction="#supplierPerfomance_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
+      <Button layoutX="123.0" layoutY="243.0" mnemonicParsing="false" onAction="#orderToSupplier_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="125.0" layoutY="243.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Icons/IMG_0429.png" />
