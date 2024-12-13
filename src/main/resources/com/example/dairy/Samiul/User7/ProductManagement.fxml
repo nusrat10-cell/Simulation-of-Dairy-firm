@@ -11,7 +11,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.ProductManagement">
    <children>
       <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
-      <ComboBox fx:id="productSelectCombobox" layoutX="69.0" layoutY="129.0" onAction="#selectProductOnAction" prefWidth="150.0" promptText="Select Product" />
+      <ComboBox fx:id="productSelectCombobox" layoutX="69.0" layoutY="129.0" prefWidth="150.0" promptText="Select Product" />
       <Text layoutX="69.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:">
          <font>
             <Font size="15.0" />

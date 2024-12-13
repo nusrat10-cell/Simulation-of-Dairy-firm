@@ -7,8 +7,8 @@ module com.example.dairy {
     opens com.example.dairy to javafx.fxml;
     exports com.example.dairy.mahamud;
     opens com.example.dairy.mahamud to javafx.fxml;
-    opens com.example.dairy.Samiul.User7 to javafx.fxml, javafx.base;
-    opens com.example.dairy.Samiul.User8 to javafx.fxml, javafx.base;
+    opens com.example.dairy.Samiul.User7 to javafx.fxml;
+    opens com.example.dairy.Samiul.User8 to javafx.fxml;
 
     exports com.example.dairy;
 

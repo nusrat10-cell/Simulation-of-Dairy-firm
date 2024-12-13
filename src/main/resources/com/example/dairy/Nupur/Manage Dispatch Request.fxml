@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -13,25 +14,24 @@
 
 <AnchorPane prefHeight="472.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.ManageDispatchRequest">
    <children>
-      <TableView fx:id="dispatchTV" layoutX="51.0" layoutY="99.0" prefHeight="200.0" prefWidth="290.0">
+      <TableView fx:id="dispatchTV" layoutX="40.0" layoutY="246.0" prefHeight="200.0" prefWidth="290.0">
         <columns>
-          <TableColumn fx:id="requestidTC" prefWidth="72.79995346069336" text="Request ID" />
-          <TableColumn fx:id="productNameTC" prefWidth="84.0" text="product name" />
-            <TableColumn fx:id="quantityTC" prefWidth="56.00001525878906" text="Quantity" />
-            <TableColumn fx:id="destinationTC" prefWidth="88.79998779296875" text="Destination" />
+          <TableColumn fx:id="productNameTC" prefWidth="89.60004043579102" text="product name" />
+            <TableColumn fx:id="quantityTC" prefWidth="79.99993896484375" text="Quantity" />
+            <TableColumn fx:id="destinationTC" prefWidth="119.99998474121094" text="Destination" />
         </columns>
       </TableView>
-      <ComboBox fx:id="selectProductsCB" layoutX="51.0" layoutY="323.0" prefWidth="150.0" promptText="Select Product" />
-      <Button layoutX="209.0" layoutY="378.0" mnemonicParsing="false" onAction="#processButton" text="Process" />
+      <ComboBox fx:id="selectProductCB" layoutX="51.0" layoutY="85.0" prefWidth="150.0" promptText="Select Product" />
+      <Button layoutX="157.0" layoutY="199.0" mnemonicParsing="false" onAction="#processButton" text="Process" />
       <Line endX="-100.0" endY="424.0" layoutX="503.0" layoutY="48.0" startX="-100.0" startY="-48.0" />
       <Label layoutX="419.0" layoutY="36.0" prefHeight="18.0" prefWidth="150.0" text="Fill-up the form">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="logisticProviderCB" layoutX="419.0" layoutY="85.0" prefHeight="26.0" prefWidth="201.0" promptText="Select Logistic Provider" />
-      <DatePicker fx:id="dispatchDateDP" layoutX="419.0" layoutY="136.0" promptText="Dispatch date" />
-      <Button layoutX="482.0" layoutY="199.0" mnemonicParsing="false" onAction="#dispatchButton" text="Dispatch" />
+      <ComboBox fx:id="logisticProviderCB" layoutX="425.0" layoutY="135.0" prefHeight="26.0" prefWidth="201.0" promptText="Select Logistic Provider" />
+      <DatePicker fx:id="dispatchDateDP" layoutX="425.0" layoutY="186.0" promptText="Dispatch date" />
+      <Button layoutX="482.0" layoutY="233.0" mnemonicParsing="false" onAction="#dispatchButton" text="Dispatch" />
       <Line endX="100.0" startX="-100.0" />
       <Line endX="155.00006103515625" layoutX="507.0" layoutY="56.0" startX="-104.5" />
       <Line endX="157.300048828125" layoutX="506.0" layoutY="36.0" startX="-103.5" />
@@ -41,5 +41,9 @@
          </font>
       </Text>
       <Line endX="100.0" layoutX="209.0" layoutY="55.0" startX="-100.0" />
+      <TextField fx:id="destinationTF" layoutX="51.0" layoutY="123.0" promptText="Enter destination" />
+      <TextField fx:id="quantityTF" layoutX="52.0" layoutY="162.0" promptText="Enter Quantity" />
+      <ComboBox fx:id="selectProductsCB" layoutX="425.0" layoutY="85.0" prefWidth="150.0" promptText="Select Product" />
+      <Button layoutX="574.0" layoutY="420.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

@@ -3,11 +3,11 @@ package com.example.dairy.ParvezHassan;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class DataStore {
     public static final ObservableList<Inventory> inventoryList = FXCollections.observableArrayList();
@@ -15,10 +15,6 @@ public class DataStore {
     public static final ObservableList<Orders> orderList = FXCollections.observableArrayList();
     public static final ObservableList<Transactions> allTransactions = FXCollections.observableArrayList();
     public static final ObservableList<CombinedList> combinedList = FXCollections.observableArrayList();
-
-    public ObservableList<Inventory> getInventoryList() {
-        return inventoryList;
-    }
 
     public static void main(String[] args) {
         // Create files
@@ -30,45 +26,47 @@ public class DataStore {
         populateOrders();
         populateTransactionList();
         populateCombinedList();
-//
-//        // Save data to files
-//        saveDataToFile(inventoryList, "InventoryList.txt");
-//        saveDataToFile(customerList, "CustomerList.txt");
-//        saveDataToFile(orderList, "OrderList.txt");
-//        saveDataToFile(allTransactions, "TransactionList.txt");
-        saveDataToFile(combinedList, "CombinedList.txt");
+
+        // Save data to files
+        saveDataToFile(new ArrayList<>(inventoryList), "DataStore/InventoryList.bin");
+        saveDataToFile(new ArrayList<>(customerList), "DataStore/CustomerList.bin");
+        saveDataToFile(new ArrayList<>(orderList), "DataStore/OrderList.bin");
+        saveDataToFile(new ArrayList<>(allTransactions), "DataStore/TransactionList.bin");
+        saveDataToFile(new ArrayList<>(combinedList), "DataStore/CombinedList.bin");
+
+        // Load data from files (for verification)
+        ObservableList<Inventory> loadedInventoryList = FXCollections.observableArrayList(loadDataFromFile("InventoryList.bin"));
+        loadedInventoryList.forEach(System.out::println);
     }
 
     private static void createFiles() {
         try {
-            new File("OrderList.txt").createNewFile();
-            new File("TransactionList.txt").createNewFile();
-            new File("InventoryList.txt").createNewFile();
-            new File("CustomerList.txt").createNewFile();
-            new File("CombinedList.txt").createNewFile();
+            new File("DataStore/OrderList.bin").createNewFile();
+            new File("DataStore/TransactionList.bin").createNewFile();
+            new File("DataStore/InventoryList.bin").createNewFile();
+            new File("DataStore/CustomerList.bin").createNewFile();
+            new File("DataStore/CombinedList.bin").createNewFile();
         } catch (IOException e) {
             throw new RuntimeException("Failed to create files: " + e.getMessage());
         }
     }
 
-    private static <T> void saveDataToFile(ObservableList<T> list, String fileName) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
-            for (T item : list) {
-                writer.write(item.toString() + "\n"); // Ensure each class has a meaningful toString() method
-            }
+    private static <T extends Serializable> void saveDataToFile(List<T> list, String fileName) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
+            oos.writeObject(list);
             System.out.println("Data saved to: " + fileName);
         } catch (IOException e) {
             System.err.println("Failed to save data to " + fileName + ": " + e.getMessage());
         }
     }
 
-    static {
-//         Initially populate lists
-        populateInventory();
-        populateCustomers();
-        populateOrders();
-        populateTransactionList();
-        populateCombinedList();
+    private static <T extends Serializable> List<T> loadDataFromFile(String fileName) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
+            return (List<T>) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            System.err.println("Failed to load data from " + fileName + ": " + e.getMessage());
+            return new ArrayList<>();
+        }
     }
 
     public static ObservableList<Customers> getCustomerList() {
@@ -87,13 +85,15 @@ public class DataStore {
         return combinedList;
     }
 
+    public ObservableList<Inventory> getInventoryList() {return inventoryList;}
+
     public static void populateInventory() {
-        inventoryList.add(new Inventory("Milk", 44, 100, "Raw Material"));
-        inventoryList.add(new Inventory("Cheese", 44, 100, "Finished Goods"));
-        inventoryList.add(new Inventory("Butter", 44, 100, "Raw Material"));
-        inventoryList.add(new Inventory("Paneer", 44, 30, "Packaging Material"));
-        inventoryList.add(new Inventory("Condensed Milk", 44, 60, "Storage Supplies"));
-        inventoryList.add(new Inventory("Whey", 44, 44, "Equipments"));
+        inventoryList.add(new Inventory("Milk", 44.0, 100, "Raw Material"));
+        inventoryList.add(new Inventory("Cheese", 44.0, 100, "Finished Goods"));
+        inventoryList.add(new Inventory("Butter", 44.0, 100, "Raw Material"));
+        inventoryList.add(new Inventory("Paneer", 44.0, 30, "Packaging Material"));
+        inventoryList.add(new Inventory("Condensed Milk", 44.0, 60, "Storage Supplies"));
+        inventoryList.add(new Inventory("Whey", 44.0, 44, "Equipments"));
     }
 
     private static void populateCustomers() {
@@ -118,6 +118,8 @@ public class DataStore {
         allTransactions.add(new Transactions("rahman", LocalDate.of(2023, 11, 23), 1990, "bkash", "credit", 2001));
         allTransactions.add(new Transactions("rahman", LocalDate.of(2023, 11, 23), 1990, "bkash", "credit", 2002));
     }
+
+
 
     private static void populateCombinedList() {
         for (Orders order : orderList) {

@@ -1,10 +1,11 @@
 package com.example.dairy.ParvezHassan;
 import java.time.LocalDate;
+import java.io.Serializable;
 
-    public class CombinedList {
+    public class CombinedList implements Serializable {
         // Attributes from Inventory
         private final String itemName;
-        private final int itemPrice;
+        private final Double itemPrice;
         private final int itemLevel;
 
         // Attributes from Orders
@@ -19,7 +20,7 @@ import java.time.LocalDate;
         private final String customerAddress;
         private final int customerNumber;
 
-        public CombinedList(String itemName, int itemPrice, int itemLevel, LocalDate orderDate, int orderID, int orderQuantity, String orderType, String customerName, int customerID, String customerAddress, int customerNumber) {
+        public CombinedList(String itemName, Double itemPrice, int itemLevel, LocalDate orderDate, int orderID, int orderQuantity, String orderType, String customerName, int customerID, String customerAddress, int customerNumber) {
             this.itemName = itemName;
             this.itemPrice = itemPrice;
             this.itemLevel = itemLevel;
@@ -38,7 +39,7 @@ import java.time.LocalDate;
             return itemName;
         }
 
-        public int getItemPrice() {
+        public Double getItemPrice() {
             return itemPrice;
         }
 

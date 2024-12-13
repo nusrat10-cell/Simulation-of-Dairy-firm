@@ -2,13 +2,21 @@ package com.example.dairy.mahamud;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
+import java.io.IOException;
+
+//import java.awt.event.ActionEvent;
 
 public class RouteOptimization {
     @FXML
@@ -46,46 +54,20 @@ public class RouteOptimization {
 
     @FXML
     public void robackbuttonfx(ActionEvent actionEvent) {
-        // Handle back button action
-        System.out.println("Back button clicked.");
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Milk Collector.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            // Handle FXML loading error
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public void roconfirmcollectionbuttonfx(ActionEvent actionEvent) {
-        String sampleId = rosampleidtextfieldfx.getText();
-        String farmerName = rofarmernametextfieldfx.getText();
-        String destination = rodestinationfx.getText();
-        String quantityStr = roquantitytextfieldfx.getText();
 
-        if (sampleId.isEmpty() || farmerName.isEmpty() || destination.isEmpty() || quantityStr.isEmpty()) {
-            System.out.println("Please fill in all fields.");
-            return;
-        }
-
-        try {
-            double quantity = Double.parseDouble(quantityStr);
-            if (quantity < 1 || quantity > 50) {
-                System.out.println("Please enter a quantity between 1 and 50 liters.");
-                return;
-            }
-
-            if (!isValidDestination(destination)) {
-                System.out.println("Invalid destination. Please enter a valid destination.");
-                return;
-            }
-
-            RouteData data = new RouteData(sampleId, farmerName, quantity, destination);
-            routeDataList.add(data);
-
-            // Clear the fields after submission
-            rosampleidtextfieldfx.clear();
-            rofarmernametextfieldfx.clear();
-            rodestinationfx.clear();
-            roquantitytextfieldfx.clear();
-
-        } catch (NumberFormatException e) {
-            System.out.println("Please enter a valid quantity.");
-        }
     }
 
     private boolean isValidDestination(String destination) {
@@ -97,4 +79,6 @@ public class RouteOptimization {
         }
         return false;
     }
+
+
 }

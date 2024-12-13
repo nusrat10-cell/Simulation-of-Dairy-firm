@@ -8,20 +8,59 @@
 
 <AnchorPane prefHeight="515.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.InventoryManagerDashboard">
    <children>
-      <Text layoutX="235.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Manager Dashboard">
+      <Text layoutX="219.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Manager Dashboard">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="26.0" />
          </font>
       </Text>
-      <Line endX="163.14453125" layoutX="395.0" layoutY="70.0" startX="-159.99996948242188" />
-      <Button layoutY="255.0" mnemonicParsing="false" onAction="#ProcessProductReturnButton" prefHeight="35.0" prefWidth="204.0" text="Process Product Return" />
-      <Button layoutX="1.0" layoutY="114.0" mnemonicParsing="false" onAction="#viewInventoryButton" prefHeight="35.0" prefWidth="204.0" text="View Inventory" />
-      <Button layoutY="290.0" mnemonicParsing="false" onAction="#DispatchShowsButton" prefHeight="35.0" prefWidth="204.0" text="Dispatch Shows" />
-      <Button layoutY="150.0" mnemonicParsing="false" onAction="#monitorStorageConditionButton" prefHeight="35.0" prefWidth="204.0" text="Monitor Storage Conditions" />
-      <Button layoutY="186.0" mnemonicParsing="false" onAction="#manageExpiryDatesButton" prefHeight="35.0" prefWidth="204.0" text="Manage Expiry Dates" />
-      <Button layoutY="222.0" mnemonicParsing="false" onAction="#TrackPackegingUsageButton" prefHeight="35.0" prefWidth="204.0" text="Track Packeging Usage" />
-      <Button layoutY="325.0" mnemonicParsing="false" onAction="#InventoryManagementToolsButton" prefHeight="35.0" prefWidth="204.0" text="Inventory Management Tools " />
-      <Button layoutY="360.0" mnemonicParsing="false" onAction="#UpdateStockButton" prefHeight="35.0" prefWidth="204.0" text="Update Stock" />
-      <Line endX="85.60002136230469" endY="4.8000030517578125" layoutX="119.0" layoutY="78.0" startX="85.60002136230469" startY="404.0" />
+      <Line endX="221.0" layoutX="375.0" layoutY="68.0" startX="-159.99996948242188" />
+      <Button layoutX="49.0" layoutY="287.0" mnemonicParsing="false" onAction="#ProcessProductReturnButton" prefHeight="82.0" prefWidth="130.0" text="Process Product">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="36.0" layoutY="142.0" mnemonicParsing="false" onAction="#viewInventoryButton" prefHeight="82.0" prefWidth="130.0" text="View Inventory">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="206.0" layoutY="287.0" mnemonicParsing="false" onAction="#DispatchShowsButton" prefHeight="82.0" prefWidth="130.0" text="Dispatch Shows">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="210.0" layoutY="142.0" mnemonicParsing="false" onAction="#monitorStorageConditionButton" prefHeight="82.0" prefWidth="123.0" text="Storage ">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="364.0" layoutY="141.0" mnemonicParsing="false" onAction="#manageExpiryDatesButton" prefHeight="82.0" prefWidth="130.0" text=" Expiry Dates">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="523.0" layoutY="142.0" mnemonicParsing="false" onAction="#TrackPackegingUsageButton" prefHeight="82.0" prefWidth="142.0" text="Track Packeging ">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="365.0" layoutY="287.0" mnemonicParsing="false" onAction="#InventoryManagementToolsButton" prefHeight="82.0" prefWidth="130.0" text="Low Stock Alert">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="527.0" layoutY="290.0" mnemonicParsing="false" onAction="#UpdateStockButton" prefHeight="82.0" prefWidth="142.0" text="Update Stock">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Text layoutX="572.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="material">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="239.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conditions">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="93.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Button layoutX="639.0" layoutY="441.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="26.0" prefWidth="92.0" text="Log Out" />
    </children>
 </AnchorPane>

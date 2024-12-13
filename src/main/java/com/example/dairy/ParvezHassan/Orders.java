@@ -2,8 +2,9 @@ package com.example.dairy.ParvezHassan;
 
 
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Orders {
+public class Orders implements Serializable{
     LocalDate orderDate;
     String orderName;
     int OrderID;

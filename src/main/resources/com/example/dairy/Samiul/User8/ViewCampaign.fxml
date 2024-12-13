@@ -16,7 +16,7 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <TableView fx:id="viewCampaignTable" layoutX="133.0" layoutY="107.0" prefHeight="200.0" prefWidth="416.0">
+      <TableView fx:id="viewCampaignTable" layoutX="133.0" layoutY="119.0" prefHeight="200.0" prefWidth="416.0">
         <columns>
           <TableColumn fx:id="nameTableview" prefWidth="90.66664123535156" text="Name" />
           <TableColumn fx:id="dateTableview" prefWidth="85.99993896484375" text="Date" />
@@ -24,24 +24,23 @@
             <TableColumn fx:id="statusTableview" prefWidth="104.6666259765625" text="Status" />
         </columns>
       </TableView>
-      <Text layoutX="71.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Date:">
+      <Text layoutX="71.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Date:">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <DatePicker fx:id="startDatePicker" layoutX="164.0" layoutY="415.0" />
-      <Text layoutX="71.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:">
+      <DatePicker fx:id="startDatePicker" layoutX="164.0" layoutY="407.0" />
+      <Text layoutX="71.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text layoutX="71.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date:">
+      <Text layoutX="71.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date:">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <DatePicker fx:id="endDatePicker" layoutX="163.0" layoutY="465.0" />
-      <Button layoutX="294.0" layoutY="513.0" mnemonicParsing="false" onAction="#filterButton" text="Filter" />
-      <Button layoutX="290.0" layoutY="330.0" mnemonicParsing="false" onAction="#showCampaignButton" text="Show Campaigns" />
+      <DatePicker fx:id="endDatePicker" layoutX="163.0" layoutY="457.0" />
+      <Button layoutX="294.0" layoutY="505.0" mnemonicParsing="false" onAction="#filterButton" text="Filter" />
    </children>
 </AnchorPane>

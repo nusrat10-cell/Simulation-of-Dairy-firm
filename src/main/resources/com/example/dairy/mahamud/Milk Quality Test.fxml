@@ -4,6 +4,8 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -18,5 +20,14 @@
       <RadioButton fx:id="mqtfailradiobuttonfx" layoutX="116.0" layoutY="276.0" mnemonicParsing="false" text="Fail" />
       <Button layoutX="57.0" layoutY="327.0" mnemonicParsing="false" onAction="#mqtprocedbuttonfx" text="Proceed" />
       <Label fx:id="mqtlabelmassagefx" layoutX="246.0" layoutY="360.0" prefHeight="18.0" prefWidth="214.0" text="Successfully  Pass " />
+      <TableView fx:id="mqttableviewfx" layoutX="187.0" layoutY="27.0" prefHeight="200.0" prefWidth="407.0">
+        <columns>
+          <TableColumn fx:id="mqtidcoolumfx" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="mqtnamecoolumfx" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="mqttypecoolumfx" prefWidth="75.0" text="type" />
+            <TableColumn fx:id="mqtqualitycoolumfx" prefWidth="75.0" text="quality" />
+            <TableColumn fx:id="mqtpassfailcoolumfx" prefWidth="75.0" text="passs/fail" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
