@@ -17,13 +17,13 @@ public class PendingOrderList
     @javafx.fxml.FXML
     private TableColumn OrderIdTableview;
     @javafx.fxml.FXML
-    private TableColumn statusTableview;
-    @javafx.fxml.FXML
     private TableColumn productNameTableview;
     @javafx.fxml.FXML
     private TableView pendingOrderListTable;
     @javafx.fxml.FXML
     private TableColumn quantityTableview;
+    @javafx.fxml.FXML
+    private TableColumn priceTableview;
 
     public void setter (Customer customer){
         this.user = customer;
@@ -35,7 +35,7 @@ public class PendingOrderList
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com.example.dairy/Samiul/User8/customer dashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/customerDashboard.fxml"));
         root = fxmlLoader.load() ;
 
         CustomerDashboard adc = fxmlLoader.getController() ;
