@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="last edit of log in Controller">
+    <list default="true" id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/ParvezHassan/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +59,15 @@
       <option name="presentableId" value="Default" />
       <updated>1733924773071</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml.">
+      <option name="closed" value="true" />
+      <created>1734176718367</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734176718367</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -77,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="last edit of log in Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="last edit of log in Controller" />
+    <MESSAGE value="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml." />
   </component>
 </project>
