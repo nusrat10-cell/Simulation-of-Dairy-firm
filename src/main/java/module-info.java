@@ -1,18 +1,17 @@
 module com.example.dairy {
     requires javafx.controls;
     requires javafx.fxml;
-    requires java.desktop;
+    requires javafx.graphics;
+    requires javafx.base;
 
+    // Export the packages to be accessible to javafx.fxml and javafx.graphics
+    exports com.example.dairy to javafx.fxml, javafx.graphics;
+    exports com.example.dairy.Nupur to javafx.fxml;
 
-    opens com.example.dairy to javafx.fxml;
-    exports com.example.dairy.mahamud;
-    opens com.example.dairy.mahamud to javafx.fxml;
-    opens com.example.dairy.Samiul.User7 to javafx.fxml;
-    opens com.example.dairy.Samiul.User8 to javafx.fxml;
-
-    exports com.example.dairy;
-
+    // Open the package for reflective access by javafx.fxml and javafx.base
+    opens com.example.dairy.Nupur to javafx.fxml, javafx.base;
 
     opens com.example.dairy.ParvezHassan to javafx.fxml, javafx.graphics;
     exports com.example.dairy.ParvezHassan;
+
 }

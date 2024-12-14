@@ -59,7 +59,7 @@ public class CustomerInquiries {
     @FXML
     public void backButton(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("Inventory Manager Dashboard.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("customer representative dashboard.fxml"));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();

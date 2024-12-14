@@ -15,10 +15,11 @@ public class HelloApplication extends Application {
 
 
 
-//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nupur/Low Stock Alert.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nupur/Inventory Manager Dashboard.fxml"));
+        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ParvezHassan/LogIn.fxml"));
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
+        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
 
 
         Scene scene = new Scene(fxmlLoader.load());

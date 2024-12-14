@@ -1,5 +1,7 @@
 package com.example.dairy.ParvezHassan;
 
+import com.example.dairy.Nupur.CustomerServiceRepresentative;
+import com.example.dairy.Nupur.InventoryManager;
 import com.example.dairy.Samiul.User7.SalesAndMarketingManager;
 import com.example.dairy.Samiul.User7.SalesDashboard;
 import com.example.dairy.Samiul.User8.Customer;
@@ -33,11 +35,18 @@ public class LogInController {
     SalesAndMarketingManager salesAndMarketingManager ;
     Customer customer;
 
+    InventoryManager inventoryManager;
+    CustomerServiceRepresentative customerServiceRepresentative;
+
+
     @javafx.fxml.FXML
     public void initialize() {
         designation_ComboBox.getItems().addAll("Milk Collector", "Milk Processor", "Inventory Manager", "Customer Service Representative", "Supply Chain & Logistics", "Financial Manager", "Sales & Marketing Manager", "Customer");
         salesAndMarketingManager = new SalesAndMarketingManager(11111, "Rayhan", "fewf@gmail.com", "01622729101", "1234");
         customer = new Customer(2, "John", "sasasa@gmail.com", "0838384", "1234");
+
+        inventoryManager =new InventoryManager(33333,"Faysal","fs@gmail.com","01776861997","Castle");
+        customerServiceRepresentative = new CustomerServiceRepresentative(44444,"Lily","lily@gmail.com","01863375342","lilium");
     }
     public void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -106,6 +115,12 @@ public class LogInController {
                         break;
                     case "Milk Collector": //1234,1234
                         root = FXMLLoader.load(getClass().getResource("/com/example/dairy/mahamud/Milk Collector.fxml"));
+                        break;
+                    case "Inventory Manager ": //1,1
+                        root = FXMLLoader.load(getClass().getResource("/com/example/dairy/Nupur/Inventory Manager Dashboard.fxml"));
+                        break;
+                    case "Customer Service Representative": //1,1
+                        root = FXMLLoader.load(getClass().getResource("/com/example/dairy/Nupur/customer representative dashboard.fxml"));
                         break;
                     default:
                         showError("Invalid designation.");
