@@ -18,7 +18,7 @@
       <TableView fx:id="orderHistoryTable" layoutX="119.0" layoutY="178.0" prefHeight="297.0" prefWidth="432.0">
         <columns>
           <TableColumn fx:id="orderIdTableview" prefWidth="119.99999237060547" text="Order Id" />
-          <TableColumn fx:id="productNameTableview" prefWidth="106.66664123535156" text="Product  Name" />
+          <TableColumn fx:id="productNameTableview" prefWidth="106.66664123535156" text="Customer  Name" />
             <TableColumn fx:id="quantityTableview" prefWidth="89.99993896484375" text="Quantity" />
             <TableColumn fx:id="priceTableview" prefWidth="113.99996948242188" text="Price" />
         </columns>
