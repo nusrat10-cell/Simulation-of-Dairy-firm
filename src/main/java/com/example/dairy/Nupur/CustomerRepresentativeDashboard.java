@@ -96,7 +96,7 @@ public class CustomerRepresentativeDashboard
     @javafx.fxml.FXML
     public void trackOrderButton(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("Track Order.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("OrderStatus.fxml"));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
@@ -110,6 +110,19 @@ public class CustomerRepresentativeDashboard
     public void productReturnsButton(ActionEvent actionEvent) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("process product return.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            // Handle FXML loading error
+            e.printStackTrace();
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void logoutButton(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
