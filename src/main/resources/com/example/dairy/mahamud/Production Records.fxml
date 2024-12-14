@@ -20,7 +20,6 @@
         </columns>
       </TableView>
       <Button layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#prbackbuttonfx" text="Back" />
-      <Button layoutX="327.0" layoutY="285.0" mnemonicParsing="false" onAction="#prsaverecordbuttonfx" text="Save Record " />
-      <Button layoutX="80.0" layoutY="187.0" mnemonicParsing="false" onAction="#praddbuttonfx" text="Add in table" />
+      <Button layoutX="106.0" layoutY="200.0" mnemonicParsing="false" onAction="#prsaverecordbuttonfx" text="Save Record " />
    </children>
 </AnchorPane>

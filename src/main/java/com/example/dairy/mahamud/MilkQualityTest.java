@@ -54,15 +54,11 @@ public class MilkQualityTest {
         qualityToggleGroup = new ToggleGroup();
         mqtpassradiobuttonfx.setToggleGroup(qualityToggleGroup);
         mqtfailradiobuttonfx.setToggleGroup(qualityToggleGroup);
-
-        // Initialize Table Columns
         mqtidcoolumfx.setCellValueFactory(new PropertyValueFactory<>("sampleId"));
         mqtnamecoolumfx.setCellValueFactory(new PropertyValueFactory<>("farmerName"));
         mqttypecoolumfx.setCellValueFactory(new PropertyValueFactory<>("milkType"));
         mqtqualitycoolumfx.setCellValueFactory(new PropertyValueFactory<>("milkQuality"));
         mqtpassfailcoolumfx.setCellValueFactory(new PropertyValueFactory<>("qualityResult"));
-
-        // Set table data
         mqttableviewfx.setItems(milkQualityDataList);
     }
 
@@ -81,8 +77,6 @@ public class MilkQualityTest {
 
         milkqualitytestModelClass data = new milkqualitytestModelClass(sampleId, farmerName, milkType, milkQuality, qualityResult);
         milkQualityDataList.add(data);
-
-        // Clear the fields after submission
         mqtsampleidtextfieldfx.clear();
         mqtfarmernametextfieldfx.clear();
         mqtmilktypecomboboxfx.setValue(null);
@@ -100,7 +94,6 @@ public class MilkQualityTest {
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
         }
     }

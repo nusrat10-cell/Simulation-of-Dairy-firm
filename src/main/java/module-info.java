@@ -10,15 +10,25 @@ module com.example.dairy {
 
     // Open the package for reflective access by javafx.fxml and javafx.base
     opens com.example.dairy.Nupur to javafx.fxml, javafx.base;
+    opens com.example.dairy.mahamud to javafx.fxml, javafx.base;
+    //opens com.example.dairy.mahamud to javafx.fxml, javafx.graphics;
 
     opens com.example.dairy.ParvezHassan to javafx.fxml, javafx.graphics;
     exports com.example.dairy.ParvezHassan;
+
+
+
+
+    exports com.example.dairy.mahamud to javafx.fxml;
+
+
 
     opens com.example.dairy.Samiul to javafx.fxml, javafx.graphics;
     exports com.example.dairy.Samiul.User7;
     exports com.example.dairy.Samiul.User8;
 
-    opens com.example.dairy.mahamud to javafx.fxml, javafx.graphics;
-    exports com.example.dairy.mahamud;
+    //opens com.example.dairy.mahamud to javafx.fxml, javafx.graphics;
+    //exports com.example.dairy.mahamud;
+
 
 }

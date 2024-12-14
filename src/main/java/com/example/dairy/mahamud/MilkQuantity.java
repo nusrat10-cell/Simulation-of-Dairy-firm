@@ -87,6 +87,6 @@ public class MilkQuantity {
 
     @FXML
     public void mqaddbuttonfx(ActionEvent actionEvent) {
-        // This method can be used for additional logic if needed
+
     }
 }
