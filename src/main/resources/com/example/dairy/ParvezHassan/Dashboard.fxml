@@ -9,63 +9,63 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.ParvezHassan.DashboardController">
    <children>
-      <Button layoutX="97.0" layoutY="109.0" mnemonicParsing="false" onAction="#inventory_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="96.0" layoutY="109.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="238.0" layoutY="107.0" mnemonicParsing="false" onAction="#inventory_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="237.0" layoutY="107.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Icons/IMG_0424.png" />
          </image>
       </ImageView>
-      <Label layoutX="71.0" layoutY="150.0" prefHeight="41.0" prefWidth="81.0" text="Inventory Management" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="211.0" layoutY="110.0" mnemonicParsing="false" onAction="#order_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="211.0" layoutY="110.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="219.0" layoutY="148.0" prefHeight="41.0" prefWidth="81.0" text="Add &amp; View Inventory" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="136.0" layoutY="244.0" mnemonicParsing="false" onAction="#order_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="137.0" layoutY="244.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Icons/IMG_0427.png" />
          </image>
       </ImageView>
-      <Label layoutX="190.0" layoutY="150.0" prefHeight="41.0" prefWidth="81.0" text="Order Management" textAlignment="CENTER" wrapText="true" />
-      <Label layoutX="307.0" layoutY="150.0" prefHeight="41.0" prefWidth="64.0" text="Route Planning" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="322.0" layoutY="110.0" mnemonicParsing="false" onAction="#route_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="322.0" layoutY="110.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="111.0" layoutY="284.0" prefHeight="41.0" prefWidth="81.0" text="Mange &amp; View Orders" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="450.0" layoutY="143.0" prefHeight="56.0" prefWidth="64.0" text="Add Orders from Customers" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="461.0" layoutY="102.0" mnemonicParsing="false" onAction="#route_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="457.0" layoutY="104.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Icons/IMG_0428.png" />
+            <Image url="@Icons/shopping-cart_6054136.png" />
          </image>
       </ImageView>
-      <Button layoutX="446.0" layoutY="109.0" mnemonicParsing="false" onAction="#supplierPerfomance_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="446.0" layoutY="109.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="129.0" layoutY="108.0" mnemonicParsing="false" onAction="#orderToSupplier_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="131.0" layoutY="108.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Icons/IMG_0429.png" />
+            <Image url="@Icons/supplier_10112630.png" />
          </image>
       </ImageView>
-      <Button layoutX="97.0" layoutY="244.0" mnemonicParsing="false" onAction="#costAnalysis_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="97.0" layoutY="244.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="349.0" layoutY="110.0" mnemonicParsing="false" onAction="#updatePrice_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="351.0" layoutY="110.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Icons/IMG_0430.png" />
          </image>
       </ImageView>
-      <Button layoutX="213.0" layoutY="244.0" mnemonicParsing="false" onAction="#coldChain_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="213.0" layoutY="244.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="239.0" layoutY="244.0" mnemonicParsing="false" onAction="#supply_performance_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
+      <ImageView fitHeight="40.0" fitWidth="51.0" layoutX="239.0" layoutY="244.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Icons/IMG_0431.png" />
+            <Image url="@Icons/IMG_0429.png" />
          </image>
       </ImageView>
-      <Button layoutX="321.0" layoutY="244.0" mnemonicParsing="false" onAction="#deliveryTrack_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="324.0" layoutY="244.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="355.0" layoutY="244.0" mnemonicParsing="false" onAction="#deliveryTrack_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="357.0" layoutY="244.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Icons/IMG_0432.png" />
          </image>
       </ImageView>
-      <Button layoutX="446.0" layoutY="244.0" mnemonicParsing="false" onAction="#logOut_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="446.0" layoutY="244.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="460.0" layoutY="244.0" mnemonicParsing="false" onAction="#logOut_Button" prefHeight="40.0" prefWidth="40.0" text="Button" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="462.0" layoutY="244.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Icons/IMG_0433.png" />
          </image>
       </ImageView>
-      <Label layoutX="84.0" layoutY="294.0" prefHeight="41.0" prefWidth="64.0" text="Cost Analysis" textAlignment="CENTER" wrapText="true" />
-      <Label layoutX="181.0" layoutY="294.0" prefHeight="41.0" prefWidth="81.0" text="Cold Chain Monitoring" textAlignment="CENTER" wrapText="true" />
-      <Label layoutX="306.0" layoutY="294.0" prefHeight="41.0" prefWidth="70.0" text="Delivery Tracking" textAlignment="CENTER" wrapText="true" />
-      <Label layoutX="447.0" layoutY="294.0" prefHeight="41.0" prefWidth="30.0" text="Log Out" textAlignment="CENTER" wrapText="true" />
-      <Label layoutX="420.0" layoutY="150.0" prefHeight="41.0" prefWidth="91.0" text="Supply Perfomanc" textAlignment="CENTER" wrapText="true" />
-      <Label layoutX="96.0" layoutY="37.0" prefHeight="33.0" prefWidth="387.0" text="Welcome, Parvez Hasssan">
+      <Label layoutX="339.0" layoutY="150.0" prefHeight="56.0" prefWidth="64.0" text="Update Inventory Price" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="222.0" layoutY="284.0" prefHeight="41.0" prefWidth="81.0" text="Supplier Performance" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="342.0" layoutY="284.0" prefHeight="41.0" prefWidth="70.0" text="Delivery Tracking" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="467.0" layoutY="284.0" prefHeight="41.0" prefWidth="30.0" text="Log Out" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="116.0" layoutY="149.0" prefHeight="41.0" prefWidth="70.0" text="Place Order to Supplier" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="107.0" layoutY="37.0" prefHeight="33.0" prefWidth="387.0" text="Welcome, Parvez Hasssan">
          <font>
             <Font name="Segoe Script Bold" size="27.0" />
          </font>

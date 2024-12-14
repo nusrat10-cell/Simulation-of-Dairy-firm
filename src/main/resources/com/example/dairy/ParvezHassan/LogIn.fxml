@@ -14,7 +14,9 @@
       <Label layoutX="141.0" layoutY="173.0" text="Designation:" AnchorPane.leftAnchor="141.0" />
       <TextField fx:id="userID_textField" layoutX="226.0" layoutY="110.0" AnchorPane.rightAnchor="225.0" />
       <ComboBox fx:id="designation_ComboBox" layoutX="250.0" layoutY="171.0" prefWidth="150.0" AnchorPane.rightAnchor="225.0" />
-      <Button layoutX="323.0" layoutY="224.0" mnemonicParsing="false" onAction="#logIn_button" text="Log In" />
+      <Button layoutX="147.0" layoutY="224.0" mnemonicParsing="false" onAction="#logIn_button" prefHeight="25.0" prefWidth="226.0" text="Log In" />
       <PasswordField fx:id="pass_textField" layoutX="225.0" layoutY="138.0" />
+      <Button layoutX="265.0" layoutY="278.0" mnemonicParsing="false" onAction="#createNewUser_Button" prefHeight="25.0" prefWidth="110.0" text="Create New User" />
+      <Label layoutX="137.0" layoutY="282.0" text="Dont Have An Account?" />
    </children>
 </AnchorPane>

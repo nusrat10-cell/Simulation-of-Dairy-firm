@@ -1,8 +1,9 @@
 package com.example.dairy.ParvezHassan;
 
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Transactions {
+public class Transactions implements Serializable {
     String recipientName;
     int trans_ID;
     String trans_type;

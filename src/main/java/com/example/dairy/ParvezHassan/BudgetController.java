@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 //import com.example.milestone3.BudgetItem;
 
 import java.io.*;
+import java.util.ArrayList;
 
 //import static com.example.milestone3.DataStore.populateTransactionList;
 
@@ -75,6 +76,7 @@ public class BudgetController
     @javafx.fxml.FXML
     public void setTotalBudget_button(ActionEvent actionEvent) {
         totalBudget = Double.parseDouble(totalBudget_TF.getText());
+        System.out.println("total budget set to: " + totalBudget);
     }
 
     @javafx.fxml.FXML
@@ -89,10 +91,6 @@ public class BudgetController
             double utility = (Double.parseDouble(utilitiesBudget_TF.getText()) / 100);
 
             if ((marketing + operations + transportations + development + processing + labor + utility) <= 1) {
-//            return totalExpense= (marketing+operations+transportations+development+processing+labor+utility);
-
-//            Amount of each catagory
-
                 Double marketingAmount = totalBudget * marketing;
                 Double operationsAmount = totalBudget * operations;
                 Double transportationsAmount = totalBudget * transportations;
@@ -103,7 +101,6 @@ public class BudgetController
 
                 totalExpense = (marketingAmount + operationsAmount + transportationsAmount + developmentAmount + processingAmount + laborAmount + utilityAmount);
                 remaining = (totalBudget - totalExpense);
-
 
                 budgetItems.setAll(
                         new BudgetItem("Marketing", marketing * 100, marketingAmount),
@@ -119,18 +116,11 @@ public class BudgetController
                 budgetTV.setItems(budgetItems);
                 remaining_TA.setText("Total Budget: " + totalBudget + "\n" + "Allocated Budget " + totalExpense + "\n" + "Remaining: " + remaining);
 
-                // Hardcoded file path
-//                String filePath = "C:/ProjectDatabase/budgetData.txt"; // Modify this path as needed
-
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter("BudgetData.txt", true))) {
-//                    writer.write("Name,Allocation,Amount\n");
-                    for (BudgetItem item : budgetItems) {
-//                        writer.write(item.getName() + "," + item.getAllocation() + "," + item.getAmount() + "\n");
-
-                        writer.write("name: " + item.getName() + ", Allocation%: " +item.getAllocation() + ", Amount: " + item.getAmount() + "\n" );
-                    }
+                // Save budget data to BudgetData.bin
+                try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("DataStore/BudgetData.bin"))) {
+                    oos.writeObject(new ArrayList<>(budgetItems));
                     System.out.println("Budget data saved");
-                    showError("Budget data saved " );
+                    showError("Budget data saved");
                 } catch (IOException e) {
                     showError("Failed to save budget data: " + e.getMessage());
                 }
@@ -138,13 +128,11 @@ public class BudgetController
             } else {
                 // Handle error: Allocations do not sum to 100%
                 error_label.setText("Error: Allocations sum greater than 100%");
-
             }
         } catch (NumberFormatException e) {
             // Handle FXML loading error
             showError("Input not integer/double");
         }
-
 
     }
 

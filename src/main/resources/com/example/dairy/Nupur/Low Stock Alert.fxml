@@ -20,14 +20,13 @@
         </columns>
       </TableView>
       <ComboBox fx:id="selectProductCB" layoutX="62.0" layoutY="300.0" prefWidth="150.0" promptText="Select Product" />
-      <ComboBox fx:id="chooseOptionCB" layoutX="62.0" layoutY="373.0" prefWidth="150.0" promptText="Choose a option" />
-      <Button layoutX="62.0" layoutY="337.0" mnemonicParsing="false" onAction="#takeActionButton" text="Take Action" />
+      <ComboBox fx:id="chooseOptionCB" layoutX="62.0" layoutY="348.0" prefWidth="150.0" promptText="Choose a option" />
       <Button layoutX="182.0" layoutY="416.0" mnemonicParsing="false" onAction="#confirmButton" text="Confirm" />
       <Button layoutX="568.0" layoutY="428.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
       <Label fx:id="label" layoutX="276.0" layoutY="420.0" prefHeight="18.0" prefWidth="194.0" text="Label" />
       <Text layoutX="226.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Low Stock Alert" wrappingWidth="194.4000000000001">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Text>
       <Line endX="100.0" layoutX="313.0" layoutY="53.0" startX="-100.0" />

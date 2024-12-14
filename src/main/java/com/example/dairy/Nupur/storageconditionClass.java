@@ -1,9 +1,10 @@
 package com.example.dairy.Nupur;
 
 public class storageconditionClass {
-    public double temperature;
-    public double humidity;
-    public String status;
+    private double temperature;
+    private double humidity;
+    private String status;
+    private String productName;
 
     public double getTemperature() {
         return temperature;
@@ -11,6 +12,14 @@ public class storageconditionClass {
 
     public void setTemperature(double temperature) {
         this.temperature = temperature;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public String getStatus() {
@@ -29,8 +38,9 @@ public class storageconditionClass {
         this.humidity = humidity;
     }
 
-    public storageconditionClass(double temperature, String status, double humidity) {
+    public storageconditionClass(double temperature, String productName, String status, double humidity) {
         this.temperature = temperature;
+        this.productName = productName;
         this.status = status;
         this.humidity = humidity;
     }
@@ -41,6 +51,7 @@ public class storageconditionClass {
                 "temperature=" + temperature +
                 ", humidity=" + humidity +
                 ", status='" + status + '\'' +
+                ", productName='" + productName + '\'' +
                 '}';
     }
 }

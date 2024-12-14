@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="440.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.PromotePSpecialOffersCampaign">
    <children>
-      <TextArea fx:id="validOfferTA" layoutX="87.0" layoutY="106.0" prefHeight="58.0" prefWidth="362.0" text="(&quot;Offer valid on all 1L milk packets until December 31st.&quot;)" />
+      <TextArea fx:id="validOfferTA" layoutX="87.0" layoutY="106.0" prefHeight="58.0" prefWidth="362.0" promptText="Write description (e.g &quot;Offer valid on all 1L milk packets until December 31st.&quot;)" />
       <Button layoutX="210.0" layoutY="188.0" mnemonicParsing="false" onAction="#submitOfferButton" text="Submit Offer" />
       <Button layoutX="531.0" layoutY="382.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
       <Text layoutX="50.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Offer">

@@ -3,9 +3,9 @@ package com.example.dairy.Nupur;
 import java.time.LocalDate;
 
 public class expiryDateModelClass {
-    public String productName;
-    public Integer currentStock;
-    public LocalDate expiryDate;
+    private String productName;
+    private Integer currentStock;
+    private LocalDate expiryDate;
 
     public expiryDateModelClass(String productName, Integer currentStock, LocalDate expiryDate) {
         this.productName = productName;

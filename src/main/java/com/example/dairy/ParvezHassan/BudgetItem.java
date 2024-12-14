@@ -1,9 +1,11 @@
 package com.example.dairy.ParvezHassan;
 
-public class BudgetItem {
-    private final String name;
-    private final double allocation;
-    private final double amount;
+import java.io.Serializable;
+
+public class BudgetItem implements Serializable {
+    private String name;
+    private double allocation;
+    private double amount;
 
     public BudgetItem(String name, double allocation, double amount) {
         this.name = name;
@@ -23,5 +25,3 @@ public class BudgetItem {
         return amount;
     }
 }
-
-

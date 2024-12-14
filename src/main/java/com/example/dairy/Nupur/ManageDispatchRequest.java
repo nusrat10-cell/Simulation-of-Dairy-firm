@@ -87,10 +87,10 @@ public class ManageDispatchRequest {
         alert.setContentText("Product dispatched with " + logisticProvider + " on " + dispatchDate + ".");
         alert.showAndWait(); }
     //showAlert(Alert.AlertType.INFORMATION, "Dispatch", "Product dispatched with " + logisticProvider + " on " + dispatchDate + ".");
-    @Deprecated
+    @FXML
     public void backButton(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("customer representative dashboard.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Inventory Manager Dashboard.fxml"));
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();

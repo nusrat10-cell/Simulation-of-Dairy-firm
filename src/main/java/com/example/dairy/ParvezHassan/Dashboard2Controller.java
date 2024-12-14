@@ -74,4 +74,17 @@ public class Dashboard2Controller
             e.printStackTrace();
         }
     }
+
+    @javafx.fxml.FXML
+    public void loanCalculator_button(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("LoanCalculator.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            // Handle FXML loading error
+            e.printStackTrace();
+        }
+    }
 }

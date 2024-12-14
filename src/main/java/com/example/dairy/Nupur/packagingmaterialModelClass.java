@@ -1,9 +1,9 @@
 package com.example.dairy.Nupur;
 
 public class packagingmaterialModelClass {
-    public String productName;
-    public Integer quantityUsed;
-    public Integer remainingStock;
+    private String productName;
+    private Integer quantityUsed;
+    private Integer remainingStock;
 
     public String getProductName() {
         return productName;
