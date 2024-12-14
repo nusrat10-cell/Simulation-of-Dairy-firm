@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryModelClass.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ProductionRecordModel.java" afterDir="false" />
@@ -34,6 +35,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Production Records.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Production Records.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Quality Control.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Quality Control.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Route Optimization.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Route Optimization.fxml" afterDir="false" />
+=======
+    <list default="true" id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 712f360f5fdde0f1d0355820bc6130e7c26420a8
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,12 +61,12 @@
     &quot;assignee&quot;: &quot;mahamud-tech&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git&quot;,
-    &quot;accountId&quot;: &quot;078a936f-662d-4687-a4a7-3f059b46d8cf&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git",
+    "accountId": "325a77ec-d633-4cfd-8e02-20913a235ea3"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -87,8 +92,18 @@
       <option name="presentableId" value="Default" />
       <updated>1733924773071</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml.">
+      <option name="closed" value="true" />
+      <created>1734176718367</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734176718367</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -98,5 +113,22 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="last edit of log in Controller" />
+    <MESSAGE value="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml." />
+>>>>>>> 712f360f5fdde0f1d0355820bc6130e7c26420a8
   </component>
 </project>
