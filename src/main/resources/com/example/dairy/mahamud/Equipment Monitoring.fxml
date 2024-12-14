@@ -9,16 +9,17 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.mahamud.EquipmentMonitoring">
    <children>
-      <ComboBox fx:id="emmachinescomboboxfx" layoutX="34.0" layoutY="158.0" prefWidth="150.0" promptText="machines" />
-      <TableView fx:id="emtablefx" layoutX="228.0" layoutY="14.0" prefHeight="200.0" prefWidth="256.0">
+      <ComboBox fx:id="emmachinescomboboxfx" layoutX="24.0" layoutY="78.0" prefWidth="150.0" promptText="equipment" />
+      <TableView fx:id="emtablefx" layoutX="30.0" layoutY="119.0" prefHeight="200.0" prefWidth="540.0">
         <columns>
-          <TableColumn fx:id="emrunningcollumfx" prefWidth="75.0" text="Running" />
-          <TableColumn fx:id="emidlecollumfx" prefWidth="75.0" text="idle" />
-            <TableColumn fx:id="emmanufacturecollumfx" prefWidth="75.0" text="manufacture" />
+          <TableColumn fx:id="emequipmentnamecollumfx" prefWidth="117.60003662109375" text="equipment name" />
+          <TableColumn fx:id="emStatuscollumfx" prefWidth="120.79998779296875" text="Status" />
+            <TableColumn fx:id="emLastMaintenanceDatecollumfx" prefWidth="152.79998779296875" text="Last Maintenance Date" />
+            <TableColumn fx:id="emCurrentUsagecollumfx" prefWidth="149.60003662109375" text="Current Usage" />
         </columns>
       </TableView>
-      <Label fx:id="emerrorlabelfx" layoutX="244.0" layoutY="350.0" text="Error massage " />
+      <Label fx:id="emerrorlabelfx" layoutX="106.0" layoutY="346.0" prefHeight="18.0" prefWidth="306.0" text="Error massage " />
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#embackbuttonfx" text="Back" />
-      <Button layoutX="342.0" layoutY="303.0" mnemonicParsing="false" onAction="#emcheackedbuttonfx" text="Cheacked" />
+      <Button layoutX="266.0" layoutY="342.0" mnemonicParsing="false" onAction="#emmonitoreqquipmentbuttonfx" text="Moitor eqquipment" />
    </children>
 </AnchorPane>

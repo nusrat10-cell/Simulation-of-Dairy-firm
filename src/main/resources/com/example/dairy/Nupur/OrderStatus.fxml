@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="540.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Nupur.OrderStatus">
+   <children>
+      <Button layoutX="243.0" layoutY="431.0" mnemonicParsing="false" onAction="#updateStatusButton" text="Update Status" />
+      <Button layoutX="622.0" layoutY="487.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Text layoutX="198.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track Customer Orders">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="statuslabel" layoutX="74.0" layoutY="490.0" prefHeight="18.0" prefWidth="308.0" text="status label" />
+      <TableView fx:id="ordersTableView" layoutX="69.0" layoutY="160.0" prefHeight="200.0" prefWidth="482.0">
+        <columns>
+          <TableColumn fx:id="orderIdTC" prefWidth="69.59997177124023" text="Order ID" />
+          <TableColumn fx:id="nameTC" prefWidth="104.00003051757812" text="Product Name" />
+            <TableColumn fx:id="quantityTC" prefWidth="72.00007629394531" text="Quantity " />
+            <TableColumn fx:id="orderdateTC" prefWidth="119.199951171875" text="Order Date" />
+            <TableColumn fx:id="statusTC" prefWidth="118.39996337890625" text="Status" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="updateStatusCB" layoutX="74.0" layoutY="375.0" prefWidth="150.0" promptText="Update Status" />
+   </children>
+</AnchorPane>

@@ -1,5 +1,7 @@
 package com.example.dairy.ParvezHassan;
 
+import com.example.dairy.Nupur.CustomerServiceRepresentative;
+import com.example.dairy.Nupur.InventoryManager;
 import com.example.dairy.Samiul.User7.SalesAndMarketingManager;
 import com.example.dairy.Samiul.User7.SalesDashboard;
 import com.example.dairy.Samiul.User8.Customer;
@@ -15,7 +17,12 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LogInController {
     @javafx.fxml.FXML
@@ -28,11 +35,18 @@ public class LogInController {
     SalesAndMarketingManager salesAndMarketingManager ;
     Customer customer;
 
+    InventoryManager inventoryManager;
+    CustomerServiceRepresentative customerServiceRepresentative;
+
+
     @javafx.fxml.FXML
     public void initialize() {
         designation_ComboBox.getItems().addAll("Milk Collector", "Milk Processor", "Inventory Manager", "Customer Service Representative", "Supply Chain & Logistics", "Financial Manager", "Sales & Marketing Manager", "Customer");
         salesAndMarketingManager = new SalesAndMarketingManager(11111, "Rayhan", "fewf@gmail.com", "01622729101", "1234");
         customer = new Customer(2, "John", "sasasa@gmail.com", "0838384", "1234");
+
+        inventoryManager =new InventoryManager(33333,"Faysal","fs@gmail.com","01776861997","Castle");
+        customerServiceRepresentative = new CustomerServiceRepresentative(44444,"Lily","lily@gmail.com","01863375342","lilium");
     }
     public void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -47,75 +61,92 @@ public class LogInController {
     public void logIn_button(ActionEvent actionEvent) {
         try {
             String password = pass_textField.getText();
-            int userID = Integer.parseInt(userID_textField.getText());
+            String userID = userID_textField.getText(); // Read user ID as String
             String designation = designation_ComboBox.getSelectionModel().getSelectedItem();
             boolean verified = false;
-//        VERIFICATION
-            if (userID == 1234 && password.equals("1234") && designation.equals("Supply Chain & Logistics")){
-                // Load Page 2
-                Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
-                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                stage.setScene(new Scene(root));
-                stage.show();
-                verified =true;
-            } if ((userID== 1234 && password.equals("12345") && designation.equals("Financial Manager"))) {
-                // Load Page 2
-                Parent root = FXMLLoader.load(getClass().getResource("Dashboard2.fxml"));
-                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                stage.setScene(new Scene(root));
-                stage.show();
-                verified =true;
 
-            }if (userID == 1 && password.equals("1") && designation.equals("Sales & Marketing Manager")){
-                // Load Page 2
-                Parent root = null ;
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User7/salesAndMarketingManagerDashboard.fxml"));
-                root = fxmlLoader.load() ;
 
-                SalesDashboard adc = fxmlLoader.getController() ;
-                adc.setter(this.salesAndMarketingManager);
 
-                Scene scene = new Scene(root) ;
-                Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
-                stage.setScene(scene);
-                stage.show();
-                verified =true;
-            } if ((userID== 2 && password.equals("2") && designation.equals("Customer"))) {
+//            DEBUG
+            System.out.println("UserID " + userID);
+            System.out.println("Password: " +password);
+            System.out.println("Designation " +designation);
 
-                Parent root = null ;
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User8/customerDashboard.fxml"));
-                root = fxmlLoader.load() ;
 
-                CustomerDashboard adc = fxmlLoader.getController() ;
-                adc.setter(this.customer);
-
-                Scene scene = new Scene(root) ;
-                Stage stage = (Stage)(((Node) actionEvent.getSource()).getScene().getWindow());
-                stage.setScene(scene);
-                stage.show();
-                verified =true;
-
+            List<User> users = new ArrayList<>();
+            File file = new File("DataStore/UserData.bin");
+            if (file.exists()) {
+                try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+                    users = (List<User>) ois.readObject();
+                } catch (IOException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                    showError("Unable to read user data.");
+                    return;
+                }
             }
-            if (userID == 1234 && password.equals("1234") && designation.equals("Milk Collector")){
-                // Load Page 2
-                Parent root = FXMLLoader.load(getClass().getResource("/com.example.dairy/mahamud/Milk Collector.fxml"));
+
+            for (User user : users) {
+//                DEBUG
+                System.out.println("StoredID: " + user.getUserID());
+                System.out.println("StoredPassword: " +user.getPassword());
+                System.out.println("StoredDesignation: " +user.getDesignation());
+
+                if (String.valueOf(user.getUserID()).equals(userID) && user.getPassword().equals(password) && user.getDesignation().equals(designation)) {
+                    verified = true;
+                    break;
+                }
+            }
+
+            if (verified) {
+
+                Parent root = null;
+                switch (designation) {
+//                    PARVEZ
+                    case "Supply Chain & Logistics":
+                        root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+                        break;
+                    case "Financial Manager":
+                        root = FXMLLoader.load(getClass().getResource("Dashboard2.fxml"));
+                        break;
+//                   SAMIUL
+                    case "Sales & Marketing Manager": //1,1
+                        root = FXMLLoader.load(getClass().getResource("/com/example/dairy/Samiul/User7/salesAndMarketingManagerDashboard.fxml"));
+                        break;
+                    case "Customer": //2,2
+                        root = FXMLLoader.load(getClass().getResource("/com/example/dairy/Samiul/User8/customerDashboard.fxml"));
+                        break;
+//                  MAHAMUD
+                    case "Milk Collector": //1234,1234
+                        root = FXMLLoader.load(getClass().getResource("/com/example/dairy/mahamud/Milk Collector.fxml"));
+                        break;
+                    case "Milk Processor":
+                        root= FXMLLoader.load(getClass().getResource("/com/example/dairy/mahamud/Milk Processor.fxml"));
+                        break;
+//                        NUPUR
+                    case "Inventory Manager": //1,1
+                        root = FXMLLoader.load(getClass().getResource("/com/example/dairy/Nupur/Inventory Manager Dashboard.fxml"));
+                        break;
+                    case "Customer Service Representative": //1,1
+                        root = FXMLLoader.load(getClass().getResource("/com/example/dairy/Nupur/customer representative dashboard.fxml"));
+                        break;
+                    default:
+                        showError("Invalid designation.");
+                        return;
+                }
                 Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 stage.setScene(new Scene(root));
                 stage.show();
-                verified =true;}
-            if (!verified) {
-                // Show error message
+            } else {
                 showError("Invalid credentials. Please try again.");
             }
         } catch (NumberFormatException e) {
-            // Handle invalid integer input
             showError("User ID must be a number.");
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
             showError("Unable to load the next page.");
         }
     }
+
 
 
     @javafx.fxml.FXML

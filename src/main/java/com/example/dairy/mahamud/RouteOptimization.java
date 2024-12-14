@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -16,9 +17,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-//import java.awt.event.ActionEvent;
-
 public class RouteOptimization {
+
     @FXML
     private TableColumn<RouteData, String> roidtablecollumfx;
     @FXML
@@ -32,24 +32,49 @@ public class RouteOptimization {
     @FXML
     private TableView<RouteData> rotablefx;
     @FXML
-    private TextField rodestinationfx;
-    @FXML
     private TableColumn<RouteData, String> rodestinationtablecollumfx;
     @FXML
     private TextField roquantitytextfieldfx;
+    @FXML
+    private ComboBox<String> rodestinationcomboboxfx;
 
     private ObservableList<RouteData> routeDataList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
-        // Initialize Table Columns
+        rodestinationcomboboxfx.getItems().setAll("Dhaka to Gazipur", "Gazipur to Uttara", "Uttara to Jatrabari", "Jatrabari to Dhanmondi");
         roidtablecollumfx.setCellValueFactory(new PropertyValueFactory<>("sampleId"));
-        ronametablecollumfx.setCellValueFactory(new PropertyValueFactory<>("farmerName"));
         roquantitytablecollumfx.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        ronametablecollumfx.setCellValueFactory(new PropertyValueFactory<>("farmerName"));
         rodestinationtablecollumfx.setCellValueFactory(new PropertyValueFactory<>("destination"));
-
-        // Set table data
         rotablefx.setItems(routeDataList);
+    }
+
+    @FXML
+    public void roconfirmcollectionbuttonfx(ActionEvent actionEvent) {
+        String sampleId = rosampleidtextfieldfx.getText();
+        String quantityStr = roquantitytextfieldfx.getText();
+        String farmerName = rofarmernametextfieldfx.getText();
+        String destination = rodestinationcomboboxfx.getValue();
+        if (sampleId.isEmpty() || quantityStr.isEmpty() || farmerName.isEmpty() || destination == null) {
+            System.out.println("Please fill in all fields.");
+            return;
+        }
+        if (!quantityStr.matches("\\d+")) {
+            System.out.println("Please enter a valid numeric value for quantity.");
+            return;
+        }
+
+        int quantity = Integer.parseInt(quantityStr);
+
+        RouteData data = new RouteData(sampleId, quantity, farmerName, destination);
+        routeDataList.add(data);
+        rosampleidtextfieldfx.clear();
+        roquantitytextfieldfx.clear();
+        rofarmernametextfieldfx.clear();
+        rodestinationcomboboxfx.setValue(null);
+
+        rotablefx.refresh();
     }
 
     @FXML
@@ -64,21 +89,4 @@ public class RouteOptimization {
             e.printStackTrace();
         }
     }
-
-    @FXML
-    public void roconfirmcollectionbuttonfx(ActionEvent actionEvent) {
-
-    }
-
-    private boolean isValidDestination(String destination) {
-        String[] validDestinations = {"Dhaka", "Gajipur", "Jatrabari", "Dhanmondi", "Gulistan", "Uttara"};
-        for (String validDestination : validDestinations) {
-            if (validDestination.equalsIgnoreCase(destination)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-
 }

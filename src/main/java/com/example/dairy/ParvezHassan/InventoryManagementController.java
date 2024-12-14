@@ -18,6 +18,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 
 public class InventoryManagementController {
@@ -87,6 +88,13 @@ public class InventoryManagementController {
 
 
         loadInventoryData();
+        // Filter data where delivered quantities are 0 and delivered date is null
+        List<OrderToSupplier> filteredOrders = placedOrders.stream()
+                .filter(order -> order.getDeliveredQuantity() == 0 && order.getDeliveryDate() == null)
+                .collect(Collectors.toList());
+
+        addedItem_tableView.getItems().setAll(filteredOrders);
+
 
     }
 
@@ -386,6 +394,15 @@ public class InventoryManagementController {
             e.printStackTrace();
         }
     }
+    private void savePlacedOrders() {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("DataStore/PlacedOrderToSupplier.bin"))) {
+            oos.writeObject(placedOrders);
+            System.out.println("Placed orders updated successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     @javafx.fxml.FXML
@@ -404,7 +421,7 @@ public class InventoryManagementController {
 
 
     }
-
+//UPDATING TO PLACEDORDERTOSUPPLER.BIN
     @javafx.fxml.FXML
     public void addItems_Button(ActionEvent actionEvent) {
         int orderID = Integer.parseInt(orderID_textField.getText());
@@ -422,8 +439,10 @@ public class InventoryManagementController {
         }
         addedItem_tableView.refresh();
         saveInventoryData();
+        savePlacedOrders();
 
-        System.out.println("Order updated");
+        System.out.println("Order updated in InventoryList.bin");
+        System.out.println("Delivery Date & Quantity updated in PlacedOrderToInventory.bin");
     }
 }
 

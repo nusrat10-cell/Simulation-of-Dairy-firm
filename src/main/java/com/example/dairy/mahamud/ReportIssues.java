@@ -29,7 +29,6 @@ public class ReportIssues {
 
     @FXML
     public void initialize() {
-        // Initialize pie chart with no data
         piechartfx.setData(FXCollections.observableArrayList());
     }
 
@@ -42,7 +41,6 @@ public class ReportIssues {
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
         }
     }
@@ -55,11 +53,7 @@ public class ReportIssues {
             rilabelmassagefx.setText("Please select an issue type.");
             return;
         }
-
-        // Update pie chart with the selected issue
         updatePieChart(errorType);
-
-        // Show success message
         rilabelmassagefx.setText("Issue reported successfully!");
     }
 

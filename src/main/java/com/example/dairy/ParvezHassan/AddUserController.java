@@ -81,7 +81,7 @@ public class AddUserController {
         }
 
         User.addUser(Arrays.asList(
-                new User(ID, name, email, number, setPassword, confirmPassword)
+                new User(ID,name,email,number,designation,confirmPassword)
         ));
 
         showConfirmation("User has been added successfully!");

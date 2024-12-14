@@ -3,16 +3,27 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.mahamud.MilkSeperation">
    <children>
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#msbackbuttonfx" text="Back" />
       <ComboBox fx:id="msmilkcomponantcomboboxfx" layoutX="21.0" layoutY="61.0" prefWidth="150.0" promptText="milk componant" />
       <ComboBox fx:id="msmilktypecomboboxfx" layoutX="21.0" layoutY="107.0" prefWidth="150.0" promptText="milk type " />
-      <TextField fx:id="msamountofmilktextfieldfx" layoutX="22.0" layoutY="156.0" text="amount of milk" />
-      <Label fx:id="mslabelmassagefx" layoutX="252.0" layoutY="173.0" text="massage " />
-      <Button layoutX="103.0" layoutY="227.0" mnemonicParsing="false" onAction="#msRunSeperationbuttonfx" text="Run Seperation" />
+      <TextField fx:id="msamountofmilktextfieldfx" layoutX="83.0" layoutY="156.0" />
+      <Label fx:id="mslabelmassagefx" layoutX="272.0" layoutY="273.0" prefHeight="51.0" prefWidth="247.0" text="massage " />
+      <Button layoutX="34.0" layoutY="360.0" mnemonicParsing="false" onAction="#msRunSeperationbuttonfx" text="Run Seperation" />
+      <TableView fx:id="mstablefx" layoutX="248.0" layoutY="60.0" prefHeight="200.0" prefWidth="329.0">
+        <columns>
+          <TableColumn fx:id="mscomponantcolfx" prefWidth="75.0" text="componant" />
+          <TableColumn fx:id="mstypecolfx" prefWidth="75.0" text="type" />
+            <TableColumn fx:id="msquantitycolfx" prefWidth="75.0" text="quantity" />
+        </columns>
+      </TableView>
+      <Text layoutX="14.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="quantity" />
    </children>
 </AnchorPane>

@@ -1,0 +1,1 @@
+CustomerID=1234, CustomerName='Rahim', CustomerAddress='IUB', CustomerNumber=1928682961, ItemName='Bottle', OrderQuantity=10, TotalPrice=1000.0

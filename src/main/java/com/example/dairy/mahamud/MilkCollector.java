@@ -24,7 +24,6 @@ public class MilkCollector
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
         }
 
@@ -51,7 +50,6 @@ public class MilkCollector
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
         }
     }
@@ -64,7 +62,6 @@ public class MilkCollector
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
         }
     }
@@ -77,7 +74,6 @@ public class MilkCollector
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
         }
     }
@@ -90,7 +86,6 @@ public class MilkCollector
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
         }
     }
@@ -103,7 +98,6 @@ public class MilkCollector
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
         }
     }
@@ -116,8 +110,22 @@ public class MilkCollector
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            // Handle FXML loading error
             e.printStackTrace();
         }
+    }
+
+    @javafx.fxml.FXML
+    public void mclogoutbuttonfx(ActionEvent actionEvent) {
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
+                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            }
+
+
     }
 }
