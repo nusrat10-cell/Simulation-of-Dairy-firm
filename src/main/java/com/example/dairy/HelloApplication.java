@@ -13,8 +13,6 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
 
 
-<<<<<<< HEAD
-
        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/mahamud/Milk Processor.fxml"));
 
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nupur/Manage Dispatch Request.fxml"));
@@ -33,9 +31,9 @@ public class HelloApplication extends Application {
 
 
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
-=======
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
->>>>>>> 712f360f5fdde0f1d0355820bc6130e7c26420a8
+
+        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/dairy/ParvezHassan/LogIn.fxml"));
+
 
 
         Scene scene = new Scene(fxmlLoader.load());

@@ -16,19 +16,19 @@ module com.example.dairy {
     opens com.example.dairy.ParvezHassan to javafx.fxml, javafx.graphics;
     exports com.example.dairy.ParvezHassan;
 
-<<<<<<< HEAD
+
 
 
     exports com.example.dairy.mahamud to javafx.fxml;
 
 
-=======
+
     opens com.example.dairy.Samiul to javafx.fxml, javafx.graphics;
     exports com.example.dairy.Samiul.User7;
     exports com.example.dairy.Samiul.User8;
 
-    opens com.example.dairy.mahamud to javafx.fxml, javafx.graphics;
-    exports com.example.dairy.mahamud;
->>>>>>> 712f360f5fdde0f1d0355820bc6130e7c26420a8
+    //opens com.example.dairy.mahamud to javafx.fxml, javafx.graphics;
+    //exports com.example.dairy.mahamud;
+
 
 }

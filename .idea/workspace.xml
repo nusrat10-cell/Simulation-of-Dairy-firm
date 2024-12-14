@@ -4,131 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryModelClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ProductionRecordModel.java" afterDir="false" />
+    <list default="true" id="5c8662dc-9ec8-4e3e-a00e-4bf2ec95db7c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStore/UserData.bin" beforeDir="false" afterPath="$PROJECT_DIR$/DataStore/UserData.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/DeliveryManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/FreshMilk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/FreshMilk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkCollector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkReception.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkReception.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkSeperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkSeperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/Packaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/Packaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PasteurizeMilk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PasteurizeMilk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PaymentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PaymentManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ProductionRecords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ProductionRecords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ReportIssues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ReportIssues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/qualityControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/qualityControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Delivery Management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Delivery Management.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk Collector.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk Collector.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk Processor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk Processor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Production Records.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Production Records.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Quality Control.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Quality Control.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Route Optimization.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Route Optimization.fxml" afterDir="false" />
-=======
-    <list default="true" id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> 712f360f5fdde0f1d0355820bc6130e7c26420a8
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;mahamud-tech&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mahamud-tech"
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git",
-    "accountId": "325a77ec-d633-4cfd-8e02-20913a235ea3"
+    "accountId": "078a936f-662d-4687-a4a7-3f059b46d8cf"
   }
 }]]></component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2q4bPUV63XRfcw1oEutBuhPatkf" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2qD5zEtToHNHeXznYwFLJ9oODur" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="" />
-      <created>1733924773071</created>
+      <changelist id="5c8662dc-9ec8-4e3e-a00e-4bf2ec95db7c" name="Changes" comment="" />
+      <created>1734184567406</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1733924773071</updated>
+      <updated>1734184567406</updated>
     </task>
-    <task id="LOCAL-00001" summary="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml.">
-      <option name="closed" value="true" />
-      <created>1734176718367</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1734176718367</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-<<<<<<< HEAD
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.IllegalAccessException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-=======
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="last edit of log in Controller" />
-    <MESSAGE value="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml." />
->>>>>>> 712f360f5fdde0f1d0355820bc6130e7c26420a8
   </component>
 </project>
