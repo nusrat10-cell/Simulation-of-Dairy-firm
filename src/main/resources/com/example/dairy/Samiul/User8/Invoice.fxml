@@ -14,7 +14,7 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <ComboBox fx:id="selectOrderIdCombobox" layoutX="225.0" layoutY="155.0" prefHeight="25.0" prefWidth="217.0" promptText="Select Order Id" />
-      <Button layoutX="288.0" layoutY="287.0" mnemonicParsing="false" onAction="#createInvoiceButton" text="Create Invoice" />
+      <ComboBox fx:id="selectOrderIdCombobox" layoutX="225.0" layoutY="228.0" prefHeight="25.0" prefWidth="217.0" promptText="Select Order Id" />
+      <Button layoutX="273.0" layoutY="296.0" mnemonicParsing="false" onAction="#createInvoiceButton" text="Create Invoice in txt" />
    </children>
 </AnchorPane>

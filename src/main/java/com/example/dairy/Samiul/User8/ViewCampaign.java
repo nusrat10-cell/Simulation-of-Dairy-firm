@@ -18,14 +18,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.time.LocalDate;
 
 public class ViewCampaign
 {
     Customer user;
-    @javafx.fxml.FXML
-    private TableColumn<CampaignClass, String> statusTableview;
-    @javafx.fxml.FXML
-    private DatePicker endDatePicker;
     @javafx.fxml.FXML
     private TableColumn<CampaignClass, String> dateTableview;
     @javafx.fxml.FXML
@@ -36,9 +33,11 @@ public class ViewCampaign
     private TableView<CampaignClass> viewCampaignTable;
     @javafx.fxml.FXML
     private TableColumn<CampaignClass, String> venueTableview;
-
+    @javafx.fxml.FXML
+    private TableColumn<CampaignClass, LocalDate> endDateTableview;
 
     ObservableList<CampaignClass> campaignClasses = FXCollections.observableArrayList();
+
 
 
     public void setter (Customer customer){
@@ -51,6 +50,7 @@ public class ViewCampaign
         nameTableview.setCellValueFactory(new PropertyValueFactory<>("name"));
         dateTableview.setCellValueFactory(new PropertyValueFactory<>("startDate"));
         venueTableview.setCellValueFactory(new PropertyValueFactory<>("venueLocation"));
+        endDateTableview.setCellValueFactory(new PropertyValueFactory<>("endDate"));
     }
 
     @javafx.fxml.FXML
@@ -103,18 +103,26 @@ public class ViewCampaign
         return campaign ;
     }
     public void show() {
-
-        viewCampaignTable.setItems(campaignClasses);
         campaignClasses= campaignFileRead();
+        viewCampaignTable.setItems(campaignClasses);
 
     }
 
     @javafx.fxml.FXML
     public void filterButton(ActionEvent actionEvent) {
+        campaignClasses= campaignFileRead();
+        ObservableList<CampaignClass> c = FXCollections.observableArrayList();
+        LocalDate start, end ;
+        start = startDatePicker.getValue() ;
+
+
+        for (CampaignClass ca: campaignClasses) {
+            if (ca.getStartDate().isEqual(start) || ca.getStartDate().isAfter(start)) {
+                c.add(ca);
+            }
+        }
+        viewCampaignTable.setItems(c);
     }
 
-    @javafx.fxml.FXML
-    public void showCampaignButton(ActionEvent actionEvent) {
-        show();
-    }
+
 }

@@ -1,0 +1,8 @@
+Invoice
+=========================
+Order ID: 3515
+Customer Name: fs
+Quantity: 44
+Delivery Date: 2024-12-25
+Total Price: $1040
+=========================

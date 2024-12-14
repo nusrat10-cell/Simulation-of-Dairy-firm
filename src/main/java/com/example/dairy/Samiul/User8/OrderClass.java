@@ -51,10 +51,19 @@ public class OrderClass implements Serializable {
         this.deliveryDate = deliveryDate;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "OrderClass{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", quantity=" + quantity +
                 ", deliveryDate=" + deliveryDate +
                 ", price=" + price +

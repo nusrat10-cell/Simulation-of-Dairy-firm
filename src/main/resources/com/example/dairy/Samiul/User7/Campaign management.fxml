@@ -49,12 +49,11 @@
       <Button layoutX="52.0" layoutY="351.0" mnemonicParsing="false" onAction="#createCampaignButton" text="Create Campaign" />
       <TableView fx:id="campaignTable" layoutX="96.0" layoutY="405.0" prefHeight="144.0" prefWidth="454.0">
         <columns>
-          <TableColumn fx:id="idTableview" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="nameTableview" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="dateTableview" prefWidth="75.0" text="Date" />
-            <TableColumn fx:id="venueTableview" prefWidth="75.0" text="Venue" />
-            <TableColumn fx:id="budgetTableview" prefWidth="75.0" text="Budget" />
-            <TableColumn fx:id="statusTableview" prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="idTableview" prefWidth="84.66661834716797" text="ID" />
+          <TableColumn fx:id="nameTableview" prefWidth="81.33332824707031" text="Name" />
+            <TableColumn fx:id="dateTableview" prefWidth="92.6666259765625" text="Date" />
+            <TableColumn fx:id="venueTableview" prefWidth="104.0" text="Venue" />
+            <TableColumn fx:id="budgetTableview" prefWidth="89.99996948242188" text="Budget" />
         </columns>
       </TableView>
       <Button layoutX="27.0" layoutY="27.0" mnemonicParsing="false" onAction="#backButton" text="Back" />

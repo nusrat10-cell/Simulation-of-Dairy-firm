@@ -23,8 +23,6 @@ public class CampaignManagement
     @javafx.fxml.FXML
     private TableColumn<CampaignClass, Integer> idTableview;
     @javafx.fxml.FXML
-    private TableColumn<CampaignClass, String> statusTableview;
-    @javafx.fxml.FXML
     private TextField venueLocationTF;
     @javafx.fxml.FXML
     private TextField campaignNameTF;

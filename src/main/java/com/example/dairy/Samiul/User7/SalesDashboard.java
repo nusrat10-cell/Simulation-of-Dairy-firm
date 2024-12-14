@@ -35,12 +35,12 @@ public class SalesDashboard
     }
 
     @javafx.fxml.FXML
-    public void salesReport(ActionEvent actionEvent) throws IOException {
+    public void distributorList(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User7/AnalyzeSalesPerformance.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User7/DistributorList.fxml"));
         root = fxmlLoader.load() ;
 
-        AnalyzeSalesPerformance adc = fxmlLoader.getController() ;
+        DistributorList adc = fxmlLoader.getController() ;
         adc.setter(this.user);
 
         Scene scene = new Scene(root) ;
@@ -67,10 +67,10 @@ public class SalesDashboard
     @javafx.fxml.FXML
     public void productInventory(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User7/ProductManagement.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/dairy/Samiul/User7/ViewProductInventory.fxml"));
         root = fxmlLoader.load() ;
 
-        ProductManagement adc = fxmlLoader.getController() ;
+        ProductInventory adc = fxmlLoader.getController() ;
         adc.setter(this.user);
 
         Scene scene = new Scene(root) ;

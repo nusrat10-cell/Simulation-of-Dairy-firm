@@ -14,12 +14,12 @@
    <left>
       <VBox prefHeight="375.0" prefWidth="115.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#salesReport" prefHeight="57.0" prefWidth="115.0" text="Sales report" />
+            <Button mnemonicParsing="false" onAction="#distributorList" prefHeight="57.0" prefWidth="115.0" text="Distributor List" />
             <Button mnemonicParsing="false" onAction="#productInventory" prefHeight="61.0" prefWidth="123.0" text="Product Inventory" />
             <Button mnemonicParsing="false" onAction="#createNewCampaign" prefHeight="61.0" prefWidth="133.0" text="Create New Campaign" textAlignment="CENTER" wrapText="true" />
-            <Button mnemonicParsing="false" onAction="#orderList" prefHeight="58.0" prefWidth="129.0" text="Order List" />
-            <Button mnemonicParsing="false" onAction="#incomeManagement" prefHeight="59.0" prefWidth="157.0" text="Income management" textAlignment="CENTER" wrapText="true" />
             <Button mnemonicParsing="false" onAction="#inhouseOrder" prefHeight="63.0" prefWidth="149.0" text="View inhouse order" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#incomeManagement" prefHeight="59.0" prefWidth="157.0" text="Income management" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#orderList" prefHeight="58.0" prefWidth="129.0" text="Order List" />
             <Button mnemonicParsing="false" onAction="#pendingOrders" prefHeight="67.0" prefWidth="135.0" text="Pending orders" />
             <Button mnemonicParsing="false" onAction="#reportProblemSales" prefHeight="69.0" prefWidth="115.0" text="Report Problem" />
             <Button mnemonicParsing="false" onAction="#signOutButton" prefHeight="77.0" prefWidth="116.0" text="Sign Out" />

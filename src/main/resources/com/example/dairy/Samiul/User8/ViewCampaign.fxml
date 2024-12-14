@@ -21,7 +21,7 @@
           <TableColumn fx:id="nameTableview" prefWidth="90.66664123535156" text="Name" />
           <TableColumn fx:id="dateTableview" prefWidth="85.99993896484375" text="Date" />
             <TableColumn fx:id="venueTableview" prefWidth="132.66665649414062" text="Venue" />
-            <TableColumn fx:id="statusTableview" prefWidth="104.6666259765625" text="Status" />
+            <TableColumn fx:id="endDateTableview" prefWidth="104.6666259765625" text="End Date" />
         </columns>
       </TableView>
       <Text layoutX="71.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Date:">
@@ -35,13 +35,6 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Text layoutX="71.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <DatePicker fx:id="endDatePicker" layoutX="163.0" layoutY="465.0" />
-      <Button layoutX="294.0" layoutY="513.0" mnemonicParsing="false" onAction="#filterButton" text="Filter" />
-      <Button layoutX="290.0" layoutY="330.0" mnemonicParsing="false" onAction="#showCampaignButton" text="Show Campaigns" />
+      <Button layoutX="296.0" layoutY="470.0" mnemonicParsing="false" onAction="#filterButton" text="Filter" />
    </children>
 </AnchorPane>

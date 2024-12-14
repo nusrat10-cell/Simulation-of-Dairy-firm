@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.Samiul.User7.DistributorList">
+   <children>
+      <TableView fx:id="distributorTable" layoutX="45.0" layoutY="143.0" prefHeight="329.0" prefWidth="579.0">
+        <columns>
+          <TableColumn fx:id="NameTableview" prefWidth="138.66668319702148" text="Name" />
+          <TableColumn fx:id="numberTableview" prefWidth="122.66670227050781" text="Number" />
+            <TableColumn fx:id="emailTableview" minWidth="0.66668701171875" prefWidth="148.6666259765625" text="Email" />
+            <TableColumn fx:id="zoneTableview" minWidth="0.0" prefWidth="166.66665649414062" text="Zone" />
+        </columns>
+      </TableView>
+      <Button layoutX="28.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Text layoutX="254.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distributor List" underline="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

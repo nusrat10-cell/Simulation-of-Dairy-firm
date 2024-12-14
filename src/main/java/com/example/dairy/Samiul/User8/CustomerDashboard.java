@@ -16,6 +16,9 @@ public class CustomerDashboard
         this.user = customer;
     }
     @javafx.fxml.FXML
+
+
+
     public void initialize() {
     }
 

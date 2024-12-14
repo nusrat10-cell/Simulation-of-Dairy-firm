@@ -15,13 +15,14 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <TableView fx:id="pendingOrderListTable" layoutX="119.0" layoutY="178.0" prefHeight="297.0" prefWidth="432.0">
+      <TableView fx:id="orderHistoryTable" layoutX="119.0" layoutY="178.0" prefHeight="297.0" prefWidth="432.0">
         <columns>
-          <TableColumn fx:id="OrderIdTableview" prefWidth="119.99999237060547" text="Order Id" />
+          <TableColumn fx:id="orderIdTableview" prefWidth="119.99999237060547" text="Order Id" />
           <TableColumn fx:id="productNameTableview" prefWidth="106.66664123535156" text="Product  Name" />
             <TableColumn fx:id="quantityTableview" prefWidth="89.99993896484375" text="Quantity" />
             <TableColumn fx:id="priceTableview" prefWidth="113.99996948242188" text="Price" />
         </columns>
       </TableView>
+      <Button layoutX="309.0" layoutY="495.0" mnemonicParsing="false" onAction="#showHistoryButton" text="Show History" />
    </children>
 </AnchorPane>

@@ -22,15 +22,15 @@ public class OrderHistory
 {
     Customer user;
     @javafx.fxml.FXML
-    private TableColumn<OrderClass, Integer> orderIdTableview;
-    @javafx.fxml.FXML
     private TableColumn<OrderClass, String> productNameTableview;
-    @javafx.fxml.FXML
-    private TableView<OrderClass> orderHistoryTable;
     @javafx.fxml.FXML
     private TableColumn<OrderClass, Integer> quantityTableview;
     @javafx.fxml.FXML
     private TableColumn<OrderClass, Integer> priceTableview;
+    @javafx.fxml.FXML
+    private TableColumn<OrderClass, Integer> orderIdTableview;
+    @javafx.fxml.FXML
+    private TableView<OrderClass> orderHistoryTable;
 
     public void setter (Customer customer){
         this.user = customer;
@@ -41,7 +41,7 @@ public class OrderHistory
     @javafx.fxml.FXML
     public void initialize() {
 
-       // orderIdTableview.setCellValueFactory(new PropertyValueFactory<>("id"));
+        orderIdTableview.setCellValueFactory(new PropertyValueFactory<>("id"));
         productNameTableview.setCellValueFactory(new PropertyValueFactory<>("name"));
         quantityTableview.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         priceTableview.setCellValueFactory(new PropertyValueFactory<>("price"));
@@ -101,8 +101,13 @@ public class OrderHistory
     }
 
     public void show() {
-        orderHistoryTable.setItems(orders);
-        orders= orderFileRead();
 
+        orders= orderFileRead();
+        orderHistoryTable.setItems(orders);
+    }
+
+    @javafx.fxml.FXML
+    public void showHistoryButton(ActionEvent actionEvent) {
+        show();
     }
 }
