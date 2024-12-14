@@ -38,12 +38,9 @@ public class PaymentManagement {
 
     @FXML
     public void initialize() {
-        // Initialize Table Columns
         pmnamecollumfx.setCellValueFactory(new PropertyValueFactory<>("name"));
         pmamountcollumfx.setCellValueFactory(new PropertyValueFactory<>("amount"));
         pmdatecollumfx.setCellValueFactory(new PropertyValueFactory<>("date"));
-
-        // Set table data
         pmtablefx.setItems(paymentDataList);
     }
 
@@ -57,14 +54,11 @@ public class PaymentManagement {
             System.out.println("Please fill in all fields.");
             return;
         }
-
         try {
             double amount = Double.parseDouble(amountStr);
 
             PaymentData data = new PaymentData(name, amount, date);
             paymentDataList.add(data);
-
-            // Clear the fields after submission
             pmnametextfieldfx.clear();
             pmamounttextfieldfx.clear();
             pmdatefx.setValue(null);

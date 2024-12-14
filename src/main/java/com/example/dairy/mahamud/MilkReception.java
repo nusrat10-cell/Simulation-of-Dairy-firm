@@ -4,12 +4,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class MilkReception {
@@ -42,14 +49,11 @@ public class MilkReception {
 
     @FXML
     public void initialize() {
-        // Initialize Table Columns
         mrdeliveryidtablecollumfx.setCellValueFactory(new PropertyValueFactory<>("deliveryId"));
         mrtruckidtablecollumfx.setCellValueFactory(new PropertyValueFactory<>("truckId"));
         mrquantitytablecollumfx.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         mrdatetablecollumfx.setCellValueFactory(new PropertyValueFactory<>("date"));
         mrstutustablecollumfx.setCellValueFactory(new PropertyValueFactory<>("status"));
-
-        // Set table data
         mrtablefx.setItems(receptionDataList);
     }
 
@@ -68,26 +72,27 @@ public class MilkReception {
 
         try {
             double quantity = Double.parseDouble(quantityStr);
-
             ReceptionData data = new ReceptionData(deliveryId, truckId, quantity, date, status);
             receptionDataList.add(data);
-
-            // Clear the fields after submission
             mrDeliveryidtextfieldfx.clear();
             mrtruckidtextfieldfx.clear();
             mrquantitytextfieldfx.clear();
             mrdatefx.setValue(null);
             mrpassradiobuttonfx.setSelected(false);
             mrfailradiobuttonfx.setSelected(false);
-
         } catch (NumberFormatException e) {
             System.out.println("Please enter a valid quantity.");
         }
     }
-
     @FXML
     public void mrbackbuttonfx(ActionEvent actionEvent) {
-        // Handle back button action
-        System.out.println("Back button clicked.");
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Milk Processor.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

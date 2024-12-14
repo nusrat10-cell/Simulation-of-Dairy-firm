@@ -2,14 +2,14 @@ package com.example.dairy.mahamud;
 
 public class RouteData {
     private String sampleId;
+    private int quantity;
     private String farmerName;
-    private double quantity;
     private String destination;
 
-    public RouteData(String sampleId, String farmerName, double quantity, String destination) {
+    public RouteData(String sampleId, int quantity, String farmerName, String destination) {
         this.sampleId = sampleId;
-        this.farmerName = farmerName;
         this.quantity = quantity;
+        this.farmerName = farmerName;
         this.destination = destination;
     }
 
@@ -21,6 +21,14 @@ public class RouteData {
         this.sampleId = sampleId;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public String getFarmerName() {
         return farmerName;
     }
@@ -29,29 +37,11 @@ public class RouteData {
         this.farmerName = farmerName;
     }
 
-    public double getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(double quantity) {
-        this.quantity = quantity;
-    }
-
     public String getDestination() {
         return destination;
     }
 
     public void setDestination(String destination) {
         this.destination = destination;
-    }
-
-    @Override
-    public String toString() {
-        return "RouteData{" +
-                "sampleId='" + sampleId + '\'' +
-                ", farmerName='" + farmerName + '\'' +
-                ", quantity=" + quantity +
-                ", destination='" + destination + '\'' +
-                '}';
     }
 }

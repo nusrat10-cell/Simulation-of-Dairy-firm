@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml.">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/OrderStatus.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/OrderStatus.fxml" afterDir="false" />
@@ -17,27 +18,28 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/complaintsClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/trackOrderClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Customer Complaints.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Customer Complaints.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Track Order.fxml" beforeDir="false" />
+=======
+    <list default="true" id="5c8662dc-9ec8-4e3e-a00e-4bf2ec95db7c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStore/UserData.bin" beforeDir="false" afterPath="$PROJECT_DIR$/DataStore/UserData.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+>>>>>>> e3dda8649ee0b527c6dcb8433ed2b20a32b6eabd
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;mahamud-tech&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mahamud-tech"
   }
+<<<<<<< HEAD
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -49,6 +51,20 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2q4bPUV63XRfcw1oEutBuhPatkf" />
+=======
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git",
+    "accountId": "078a936f-662d-4687-a4a7-3f059b46d8cf"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2qD5zEtToHNHeXznYwFLJ9oODur" />
+>>>>>>> e3dda8649ee0b527c6dcb8433ed2b20a32b6eabd
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,44 +74,23 @@
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+<<<<<<< HEAD
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP PAVILION/IdeaProjects/Simulation-of-Dairy-firm"
+=======
+    "kotlin-language-version-configured": "true"
+>>>>>>> e3dda8649ee0b527c6dcb8433ed2b20a32b6eabd
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="" />
-      <created>1733924773071</created>
+      <changelist id="5c8662dc-9ec8-4e3e-a00e-4bf2ec95db7c" name="Changes" comment="" />
+      <created>1734184567406</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1733924773071</updated>
+      <updated>1734184567406</updated>
     </task>
-    <task id="LOCAL-00001" summary="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml.">
-      <option name="closed" value="true" />
-      <created>1734176718367</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1734176718367</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="last edit of log in Controller" />
-    <MESSAGE value="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added everyones, user name and id to userData. modified log in controller to load each users page?dashboard. &#10;modified workspace.xml." />
   </component>
 </project>
