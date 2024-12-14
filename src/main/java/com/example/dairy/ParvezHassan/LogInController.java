@@ -101,22 +101,29 @@ public class LogInController {
 
                 Parent root = null;
                 switch (designation) {
+//                    PARVEZ
                     case "Supply Chain & Logistics":
                         root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
                         break;
                     case "Financial Manager":
                         root = FXMLLoader.load(getClass().getResource("Dashboard2.fxml"));
                         break;
+//                   SAMIUL
                     case "Sales & Marketing Manager": //1,1
                         root = FXMLLoader.load(getClass().getResource("/com/example/dairy/Samiul/User7/salesAndMarketingManagerDashboard.fxml"));
                         break;
                     case "Customer": //2,2
                         root = FXMLLoader.load(getClass().getResource("/com/example/dairy/Samiul/User8/customerDashboard.fxml"));
                         break;
+//                  MAHAMUD
                     case "Milk Collector": //1234,1234
                         root = FXMLLoader.load(getClass().getResource("/com/example/dairy/mahamud/Milk Collector.fxml"));
                         break;
-                    case "Inventory Manager ": //1,1
+                    case "Milk Processor":
+                        root= FXMLLoader.load(getClass().getResource("/com/example/dairy/mahamud/Milk Processor.fxml"));
+                        break;
+//                        NUPUR
+                    case "Inventory Manager": //1,1
                         root = FXMLLoader.load(getClass().getResource("/com/example/dairy/Nupur/Inventory Manager Dashboard.fxml"));
                         break;
                     case "Customer Service Representative": //1,1

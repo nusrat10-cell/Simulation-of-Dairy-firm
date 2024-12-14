@@ -14,4 +14,11 @@ module com.example.dairy {
     opens com.example.dairy.ParvezHassan to javafx.fxml, javafx.graphics;
     exports com.example.dairy.ParvezHassan;
 
+    opens com.example.dairy.Samiul to javafx.fxml, javafx.graphics;
+    exports com.example.dairy.Samiul.User7;
+    exports com.example.dairy.Samiul.User8;
+
+    opens com.example.dairy.mahamud to javafx.fxml, javafx.graphics;
+    exports com.example.dairy.mahamud;
+
 }
