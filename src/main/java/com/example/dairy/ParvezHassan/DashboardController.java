@@ -114,5 +114,14 @@ public class DashboardController
 
     @javafx.fxml.FXML
     public void supply_performance_Button(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("SupplierEvaluation.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            // Handle FXML loading error
+            e.printStackTrace();
+        }
     }
 }
