@@ -34,35 +34,26 @@ public class FreshMilk {
     @FXML
     public void initialize() {
         fmRefrigerationcombobxfx.getItems().setAll("Running", "Idle", "Cooling");
-
-        // Initialize Table Columns
         fmtempareturecollumfx.setCellValueFactory(new PropertyValueFactory<>("temperature"));
         fmstutuscollumfx.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         // Set table data
         fmtablefx.setItems(freshmilkModelClassList);
     }
-
     @FXML
     public void fmstartcollectionbuttonfx(ActionEvent actionEvent) {
         String temperatureStr = fmtempareturetextfieldfx.getText();
         String status = fmRefrigerationcombobxfx.getValue();
-
         if (temperatureStr.isEmpty() || status == null) {
             System.out.println("Please fill in all fields.");
             return;
         }
-
         try {
             double temperature = Double.parseDouble(temperatureStr);
-
             freshmilkModelClass data = new freshmilkModelClass(temperature, status);
             freshmilkModelClassList.add(data);
-
-            // Clear the fields after submission
             fmtempareturetextfieldfx.clear();
             fmRefrigerationcombobxfx.setValue(null);
-
         } catch (NumberFormatException e) {
             System.out.println("Please enter a valid temperature.");
         }

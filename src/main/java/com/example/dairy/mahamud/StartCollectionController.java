@@ -39,12 +39,9 @@ public class StartCollectionController {
 
     @FXML
     public void initialize() {
-        // Initialize Table Columns
         collumnamefx.setCellValueFactory(new PropertyValueFactory<>("farmerName"));
         datecollumfx.setCellValueFactory(new PropertyValueFactory<>("date"));
         quanticollumtyfx.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-
-        // Set table data
         tablefx.setItems(collectionDataList);
     }
 
@@ -64,8 +61,6 @@ public class StartCollectionController {
 
             CollectionData data = new CollectionData(farmerName, quantity, date);
             collectionDataList.add(data);
-
-            // Clear the fields after submission
             farmernamefx.clear();
             quantityfx.clear();
             datefx.setValue(null);

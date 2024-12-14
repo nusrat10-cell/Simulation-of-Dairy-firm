@@ -30,5 +30,6 @@
       <Button layoutX="47.0" layoutY="313.0" mnemonicParsing="false" onAction="#mcFreshmilkbuttonfx" prefHeight="51.0" prefWidth="127.0" text="Fresh milk" />
       <Button layoutX="47.0" layoutY="247.0" mnemonicParsing="false" onAction="#mcMilkQuantitybuttonfx" prefHeight="51.0" prefWidth="127.0" text="Milk Quantity" />
       <Button layoutX="48.0" layoutY="189.0" mnemonicParsing="false" onAction="#mcRouteOptimizationbuttonfx" prefHeight="45.0" prefWidth="120.0" text="Route Optimization" />
+      <Button layoutX="651.0" layoutY="531.0" mnemonicParsing="false" onAction="#mclogoutbuttonfx" text="LogOut" />
    </children>
 </AnchorPane>

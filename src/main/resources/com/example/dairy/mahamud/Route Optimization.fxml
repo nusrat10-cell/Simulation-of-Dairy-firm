@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -20,7 +21,7 @@
             <TableColumn fx:id="rodestinationtablecollumfx" prefWidth="75.0" text="destination" />
         </columns>
       </TableView>
-      <TextField fx:id="rodestinationfx" layoutX="35.0" layoutY="207.0" text="destination" />
       <TextField fx:id="roquantitytextfieldfx" layoutX="25.0" layoutY="146.0" text="quantity" />
+      <ComboBox fx:id="rodestinationcomboboxfx" layoutX="24.0" layoutY="188.0" prefWidth="150.0" promptText="destination" />
    </children>
 </AnchorPane>

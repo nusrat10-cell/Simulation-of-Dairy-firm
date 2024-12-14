@@ -2,7 +2,14 @@ package com.example.dairy.mahamud;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class PasteurizeMilk {
     @FXML
@@ -20,13 +27,18 @@ public class PasteurizeMilk {
 
     @FXML
     public void pmbckbuttonfx(ActionEvent actionEvent) {
-        // Handle back button action
-        System.out.println("Back button clicked.");
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Milk Processor.fxml"));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public void pmfinishfx(ActionEvent actionEvent) {
-        // Set the text for each label
         pmlabelfx2.setText("Cow, Goat, Buffalo");
         pmlabelfx1.setText("Healthy, Long Lasting, Safe");
         pmlabelfx3.setText("Rich in Nutrition, Hygienically Processed, Longer Shelf Life");
