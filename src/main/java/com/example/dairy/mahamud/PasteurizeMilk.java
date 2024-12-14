@@ -1,27 +1,35 @@
 package com.example.dairy.mahamud;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-//import java.awt.event.ActionEvent;
+public class PasteurizeMilk {
+    @FXML
+    private Label pmlabelfx;
+    @FXML
+    private Label pmlabelfx1;
+    @FXML
+    private Label pmlabelfx2;
+    @FXML
+    private Label pmlabelfx3;
 
-public class PasteurizeMilk
-{
-    @javafx.fxml.FXML
-    private ComboBox pmmilktypecomboxfx;
-    @javafx.fxml.FXML
-    private Label pmmassagefxlabel;
-
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void pmbckbuttonfx(ActionEvent actionEvent) {
+        // Handle back button action
+        System.out.println("Back button clicked.");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void pmfinishfx(ActionEvent actionEvent) {
+        // Set the text for each label
+        pmlabelfx2.setText("Cow, Goat, Buffalo");
+        pmlabelfx1.setText("Healthy, Long Lasting, Safe");
+        pmlabelfx3.setText("Rich in Nutrition, Hygienically Processed, Longer Shelf Life");
+        pmlabelfx.setText("Our milk is 100% pure and certified.");
     }
 }

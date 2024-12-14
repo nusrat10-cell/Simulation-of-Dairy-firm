@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dairy.mahamud.PasteurizeMilk">
    <children>
-      <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#pmbckbuttonfx" text="Back" />
-      <ComboBox fx:id="pmmilktypecomboxfx" layoutX="34.0" layoutY="80.0" prefWidth="150.0" promptText="type of milk" />
-      <Label fx:id="pmmassagefxlabel" layoutX="55.0" layoutY="159.0" prefHeight="18.0" prefWidth="150.0" text="tempareture 72 c" />
-      <Button layoutX="97.0" layoutY="219.0" mnemonicParsing="false" onAction="#pmfinishfx" text="Finish " />
+      <Button layoutY="11.0" mnemonicParsing="false" onAction="#pmbckbuttonfx" text="Back" />
+      <Label layoutX="184.0" layoutY="11.0" prefHeight="35.0" prefWidth="186.0" text="Pasteurized Millk">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button layoutX="71.0" layoutY="314.0" mnemonicParsing="false" onAction="#pmfinishfx" text="Finish " />
+      <Line endX="100.0" layoutX="277.0" layoutY="46.0" startX="-100.0" />
+      <Text layoutX="30.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Milk type" />
+      <Text layoutX="25.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About milk" wrappingWidth="58.083984375" />
+      <Text layoutX="11.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product features" />
+      <Label fx:id="pmlabelfx" layoutX="32.0" layoutY="258.0" prefHeight="46.0" prefWidth="220.0" text="Label" />
+      <Label fx:id="pmlabelfx1" layoutX="128.0" layoutY="132.0" prefHeight="46.0" prefWidth="220.0" />
+      <Label fx:id="pmlabelfx2" layoutX="96.0" layoutY="61.0" prefHeight="46.0" prefWidth="220.0" />
+      <Label fx:id="pmlabelfx3" layoutX="128.0" layoutY="198.0" prefHeight="46.0" prefWidth="220.0" />
    </children>
 </AnchorPane>

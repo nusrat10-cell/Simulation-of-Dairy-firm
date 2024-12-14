@@ -4,90 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="ce530416-739c-4453-a2ee-9e08f0eebf3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ExpiryDates.java" afterDir="false" />
+    <list default="true" id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PackagingModelClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ReceptionData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/SeperationData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/qualityControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/FeedbackModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/FeedbackModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageDispatchRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/ManageInventoryLevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/Nupur/productDispatchmodelClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage Dispatch Request.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/Nupur/Manage inventory level.fxml" afterDir="false" />
-=======
-    <list default="true" id="b76f6ffe-c533-4a2d-88dc-9d5b27fefa67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/FreshMilk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/FreshMilk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkCollector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQualityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkQuantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PaymentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PaymentManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ReportIssues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/ReportIssues.java" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/RouteOptimization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/StartCollectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/SupplierManagemen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/SupplierManagemen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/EquipmentMonitoring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkReception.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkReception.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkSeperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/MilkSeperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/Packaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/Packaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PasteurizeMilk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/PasteurizeMilk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dairy/mahamud/QualityControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Equipment Monitoring.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Equipment Monitoring.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk seperation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Milk seperation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Packaging.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Packaging.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Quality Control.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Quality Control.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Report Issues.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/Report Issues.fxml" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
->>>>>>> 709cf25d6dd0e835158e7cc16a2f4663a3119591
->>>>>>> 3d1363a492e4bf1d7162d9ad4a0dc13379db2aea
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/pasteurize milk.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dairy/mahamud/pasteurize milk.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mahamud-tech"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mahamud-tech&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git",
-    "accountId": "078a936f-662d-4687-a4a7-3f059b46d8cf"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nusrat10-cell/Simulation-of-Dairy-firm.git&quot;,
+    &quot;accountId&quot;: &quot;078a936f-662d-4687-a4a7-3f059b46d8cf&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
-  <component name="ProjectId" id="2q4T5lMDzdfsudb6jckpE13ifPN" />
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2q4bPUV63XRfcw1oEutBuhPatkf" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-<<<<<<< HEAD
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.dairy" />
-    </key>
-  </component>
-=======
-}]]></component>
->>>>>>> 709cf25d6dd0e835158e7cc16a2f4663a3119591
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b76f6ffe-c533-4a2d-88dc-9d5b27fefa67" name="Changes" comment="" />
-      <created>1733920668616</created>
+      <changelist id="9d728f42-ab56-4fff-a24c-933e11c49ac3" name="Changes" comment="" />
+      <created>1733924773071</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1733920668616</updated>
+      <updated>1733924773071</updated>
     </task>
     <servers />
   </component>
